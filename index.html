@@ -292,6 +292,8 @@ section{padding:72px 0}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--gray-300)}
 .upload-zone{border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--gray-25)}
 .upload-zone:hover{border-color:var(--blue);background:rgba(43,76,126,.02)}
+.upload-zone.drag-over{border-color:var(--blue);background:rgba(43,76,126,.05);transform:scale(1.01)}
+.upload-zone.has-file{border-color:var(--blue);border-style:solid;background:var(--blue-50)}
 .upload-icon{width:42px;height:42px;border-radius:var(--radius);background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
 .upload-icon svg{width:18px;height:18px;stroke:var(--blue)}
 .upload-zone p{font-size:.84rem;color:var(--gray-500);font-weight:500}
@@ -740,10 +742,11 @@ section{padding:72px 0}
           <div class="form-group"><label>Message <span class="opt">(optional)</span></label><textarea name="message" placeholder="Tell us anything else about your project, timeline, or requirements..."></textarea></div>
           <div class="form-group">
             <label>Upload Photo or Plan <span class="opt">(optional)</span></label>
-            <div class="upload-zone">
+            <div class="upload-zone" id="uploadZone">
+              <input type="file" name="attachment" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" style="display:none">
               <div class="upload-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
-              <p>Click to upload or drag and drop</p>
-              <span>JPG, PNG, or PDF — max 10MB</span>
+              <p id="uploadText">Click to upload or drag and drop</p>
+              <span id="uploadHint">JPG, PNG, or PDF — max 10MB</span>
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-lg form-submit">Get My Free Quote</button>
@@ -928,6 +931,51 @@ document.getElementById('quoteForm').addEventListener('submit', function(e) {
       btn.disabled = false;
     }, 3000);
   });
+});
+
+// File upload zone
+var uploadZone = document.getElementById('uploadZone');
+var fileInput = document.getElementById('fileInput');
+var uploadText = document.getElementById('uploadText');
+var uploadHint = document.getElementById('uploadHint');
+
+uploadZone.addEventListener('click', function() { fileInput.click(); });
+
+fileInput.addEventListener('change', function() {
+  if (fileInput.files.length > 0) { showFileName(fileInput.files[0]); }
+});
+
+uploadZone.addEventListener('dragover', function(e) {
+  e.preventDefault();
+  uploadZone.classList.add('drag-over');
+});
+
+uploadZone.addEventListener('dragleave', function(e) {
+  e.preventDefault();
+  uploadZone.classList.remove('drag-over');
+});
+
+uploadZone.addEventListener('drop', function(e) {
+  e.preventDefault();
+  uploadZone.classList.remove('drag-over');
+  if (e.dataTransfer.files.length > 0) {
+    fileInput.files = e.dataTransfer.files;
+    showFileName(e.dataTransfer.files[0]);
+  }
+});
+
+function showFileName(file) {
+  var sizeMB = (file.size / 1024 / 1024).toFixed(1);
+  uploadText.textContent = file.name;
+  uploadHint.textContent = sizeMB + ' MB — click to change';
+  uploadZone.classList.add('has-file');
+}
+
+// Reset upload zone when form is reset
+document.getElementById('quoteForm').addEventListener('reset', function() {
+  uploadText.textContent = 'Click to upload or drag and drop';
+  uploadHint.textContent = 'JPG, PNG, or PDF — max 10MB';
+  uploadZone.classList.remove('has-file');
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){const y=t.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:'smooth'})}})});
