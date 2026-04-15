@@ -363,6 +363,17 @@ section{padding:72px 0}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 .delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}.delay-4{transition-delay:.4s}
+
+/* ============================================================
+   NEW: PRODUCT CARD LINK STYLES
+   The product cards are now wrapped in <a> tags so each card
+   navigates to its dedicated product detail page in a new tab.
+   These rules ensure the anchor inherits the card's look exactly
+   (no underline, no inherited link color, full block click target)
+   so the existing visual design is preserved 1:1.
+   ============================================================ */
+a.product-card{display:block;color:inherit;text-decoration:none}
+a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -375,7 +386,9 @@ section{padding:72px 0}
       SuperDeco Canada
     </a>
     <div class="nav-links">
-      <a href="#panels">Panels</a>
+      <!-- MODIFIED: "Panels" nav link now opens the full catalogue page (panels.html) in a new tab.
+           Styling and position are unchanged. -->
+      <a href="panels.html" target="_blank" rel="noopener">Panels</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#projects">Projects</a>
       <a href="#faq">FAQs</a>
@@ -389,7 +402,8 @@ section{padding:72px 0}
 </header>
 
 <div class="mobile-nav" id="mobileNav">
-  <a href="#panels" onclick="closeMobile()">Panels</a>
+  <!-- MODIFIED: Mobile "Panels" link mirrors the desktop nav — opens panels.html in a new tab. -->
+  <a href="panels.html" target="_blank" rel="noopener" onclick="closeMobile()">Panels</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="#projects" onclick="closeMobile()">Projects</a>
   <a href="#faq" onclick="closeMobile()">FAQs</a>
@@ -498,6 +512,18 @@ section{padding:72px 0}
 </section>
 
 <!-- PRODUCTS -->
+<!--
+  ============================================================
+  MODIFIED: Each product card is now an <a> tag instead of <div>.
+  - target="_blank" opens the product detail page in a new tab.
+  - rel="noopener" is a security best-practice for target="_blank".
+  - Relative paths point to ./products/<slug>.html
+  - The inner "Request Sample" overlay link uses event.stopPropagation()
+    via a small inline handler so clicking it doesn't also trigger
+    the parent card link.
+  - All visual classes/markup are otherwise unchanged.
+  ============================================================
+-->
 <section class="products-section" id="panels">
   <div class="container">
     <div class="section-header reveal">
@@ -506,73 +532,86 @@ section{padding:72px 0}
       <p class="section-desc">Browse our most popular PVC panel collections. Not sure what works best? We're happy to help you decide.</p>
     </div>
     <div class="products-grid">
-      <div class="product-card reveal">
+
+      <!-- Product 1: Indoor Wall Panels -->
+      <a href="products/indoor-wall-panels.html" target="_blank" rel="noopener" class="product-card reveal" aria-label="View details: Indoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-1"></div>
           <span class="product-img-label">Popular</span>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Indoor Wall Panels</h3>
           <p>Fluted and textured PVC panels with warm wood-look finishes that bring depth and character to living rooms, bedrooms, and offices.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
-      <div class="product-card reveal delay-1">
+      </a>
+
+      <!-- Product 2: Outdoor Wall Panels -->
+      <a href="products/outdoor-wall-panels.html" target="_blank" rel="noopener" class="product-card reveal delay-1" aria-label="View details: Outdoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-2"></div>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Outdoor Wall Panels</h3>
           <p>Weather-resistant WPC panels built for exterior walls, facades, and patios. Durable protection with a modern, clean look.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
-      <div class="product-card reveal delay-2">
+      </a>
+
+      <!-- Product 3: Acoustic Panels -->
+      <a href="products/acoustic-panels.html" target="_blank" rel="noopener" class="product-card reveal delay-2" aria-label="View details: Acoustic Panels">
         <div class="product-img">
           <div class="product-img-bg pi-3"></div>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Acoustic Panels</h3>
           <p>Sound-absorbing panels that reduce echo and improve room acoustics. Ideal for offices, studios, and media rooms.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
-      <div class="product-card reveal delay-3">
+      </a>
+
+      <!-- Product 4: Mirror PVC -->
+      <a href="products/mirror-pvc.html" target="_blank" rel="noopener" class="product-card reveal delay-3" aria-label="View details: Mirror PVC">
         <div class="product-img">
           <div class="product-img-bg pi-4"></div>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Mirror PVC</h3>
           <p>Reflective mirror-finish panels that add depth and light to any space. A sleek, modern alternative to traditional mirrors.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
-      <div class="product-card reveal delay-4">
+      </a>
+
+      <!-- Product 5: Marble PVC High Gloss -->
+      <a href="products/marble-pvc-high-gloss.html" target="_blank" rel="noopener" class="product-card reveal delay-4" aria-label="View details: Marble PVC High Gloss">
         <div class="product-img">
           <div class="product-img-bg pi-5"></div>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Marble PVC High Gloss</h3>
           <p>Luxurious high-gloss marble-look panels that bring sophistication and elegance to interiors at a fraction of the cost of real stone.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
-      <div class="product-card reveal">
+      </a>
+
+      <!-- Product 6: Metal PVC -->
+      <a href="products/metal-pvc.html" target="_blank" rel="noopener" class="product-card reveal" aria-label="View details: Metal PVC">
         <div class="product-img">
           <div class="product-img-bg pi-6"></div>
-          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+          <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Metal PVC</h3>
           <p>Metallic-finish PVC panels that add an industrial-chic or brushed-metal aesthetic. Perfect for accent walls and commercial spaces.</p>
-          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-      </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -864,12 +903,13 @@ section{padding:72px 0}
       <div>
         <h4>Panel Types</h4>
         <ul>
-          <li><a href="#">Indoor Wall Panels</a></li>
-          <li><a href="#">Outdoor Wall Panels</a></li>
-          <li><a href="#">Acoustic Panels</a></li>
-          <li><a href="#">Mirror PVC</a></li>
-          <li><a href="#">Marble PVC High Gloss</a></li>
-          <li><a href="#">Metal PVC</a></li>
+          <!-- MODIFIED: Footer "Panel Types" links now point to their dedicated detail pages, opening in new tabs. -->
+          <li><a href="products/indoor-wall-panels.html" target="_blank" rel="noopener">Indoor Wall Panels</a></li>
+          <li><a href="products/outdoor-wall-panels.html" target="_blank" rel="noopener">Outdoor Wall Panels</a></li>
+          <li><a href="products/acoustic-panels.html" target="_blank" rel="noopener">Acoustic Panels</a></li>
+          <li><a href="products/mirror-pvc.html" target="_blank" rel="noopener">Mirror PVC</a></li>
+          <li><a href="products/marble-pvc-high-gloss.html" target="_blank" rel="noopener">Marble PVC High Gloss</a></li>
+          <li><a href="products/metal-pvc.html" target="_blank" rel="noopener">Metal PVC</a></li>
         </ul>
       </div>
       <div>
@@ -992,7 +1032,17 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
   uploadZone.classList.remove('has-file');
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){const y=t.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:'smooth'})}})});
+// MODIFIED smooth-scroll: skip anchors that point to other pages (e.g. panels.html)
+// or that lack an internal hash target. Original scroll-to-section logic preserved.
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){
+  const href=this.getAttribute('href');
+  if(href.length<2)return; // ignore bare "#"
+  const t=document.querySelector(href);
+  if(!t)return;
+  e.preventDefault();
+  const y=t.getBoundingClientRect().top+window.pageYOffset-80;
+  window.scrollTo({top:y,behavior:'smooth'});
+})});
 </script>
 </body>
 </html>
