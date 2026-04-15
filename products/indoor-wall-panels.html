@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+============================================================
+  PRODUCT DETAIL PAGE TEMPLATE
+  ------------------------------------------------------------
+  This file is the reusable template for every product in
+  /products/. To create a new product page:
+
+    1. Copy this file and rename it (e.g. mirror-pvc.html).
+    2. Update the <title>, <meta description>, and the four
+       blocks marked with "PRODUCT-SPECIFIC CONTENT" below:
+         (a) breadcrumb label
+         (b) product info column (title, tagline, description,
+             features list)
+         (c) gallery main image + 4 thumbnail backgrounds
+         (d) hidden gallery image URLs in the data-attributes
+             on the .gallery-thumb buttons
+    3. Save into /products/<slug>.html — done.
+
+  Header, footer, navigation, styling, and the gallery
+  thumbnail-switching JS are all inherited from shared.css /
+  shared.js, so they only need to be maintained in one place.
+============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indoor Wall Panels — SuperDeco Canada</title>
+<meta name="description" content="Fluted and textured PVC panels with warm wood-look finishes — ideal for living rooms, bedrooms, and offices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Note the "../" — product pages live one level down inside /products/ -->
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+<!-- ===== HEADER (matches homepage) ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".9"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".4"/></svg></span>
+      SuperDeco Canada
+    </a>
+    <div class="nav-links">
+      <a href="../panels.html" target="_blank" rel="noopener">Panels</a>
+      <a href="../index.html#how-it-works">How It Works</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#faq">FAQs</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#quote" class="btn btn-primary">Get Quote</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../panels.html" target="_blank" rel="noopener" onclick="closeMobile()">Panels</a>
+  <a href="../index.html#how-it-works" onclick="closeMobile()">How It Works</a>
+  <a href="../index.html#projects" onclick="closeMobile()">Projects</a>
+  <a href="../index.html#faq" onclick="closeMobile()">FAQs</a>
+  <a href="../index.html#contact" onclick="closeMobile()">Contact</a>
+  <a href="../index.html#quote" class="btn btn-primary" onclick="closeMobile()">Get Quote</a>
+</div>
+
+<!-- ===== PRODUCT DETAIL ===== -->
+<section class="product-detail">
+  <div class="container">
+
+    <a href="../panels.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to all panels
+    </a>
+
+    <div class="product-detail-grid">
+
+      <!-- ========== GALLERY COLUMN (PRODUCT-SPECIFIC CONTENT c) ========== -->
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <!-- mainImage is the large image swapped by thumbnail clicks -->
+          <div class="gallery-main-img" id="mainImage"
+               style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/indoor-wall-panels.png')"></div>
+        </div>
+        <div class="gallery-thumbs">
+          <!-- Each thumb stores its full-size image in data-img.
+               Clicking it swaps mainImage's background. -->
+          <button class="gallery-thumb active"
+                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/indoor-wall-panels.png')"
+                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/indoor-wall-panels.png"
+                  aria-label="View image 1"></button>
+          <button class="gallery-thumb"
+                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/Lobby-elegante-con-marmol-Carrara-9.png')"
+                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/Lobby-elegante-con-marmol-Carrara-9.png"
+                  aria-label="View image 2"></button>
+          <button class="gallery-thumb"
+                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/Pasillo-de-lujo-con-reflejos-dorados-1.png')"
+                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/Pasillo-de-lujo-con-reflejos-dorados-1.png"
+                  aria-label="View image 3"></button>
+          <button class="gallery-thumb"
+                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/ChatGPT-Image-13-jul-2025-05_12_26-p.m.png')"
+                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/ChatGPT-Image-13-jul-2025-05_12_26-p.m.png"
+                  aria-label="View image 4"></button>
+        </div>
+      </div>
+
+      <!-- ========== INFO COLUMN (PRODUCT-SPECIFIC CONTENT b) ========== -->
+      <div class="product-info">
+        <div class="pd-eyebrow">Indoor Collection</div>
+        <h1>Indoor Wall Panels</h1>
+        <p class="pd-tagline">Fluted and textured PVC panels with warm wood-look finishes that bring depth and character to living rooms, bedrooms, and offices.</p>
+
+        <div class="pd-meta">
+          <span class="pd-meta-pill">Best Seller</span>
+          <span class="pd-meta-pill">Easy DIY Install</span>
+          <span class="pd-meta-pill">Custom Sizes</span>
+        </div>
+
+        <div class="pd-cta-row">
+          <a href="../index.html#quote" class="btn btn-primary btn-lg">Request Quote</a>
+          <a href="../index.html#quote" class="btn btn-outline btn-lg">Order Free Sample</a>
+        </div>
+
+        <h2 class="pd-section-title">Description</h2>
+        <div class="pd-description">
+          <p>Our indoor wall panels combine the warmth of natural wood with the practicality of modern PVC. Precision-milled fluted profiles cast soft, dynamic shadows across your wall — adding texture, dimension, and quiet sophistication to any interior.</p>
+          <p>Available in over a dozen finishes from light oak to deep walnut, panels arrive ready to mount and can typically be installed by a single person in a few hours. The surface is moisture-resistant, easy to wipe clean, and built to retain its appearance for years.</p>
+        </div>
+
+        <h2 class="pd-section-title">Features &amp; Specifications</h2>
+        <ul class="spec-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Material:</strong> High-density PVC with wood-grain laminate finish</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Standard size:</strong> 2900 mm × 122 mm × 12 mm (custom cuts available)</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Coverage:</strong> Approx. 0.35 m² per panel</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Installation:</strong> Adhesive mount or screw fixing — both supported</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Fire rating:</strong> Class B s2 d0 (low flame spread)</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Maintenance:</strong> Wipe clean with damp cloth — no special products required</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Warranty:</strong> 10-year manufacturer warranty</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="pd-trust-strip">
+      <div class="pd-trust-strip-item">
+        <h4>Free Samples</h4>
+        <p>See and feel the panel in your space before you commit.</p>
+      </div>
+      <div class="pd-trust-strip-item">
+        <h4>48-Hour Quote</h4>
+        <p>Detailed, no-obligation pricing within two business days.</p>
+      </div>
+      <div class="pd-trust-strip-item">
+        <h4>10-Year Warranty</h4>
+        <p>Backed by a decade-long manufacturer guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER (matches homepage) ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".7"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".3"/></svg></span>
+          SuperDeco Canada
+        </div>
+        <p>Decorative wall panels for homes, offices, and commercial spaces. Quality materials, fair pricing, and reliable service.</p>
+      </div>
+      <div class="footer-cta-area">
+        <p>Ready to get started?</p>
+        <a href="../index.html#quote" class="btn btn-primary btn-sm">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html#panels">Our Panels</a></li>
+          <li><a href="../index.html#how-it-works">How It Works</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#faq">FAQs</a></li>
+          <li><a href="../index.html#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Panel Types</h4>
+        <ul>
+          <li><a href="indoor-wall-panels.html">Indoor Wall Panels</a></li>
+          <li><a href="outdoor-wall-panels.html">Outdoor Wall Panels</a></li>
+          <li><a href="acoustic-panels.html">Acoustic Panels</a></li>
+          <li><a href="mirror-pvc.html">Mirror PVC</a></li>
+          <li><a href="marble-pvc-high-gloss.html">Marble PVC High Gloss</a></li>
+          <li><a href="metal-pvc.html">Metal PVC</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@superdeco.ca">hello@superdeco.ca</a></li>
+          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><a href="#">Montreal, QC &amp; surrounding areas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SuperDeco Canada. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared.js"></script>
+<script>
+  /* ============================================================
+     Gallery thumbnail switcher.
+     Clicking a thumbnail swaps the main image and marks the
+     clicked thumb active. Logic is intentionally local because
+     the gallery is the only product-detail-specific behaviour.
+     ============================================================ */
+  (function(){
+    var main=document.getElementById('mainImage');
+    var thumbs=document.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(function(t){
+      t.addEventListener('click',function(){
+        var url=t.getAttribute('data-img');
+        if(!url)return;
+        main.style.backgroundImage="url('"+url+"')";
+        thumbs.forEach(function(x){x.classList.remove('active')});
+        t.classList.add('active');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
