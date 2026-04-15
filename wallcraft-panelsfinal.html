@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WallCraft Panels — Decorative Wall Panels for Beautiful Homes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --white:#ffffff;
+  --gray-25:#fcfcfb;
+  --gray-50:#f8f7f6;
+  --gray-100:#f0efec;
+  --gray-150:#e6e4e0;
+  --gray-200:#d9d7d2;
+  --gray-300:#bfbdb6;
+  --gray-400:#9c9990;
+  --gray-500:#76736b;
+  --gray-600:#56534b;
+  --gray-700:#3d3b35;
+  --gray-800:#2a2824;
+  --gray-900:#1b1a17;
+  --warm-50:#faf7f3;
+  --warm-100:#f2ece2;
+  --warm-200:#e5dace;
+  --blue:#2b4c7e;
+  --blue-50:#eef2f7;
+  --blue-100:#d4dfed;
+  --blue-200:#b0c4de;
+  --blue-600:#213d68;
+  --blue-700:#1a3154;
+  --blue-800:#142742;
+  --blue-900:#0e1c30;
+  --amber:#c07830;
+  --amber-50:#fef5ec;
+  --amber-100:#fce8d2;
+  --font:'Outfit',system-ui,-apple-system,sans-serif;
+  --shadow-xs:0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm:0 1px 4px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:0 4px 16px rgba(0,0,0,.08),0 1px 4px rgba(0,0,0,.04);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.05);
+  --shadow-xl:0 20px 48px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);
+  --radius:10px;
+  --radius-lg:14px;
+  --radius-xl:18px;
+  --radius-2xl:24px;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--gray-600);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{border:none;cursor:pointer;font-family:inherit}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.container{padding:0 36px}}
+@media(min-width:1100px){.container{padding:0 52px}}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:var(--radius);font-size:.88rem;font-weight:600;transition:all .22s ease;white-space:nowrap;letter-spacing:-.005em}
+.btn-primary{background:var(--blue);color:var(--white);box-shadow:0 2px 8px rgba(43,76,126,.3)}
+.btn-primary:hover{background:var(--blue-600);box-shadow:0 6px 20px rgba(43,76,126,.35);transform:translateY(-1px)}
+.btn-outline{background:var(--white);color:var(--gray-700);border:1.5px solid var(--gray-200);box-shadow:var(--shadow-xs)}
+.btn-outline:hover{border-color:var(--gray-300);background:var(--gray-50);transform:translateY(-1px)}
+.btn-ghost{color:var(--blue);font-weight:600;padding:0;background:none;font-size:.86rem;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{color:var(--blue-700)}
+.btn-ghost svg{transition:transform .2s}.btn-ghost:hover svg{transform:translateX(3px)}
+.btn-lg{padding:16px 36px;font-size:.94rem;border-radius:var(--radius-lg)}
+.btn-white{background:var(--white);color:var(--blue);font-weight:700;box-shadow:var(--shadow-md)}
+.btn-white:hover{background:var(--gray-50);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.btn-sm{padding:9px 18px;font-size:.82rem}
+
+/* ===== HEADER ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-size:1.35rem;font-weight:800;color:var(--gray-900);display:flex;align-items:center;gap:10px;letter-spacing:-.03em}
+.logo-mark{width:34px;height:34px;background:linear-gradient(135deg,var(--blue),var(--blue-700));border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(43,76,126,.3)}
+.logo-mark svg{width:18px;height:18px}
+.nav-links{display:none;align-items:center;gap:6px}
+@media(min-width:940px){.nav-links{display:flex}}
+.nav-links a:not(.btn){font-size:.86rem;font-weight:500;color:var(--gray-500);transition:all .2s;padding:8px 14px;border-radius:var(--radius)}
+.nav-links a:not(.btn):hover{color:var(--gray-800);background:var(--gray-50)}
+.mobile-menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius);background:var(--gray-50);color:var(--gray-600);transition:background .2s}
+.mobile-menu-btn:hover{background:var(--gray-100)}
+@media(min-width:940px){.mobile-menu-btn{display:none}}
+.header .btn-primary{padding:10px 24px;font-size:.84rem;box-shadow:0 1px 4px rgba(43,76,126,.2)}
+
+.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);z-index:99;padding:8px 24px 32px;overflow-y:auto}
+.mobile-nav.open{display:flex;flex-direction:column;gap:2px}
+.mobile-nav a{padding:14px 8px;font-size:1rem;font-weight:500;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
+.mobile-nav a:hover{color:var(--blue)}
+.mobile-nav a:last-child{border:none}
+.mobile-nav .btn{margin-top:12px;text-align:center;justify-content:center}
+
+/* ===== HERO ===== */
+.hero{background:var(--blue-900);position:relative;overflow:hidden;padding:0}
+.hero::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 80% 60% at 70% 40%,rgba(43,76,126,.4),transparent),
+  radial-gradient(ellipse 50% 50% at 20% 80%,rgba(43,76,126,.2),transparent);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--white),transparent);pointer-events:none;z-index:2}
+.hero-inner{position:relative;z-index:1;padding:64px 0 80px}
+@media(min-width:768px){.hero-inner{padding:80px 0 100px}}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.hero-grid{grid-template-columns:1fr 1.1fr;gap:56px}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);padding:7px 16px;border-radius:50px;font-size:.8rem;font-weight:600;margin-bottom:22px;border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+.hero-badge svg{width:14px;height:14px;flex-shrink:0}
+.hero h1{font-size:clamp(2.1rem,4.5vw,3.1rem);font-weight:800;line-height:1.15;color:var(--white);margin-bottom:20px;letter-spacing:-.03em}
+.hero h1 span{color:var(--blue-200)}
+.hero-desc{font-size:1.08rem;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:480px;line-height:1.75}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero .btn-primary{background:var(--white);color:var(--blue);box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.hero .btn-primary:hover{background:var(--gray-50);box-shadow:0 6px 24px rgba(0,0,0,.2);transform:translateY(-2px)}
+.hero .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.25)}
+.hero .btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4)}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.hero-trust-item{display:flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);backdrop-filter:blur(8px)}
+.hero-trust-icon{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-trust-icon svg{width:18px;height:18px;stroke:var(--blue-200);fill:none;stroke-width:2}
+.hero-trust-text{font-size:.82rem}
+.hero-trust-text strong{display:block;font-weight:700;color:var(--white)}
+.hero-trust-text span{color:rgba(255,255,255,.5);font-size:.76rem}
+
+.hero-visual{position:relative}
+.hero-image-wrapper{border-radius:var(--radius-2xl);overflow:hidden;position:relative;aspect-ratio:5/4;box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 0 1px rgba(255,255,255,.08)}
+.hero-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#ddd5c8 0%,#cfc4b5 30%,#c0b3a2 60%,#b5a795 100%)}
+.hero-img-placeholder::before{content:'';position:absolute;inset:0;opacity:.2;background:repeating-linear-gradient(90deg,transparent,transparent 76px,rgba(120,100,78,.35) 76px,rgba(120,100,78,.35) 78px),repeating-linear-gradient(0deg,transparent,transparent 190px,rgba(120,100,78,.18) 190px,rgba(120,100,78,.18) 192px)}
+.hero-img-placeholder::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(50,42,34,.2) 0%,transparent 40%),linear-gradient(to bottom right,rgba(255,255,255,.08) 0%,transparent 50%)}
+.hero-img-label{position:relative;z-index:1;text-align:center;color:rgba(80,65,50,.4);font-size:.85rem;font-weight:500}
+
+.hero-float-card{position:absolute;z-index:3;background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.hero-float-card.top{top:-16px;right:16px}
+.hero-float-card.bottom{bottom:20px;left:-16px}
+@media(max-width:768px){.hero-float-card.bottom{left:16px}.hero-float-card.top{right:12px;top:-10px}}
+.float-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.float-icon.blue{background:var(--blue-50);color:var(--blue)}
+.float-icon.amber{background:var(--amber-50);color:var(--amber)}
+.float-icon svg{width:18px;height:18px}
+.float-text{font-size:.82rem;font-weight:700;color:var(--gray-800)}
+.float-text span{display:block;font-weight:400;color:var(--gray-400);font-size:.73rem;margin-top:2px}
+
+/* ===== SECTION UTILITIES ===== */
+section{padding:72px 0}
+@media(min-width:768px){section{padding:96px 0}}
+.section-header{margin-bottom:52px}
+.section-header.center{text-align:center}
+.section-label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-header.center .section-label{justify-content:center}
+.section-label::before{content:'';width:20px;height:2.5px;background:var(--blue);border-radius:2px}
+.section-title{font-size:clamp(1.65rem,3.2vw,2.3rem);font-weight:800;color:var(--gray-900);line-height:1.2;letter-spacing:-.025em}
+.section-desc{font-size:.96rem;color:var(--gray-500);margin-top:12px;max-width:540px;line-height:1.75}
+.section-header.center .section-desc{margin-left:auto;margin-right:auto}
+.bg-light{background:var(--gray-50)}
+.bg-warm{background:var(--warm-50)}
+.bg-blue-subtle{background:linear-gradient(180deg,var(--blue-50) 0%,var(--white) 100%)}
+
+/* ===== WHY US ===== */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr}}
+.why-card{padding:32px 28px;border-radius:var(--radius-xl);background:var(--white);border:1px solid var(--gray-100);transition:all .25s ease;position:relative;overflow:hidden;box-shadow:var(--shadow-xs)}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-200));opacity:0;transition:opacity .25s}
+.why-card:hover{border-color:var(--gray-150);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.why-card:hover::before{opacity:1}
+.why-icon{width:52px;height:52px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.why-icon svg{width:24px;height:24px}
+.why-icon.blue{background:var(--blue-50);color:var(--blue)}
+.why-icon.blue svg{stroke:var(--blue);fill:none;stroke-width:1.8}
+.why-icon.amber{background:var(--amber-50);color:var(--amber)}
+.why-icon.amber svg{stroke:var(--amber);fill:none;stroke-width:1.8}
+.why-icon.warm{background:var(--warm-100);color:var(--gray-600)}
+.why-icon.warm svg{stroke:var(--gray-600);fill:none;stroke-width:1.8}
+.why-card h3{font-size:1.04rem;font-weight:700;color:var(--gray-800);margin-bottom:8px}
+.why-card p{font-size:.87rem;color:var(--gray-500);line-height:1.7}
+
+/* ===== PRODUCTS ===== */
+.products-section{position:relative;overflow:hidden}
+.products-section::before{content:'';position:absolute;top:40px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(43,76,126,.04),transparent 70%);pointer-events:none}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.products-grid{grid-template-columns:1fr}}
+.product-card{border-radius:var(--radius-xl);overflow:hidden;background:var(--white);border:1px solid var(--gray-100);transition:all .3s ease;cursor:pointer;position:relative;box-shadow:var(--shadow-sm)}
+.product-card:hover{box-shadow:var(--shadow-xl);border-color:transparent;transform:translateY(-5px)}
+.product-img{height:240px;overflow:hidden;position:relative}
+.product-img-bg{width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.product-card:hover .product-img-bg{transform:scale(1.06)}
+.pi-1{background:linear-gradient(145deg,#d8cbb0 0%,#c4b494 40%,#b5a382 100%)}
+.pi-2{background:linear-gradient(145deg,#ccc4b8 0%,#b8aea2 40%,#a89c8e 100%)}
+.pi-3{background:linear-gradient(145deg,#b8d0c8 0%,#9cbcae 40%,#84a898 100%)}
+.pi-4{background:linear-gradient(145deg,#c8baa8 0%,#b4a694 40%,#a09484 100%)}
+.pi-5{background:linear-gradient(145deg,#d4d0c8 0%,#c0bab0 40%,#aca6a0 100%)}
+.product-img-label{position:absolute;top:14px;left:14px;background:var(--blue);color:var(--white);padding:5px 14px;border-radius:50px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 2px 6px rgba(43,76,126,.3)}
+.product-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,28,48,.5) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;justify-content:center;padding:20px}
+.product-card:hover .product-img-overlay{opacity:1}
+.product-img-overlay .btn{font-size:.82rem;padding:10px 22px}
+.product-body{padding:24px 24px 20px}
+.product-body h3{font-size:1.06rem;font-weight:700;color:var(--gray-800);margin-bottom:8px}
+.product-body p{font-size:.85rem;color:var(--gray-500);line-height:1.65;margin-bottom:14px}
+
+/* ===== HOW IT WORKS ===== */
+.steps-section{background:var(--blue-900);position:relative;overflow:hidden;color:var(--white)}
+.steps-section::before{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%);pointer-events:none}
+.steps-section::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(43,76,126,.3),transparent 70%);pointer-events:none}
+.steps-section .section-label{color:var(--blue-200)}
+.steps-section .section-label::before{background:var(--blue-200)}
+.steps-section .section-title{color:var(--white)}
+.steps-section .section-desc{color:rgba(255,255,255,.55)}
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative;z-index:1}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.steps-grid{grid-template-columns:1fr}}
+.step-card{padding:28px 22px;border-radius:var(--radius-xl);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);text-align:center;transition:all .25s ease;backdrop-filter:blur(4px)}
+.step-card:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.14);transform:translateY(-3px)}
+.step-num{width:48px;height:48px;border-radius:14px;background:var(--white);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.92rem;font-weight:800;margin:0 auto 16px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.step-card h3{font-size:.96rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.step-card p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.65}
+
+/* ===== GALLERY ===== */
+.gallery-section{position:relative;overflow:hidden}
+.gallery-section::after{content:'';position:absolute;bottom:-80px;right:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(43,76,126,.03),transparent 70%);pointer-events:none}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-grid .gallery-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid .gallery-item:first-child{grid-column:span 1;grid-row:span 1}}
+@media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+.gallery-item{border-radius:var(--radius-xl);overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;box-shadow:var(--shadow-sm)}
+.gallery-item-bg{width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.gallery-item:hover .gallery-item-bg{transform:scale(1.05)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,28,48,.65) 0%,transparent 55%);display:flex;align-items:flex-end;padding:22px;opacity:0;transition:opacity .35s}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-overlay-text{color:var(--white)}
+.gallery-overlay-text strong{display:block;font-size:.92rem;font-weight:700}
+.gallery-overlay-text span{font-size:.78rem;opacity:.7}
+.gi-1{background:linear-gradient(145deg,#ddd5c5,#c8bca8)}.gi-2{background:linear-gradient(145deg,#cdc5b5,#b8ac9c)}
+.gi-3{background:linear-gradient(145deg,#e3dbd0,#d0c4b4)}.gi-4{background:linear-gradient(145deg,#c5b9a9,#b0a494)}
+.gi-5{background:linear-gradient(145deg,#c8c4bc,#b4b0a8)}.gi-6{background:linear-gradient(145deg,#d8d0c0,#c4b8a8)}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section{background:linear-gradient(180deg,var(--warm-50),var(--white));position:relative}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.testimonials-grid{grid-template-columns:1fr}}
+.testimonial-card{padding:32px;border-radius:var(--radius-xl);background:var(--white);border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);transition:all .25s ease;position:relative;overflow:hidden}
+.testimonial-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue-200))}
+.testimonial-card::after{content:'\201C';position:absolute;top:28px;right:24px;font-size:4rem;font-weight:800;color:var(--blue-50);line-height:1;font-family:Georgia,serif;pointer-events:none}
+.testimonial-stars{color:var(--amber);font-size:.9rem;margin-bottom:16px;letter-spacing:2px}
+.testimonial-card blockquote{font-size:.92rem;color:var(--gray-600);line-height:1.8;margin-bottom:24px;position:relative;z-index:1}
+.testimonial-footer{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--gray-100)}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue-50),var(--blue-100));display:flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:700;color:var(--blue)}
+.testimonial-name strong{display:block;font-size:.87rem;font-weight:700;color:var(--gray-800)}
+.testimonial-name span{font-size:.76rem;color:var(--gray-400)}
+
+/* ===== STATS BAR ===== */
+.stats-bar{background:linear-gradient(135deg,var(--blue-800),var(--blue-900));padding:56px 0;position:relative;overflow:hidden}
+.stats-bar::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:800px;height:300px;border-radius:50%;background:radial-gradient(ellipse,rgba(43,76,126,.4),transparent 70%);pointer-events:none}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative;z-index:1}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+.stat-item{text-align:center;position:relative}
+.stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:rgba(255,255,255,.08)}
+@media(max-width:768px){.stat-item::after{display:none!important}}
+.stat-icon{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.stat-icon svg{width:22px;height:22px;stroke:var(--blue-200);fill:none;stroke-width:1.8}
+.stat-item h3{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;color:var(--white);margin-bottom:4px;letter-spacing:-.02em}
+.stat-item p{font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4)}
+
+/* ===== QUOTE FORM ===== */
+.quote-section{background:linear-gradient(180deg,var(--gray-50),var(--warm-50));position:relative;overflow:hidden}
+.quote-section::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(43,76,126,.04),transparent 70%);pointer-events:none}
+.quote-section::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(192,120,48,.03),transparent 70%);pointer-events:none}
+.quote-layout{display:grid;gap:40px;align-items:start;position:relative;z-index:1}
+@media(min-width:768px){.quote-layout{grid-template-columns:5fr 7fr;gap:56px}}
+.quote-info{display:flex;flex-direction:column;justify-content:center}
+.quote-info p{color:var(--gray-500);line-height:1.75;margin-bottom:28px;font-size:.95rem}
+.quote-perks{display:flex;flex-direction:column;gap:14px}
+.quote-perk{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--gray-600);font-weight:500}
+.quote-perk-icon{width:26px;height:26px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 4px rgba(43,76,126,.2)}
+.quote-perk-icon svg{width:12px;height:12px}
+.quote-form-card{background:var(--white);border-radius:var(--radius-2xl);padding:36px;box-shadow:var(--shadow-xl);border:1px solid rgba(0,0,0,.04);position:relative}
+.quote-form-card::before{content:'';position:absolute;top:0;left:24px;right:24px;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue-200));border-radius:0 0 4px 4px}
+@media(min-width:768px){.quote-form-card{padding:44px}}
+.quote-form-title{font-size:1.2rem;font-weight:800;color:var(--gray-800);margin-bottom:28px;display:flex;align-items:center;gap:10px}
+.quote-form-title .form-badge{font-size:.68rem;font-weight:700;background:var(--blue-50);color:var(--blue);padding:4px 12px;border-radius:50px;text-transform:uppercase;letter-spacing:.04em}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--gray-700);margin-bottom:6px}
+.form-group label .opt{font-weight:400;color:var(--gray-400)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid var(--gray-150);border-radius:var(--radius);font-family:var(--font);font-size:.88rem;color:var(--gray-800);background:var(--white);transition:all .2s;outline:none}
+.form-group input:hover,.form-group select:hover,.form-group textarea:hover{border-color:var(--gray-300)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(43,76,126,.08)}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--gray-300)}
+.upload-zone{border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--gray-25)}
+.upload-zone:hover{border-color:var(--blue);background:rgba(43,76,126,.02)}
+.upload-icon{width:42px;height:42px;border-radius:var(--radius);background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.upload-icon svg{width:18px;height:18px;stroke:var(--blue)}
+.upload-zone p{font-size:.84rem;color:var(--gray-500);font-weight:500}
+.upload-zone span{font-size:.75rem;color:var(--gray-400);margin-top:2px;display:block}
+.form-submit{width:100%;margin-top:8px;padding:15px 34px;font-size:.94rem}
+.form-note{text-align:center;margin-top:12px;font-size:.75rem;color:var(--gray-400);display:flex;align-items:center;justify-content:center;gap:6px}
+.form-note svg{width:13px;height:13px;stroke:var(--gray-300);flex-shrink:0}
+
+/* ===== FAQ ===== */
+.faq-section{background:var(--white);position:relative}
+.faq-layout{display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:start}
+@media(max-width:768px){.faq-layout{grid-template-columns:1fr}}
+.faq-sidebar .section-header{margin-bottom:24px}
+.faq-sidebar-cta{margin-top:28px;padding:24px;background:var(--blue-50);border-radius:var(--radius-xl);border:1px solid var(--blue-100)}
+.faq-sidebar-cta p{font-size:.88rem;color:var(--gray-600);margin-bottom:14px;line-height:1.7}
+.faq-list{width:100%}
+.faq-item{border:1px solid var(--gray-100);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;background:var(--white);transition:all .25s;box-shadow:var(--shadow-xs)}
+.faq-item:hover{border-color:var(--gray-150)}
+.faq-item.open{border-color:var(--blue-100);box-shadow:var(--shadow-md)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;text-align:left;font-family:var(--font);font-size:.94rem;font-weight:600;color:var(--gray-800);cursor:pointer;transition:color .2s;gap:16px}
+.faq-q:hover{color:var(--blue)}
+.faq-toggle{width:30px;height:30px;border-radius:8px;background:var(--gray-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+.faq-toggle svg{width:14px;height:14px;stroke:var(--gray-400);transition:transform .25s}
+.faq-item.open .faq-toggle{background:var(--blue)}
+.faq-item.open .faq-toggle svg{stroke:var(--white);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:250px}
+.faq-a p{padding:0 24px 22px;font-size:.87rem;color:var(--gray-500);line-height:1.75}
+
+/* ===== FINAL CTA ===== */
+.final-cta{background:linear-gradient(135deg,var(--blue),var(--blue-700));padding:72px 0;text-align:center;position:relative;overflow:hidden}
+@media(min-width:768px){.final-cta{padding:96px 0}}
+.final-cta::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.06),transparent 50%);pointer-events:none}
+.final-cta::after{content:'';position:absolute;bottom:-40px;right:-40px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.04),transparent 70%);pointer-events:none}
+.final-cta h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;color:var(--white);margin-bottom:16px;letter-spacing:-.02em;position:relative}
+.final-cta p{font-size:1.02rem;color:rgba(255,255,255,.7);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;position:relative;line-height:1.7}
+.final-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.final-cta .btn-white{color:var(--blue);font-weight:700}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--gray-900);color:rgba(255,255,255,.55);padding:72px 0 28px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:20px}
+.footer-brand .logo{color:var(--white);margin-bottom:8px}
+.footer-brand .logo .logo-mark{box-shadow:none;background:rgba(255,255,255,.1)}
+.footer-brand p{font-size:.85rem;line-height:1.75;max-width:320px}
+.footer-cta-area{text-align:right}
+.footer-cta-area p{font-size:.9rem;color:rgba(255,255,255,.7);font-weight:500;margin-bottom:10px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-top{flex-direction:column;align-items:flex-start}.footer-cta-area{text-align:left}}
+.footer h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:18px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul a{font-size:.85rem;color:rgba(255,255,255,.5);transition:all .2s;display:inline-flex;align-items:center;gap:4px}
+.footer ul a:hover{color:rgba(255,255,255,.9)}
+.footer-divider{height:1px;background:rgba(255,255,255,.06);margin-bottom:24px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.78rem;color:rgba(255,255,255,.28)}
+.footer-bottom a{color:rgba(255,255,255,.35);transition:color .2s}
+.footer-bottom a:hover{color:rgba(255,255,255,.6)}
+.footer-legal{display:flex;gap:16px;flex-wrap:wrap}
+
+/* ===== ANIMATIONS ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}.delay-4{transition-delay:.4s}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".9"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".4"/></svg></span>
+      WallCraft
+    </a>
+    <div class="nav-links">
+      <a href="#panels">Panels</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a href="#quote" class="btn btn-primary">Get Quote</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#panels" onclick="closeMobile()">Panels</a>
+  <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#faq" onclick="closeMobile()">FAQs</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#quote" class="btn btn-primary" onclick="closeMobile()">Get Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Trusted by 2,000+ homeowners &amp; contractors
+        </div>
+        <h1>Beautiful Wall Panels That <span>Transform Any Room</span></h1>
+        <p class="hero-desc">Durable, stylish decorative panels that are easy to install and built to last. The smart way to upgrade living rooms, bedrooms, offices, and more.</p>
+        <div class="hero-ctas">
+          <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote</a>
+          <a href="#panels" class="btn btn-outline btn-lg">View Panels</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <div class="hero-trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="hero-trust-text">
+              <strong>10+ Years in Business</strong>
+              <span>Established &amp; reliable</span>
+            </div>
+          </div>
+          <div class="hero-trust-item">
+            <div class="hero-trust-icon">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="hero-trust-text">
+              <strong>4.9 ★ Average Rating</strong>
+              <span>350+ verified reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-img-placeholder">
+            <span class="hero-img-label">Wall Panel Interior</span>
+          </div>
+        </div>
+        <div class="hero-float-card top">
+          <div class="float-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="float-text">Free Samples<span>Try before you buy</span></div>
+        </div>
+        <div class="hero-float-card bottom">
+          <div class="float-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="float-text">48hr Quote Turnaround<span>Fast &amp; detailed response</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="bg-blue-subtle">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Why WallCraft</div>
+      <h2 class="section-title">Quality Panels, Reliable Service</h2>
+      <p class="section-desc">We make it easy to upgrade your walls with panels that look great, last long, and install without hassle.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Durable Materials</h3>
+        <p>Built with high-quality MDF, natural veneers, and moisture-resistant composites that hold up for years.</p>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Stylish Designs</h3>
+        <p>From warm wood-look finishes to modern textures, our designs complement any room style.</p>
+      </div>
+      <div class="why-card reveal delay-2">
+        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Easy Installation</h3>
+        <p>Precision-cut panels with simple mounting. Most walls can be done in a day — DIY or professional.</p>
+      </div>
+      <div class="why-card reveal delay-3">
+        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Low Maintenance</h3>
+        <p>Wipe-clean surfaces that resist dust, moisture, and everyday wear. No repainting needed.</p>
+      </div>
+      <div class="why-card reveal delay-4">
+        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3>Custom Sizes</h3>
+        <p>Every room is different. We cut panels to your exact dimensions for a perfect fit.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Fast, Reliable Service</h3>
+        <p>Quick turnaround on quotes, timely delivery, and real support from people who care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="panels">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Our Panels</div>
+      <h2 class="section-title">Find the Right Style for Your Space</h2>
+      <p class="section-desc">Browse our most popular panel collections. Not sure what works best? We're happy to help you decide.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-img-bg pi-1"></div>
+          <span class="product-img-label">Popular</span>
+          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+        </div>
+        <div class="product-body">
+          <h3>Wood-Look Panels</h3>
+          <p>Warm, natural wood grain finishes that bring texture and character to any wall — without the upkeep of real timber.</p>
+          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-1">
+        <div class="product-img">
+          <div class="product-img-bg pi-2"></div>
+          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+        </div>
+        <div class="product-body">
+          <h3>Textured Wall Panels</h3>
+          <p>3D surface patterns that add depth and visual interest. Great for feature walls in living rooms and bedrooms.</p>
+          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-2">
+        <div class="product-img">
+          <div class="product-img-bg pi-3"></div>
+          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+        </div>
+        <div class="product-body">
+          <h3>Acoustic Panels</h3>
+          <p>Sound-absorbing panels that improve room acoustics while looking polished. Ideal for offices and media rooms.</p>
+          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-3">
+        <div class="product-img">
+          <div class="product-img-bg pi-4"></div>
+          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+        </div>
+        <div class="product-body">
+          <h3>Feature Wall Panels</h3>
+          <p>Bold patterns and clean geometric lines designed to create a standout accent wall in any space.</p>
+          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-4">
+        <div class="product-img">
+          <div class="product-img-bg pi-5"></div>
+          <div class="product-img-overlay"><a href="#quote" class="btn btn-white btn-sm">Request Sample</a></div>
+        </div>
+        <div class="product-body">
+          <h3>Contemporary Panels</h3>
+          <p>Smooth matte finishes with clean lines. A subtle, modern touch that works in any room of the house.</p>
+          <a href="#quote" class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section" id="how-it-works">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple from Start to Finish</h2>
+      <p class="section-desc">Getting your panels is straightforward. Here's what to expect.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Pick a Style</h3>
+        <p>Browse our panels or tell us what you're looking for.</p>
+      </div>
+      <div class="step-card reveal delay-1">
+        <div class="step-num">2</div>
+        <h3>Send Measurements</h3>
+        <p>Share your wall dimensions and any photos of the space.</p>
+      </div>
+      <div class="step-card reveal delay-2">
+        <div class="step-num">3</div>
+        <h3>Get Your Quote</h3>
+        <p>We'll send a clear, detailed quote within 48 hours.</p>
+      </div>
+      <div class="step-card reveal delay-3">
+        <div class="step-num">4</div>
+        <h3>Confirm &amp; Order</h3>
+        <p>Approve the quote and we'll start preparing your panels.</p>
+      </div>
+      <div class="step-card reveal delay-4">
+        <div class="step-num">5</div>
+        <h3>Delivery &amp; Install</h3>
+        <p>Panels arrive ready to mount. DIY or use our installers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Recent Projects</div>
+      <h2 class="section-title">See What's Possible</h2>
+      <p class="section-desc">Real projects from real customers. From cozy bedrooms to modern offices — here's how our panels look installed.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <div class="gallery-item-bg gi-1"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Living Room Accent Wall</strong><span>Wood-Look Panels</span></div></div>
+      </div>
+      <div class="gallery-item reveal delay-1">
+        <div class="gallery-item-bg gi-2"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Bedroom Feature Wall</strong><span>Contemporary Panels</span></div></div>
+      </div>
+      <div class="gallery-item reveal delay-2">
+        <div class="gallery-item-bg gi-3"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Home Office</strong><span>Acoustic Panels</span></div></div>
+      </div>
+      <div class="gallery-item reveal delay-1">
+        <div class="gallery-item-bg gi-4"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Hallway Renovation</strong><span>Textured Panels</span></div></div>
+      </div>
+      <div class="gallery-item reveal delay-2">
+        <div class="gallery-item-bg gi-5"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Open Plan Kitchen</strong><span>Wood-Look Panels</span></div></div>
+      </div>
+      <div class="gallery-item reveal delay-3">
+        <div class="gallery-item-bg gi-6"></div>
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong>Contractor Build</strong><span>Feature Wall Panels</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px" class="reveal">
+      <a href="#" class="btn btn-outline">See All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-desc">Don't just take our word for it — hear from homeowners, contractors, and renovators who've used WallCraft.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"We put wood-look panels in our living room and the difference is amazing. They were easy to install and look so much better than we expected. Great value for the price."</blockquote>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">DM</div>
+          <div class="testimonial-name"><strong>David M.</strong><span>Homeowner, Toronto</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"I'm a contractor and I've used WallCraft on multiple renovation projects. The panels are consistent quality, the sizing is accurate, and my clients are always happy with the result."</blockquote>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">RL</div>
+          <div class="testimonial-name"><strong>Rachel L.</strong><span>General Contractor</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"The acoustic panels in our home office made a real difference for video calls. They look clean and professional, and the whole ordering process was quick and painless."</blockquote>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">JK</div>
+          <div class="testimonial-name"><strong>James K.</strong><span>Remote Worker, Montreal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>10+</h3>
+        <p>Years in Business</p>
+      </div>
+      <div class="stat-item reveal delay-1">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>2,400+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>98%</h3>
+        <p>Customer Satisfaction</p>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>48hr</h3>
+        <p>Quote Response</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="quote-layout">
+      <div class="quote-info reveal">
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Request Your Free Quote</h2>
+        <p>Tell us about your project and we'll get back to you within 48 hours with a clear, no-obligation quote. It's the easiest way to get started.</p>
+        <div class="quote-perks">
+          <div class="quote-perk"><span class="quote-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Free quote — no obligation</div>
+          <div class="quote-perk"><span class="quote-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Response within 48 hours</div>
+          <div class="quote-perk"><span class="quote-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Transparent pricing — no hidden fees</div>
+          <div class="quote-perk"><span class="quote-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Free samples available</div>
+          <div class="quote-perk"><span class="quote-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Custom sizing included</div>
+        </div>
+      </div>
+      <div class="quote-form-card reveal delay-1" id="contact">
+        <div class="quote-form-title">Request a Quote <span class="form-badge">Free</span></div>
+        <form id="quoteForm">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name" required></div>
+            <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone <span class="opt">(optional)</span></label><input type="tel" placeholder="(555) 000-0000"></div>
+            <div class="form-group"><label>Project Type</label><select><option value="">Select one</option><option>Home Renovation</option><option>New Build</option><option>Commercial Space</option><option>Single Room</option><option>Other</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Room Type</label><select><option value="">Select room</option><option>Living Room</option><option>Bedroom</option><option>Office / Study</option><option>Hallway</option><option>Kitchen</option><option>Bathroom</option><option>Multiple Rooms</option><option>Other</option></select></div>
+            <div class="form-group"><label>Panel Style</label><select><option value="">Select style</option><option>Wood-Look Panels</option><option>Textured Panels</option><option>Acoustic Panels</option><option>Feature Wall Panels</option><option>Contemporary Panels</option><option>Not sure yet</option></select></div>
+          </div>
+          <div class="form-group"><label>Wall Dimensions <span class="opt">(approximate is fine)</span></label><input type="text" placeholder="e.g. 3m wide × 2.5m high"></div>
+          <div class="form-group"><label>Message <span class="opt">(optional)</span></label><textarea placeholder="Tell us anything else about your project, timeline, or requirements..."></textarea></div>
+          <div class="form-group">
+            <label>Upload Photo or Plan <span class="opt">(optional)</span></label>
+            <div class="upload-zone">
+              <div class="upload-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+              <p>Click to upload or drag and drop</p>
+              <span>JPG, PNG, or PDF — max 10MB</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Get My Free Quote</button>
+          <p class="form-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Your information is secure and never shared.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-sidebar">
+        <div class="section-header reveal">
+          <div class="section-label">FAQs</div>
+          <h2 class="section-title">Common Questions</h2>
+          <p class="section-desc">Everything you need to know about our panels, process, and service.</p>
+        </div>
+        <div class="faq-sidebar-cta reveal">
+          <p>Can't find what you're looking for? We're happy to help.</p>
+          <a href="#quote" class="btn btn-primary btn-sm">Contact Us</a>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">What are your panels made from?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Our panels are made from high-density MDF, natural wood veneers, and engineered composites depending on the collection. All materials are chosen for durability, appearance, and ease of maintenance.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Are they easy to install?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Yes. Our panels come precision-cut with straightforward mounting options. Many customers install them as a weekend DIY project. We also provide detailed guides and can recommend local installers if you prefer a professional job.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Can I order custom sizes?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Absolutely. Just include your wall dimensions in the quote form and we'll configure the panels to fit your space. Custom sizing is included at no extra charge for most orders.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you offer samples?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Yes, we offer sample kits so you can see and feel the materials in your own space before ordering. Request samples through our quote form or contact us directly.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How long does delivery take?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Standard orders typically ship within 5–10 business days. Custom orders take 2–3 weeks. We'll give you a clear timeline with your quote.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Are they suitable for bathrooms or kitchens?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Yes — certain collections feature moisture-resistant finishes designed for high-humidity areas. Let us know the room type and we'll recommend the best option.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Are the panels easy to clean?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p>Very. A damp cloth is all you need. Our finishes resist dust, fingerprints, and everyday wear — no special products required.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to Upgrade Your Walls?</h2>
+    <p>Get a free, no-obligation quote and see how easy it is to transform your space with WallCraft panels.</p>
+    <div class="final-cta-btns">
+      <a href="#quote" class="btn btn-white btn-lg">Get a Free Quote</a>
+      <a href="#panels" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.25);color:var(--white)">View Panels</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".7"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".3"/></svg></span>
+          WallCraft
+        </div>
+        <p>Decorative wall panels for homes, offices, and commercial spaces. Quality materials, fair pricing, and reliable service.</p>
+      </div>
+      <div class="footer-cta-area">
+        <p>Ready to get started?</p>
+        <a href="#quote" class="btn btn-primary btn-sm" style="box-shadow:0 2px 8px rgba(43,76,126,.4)">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#panels">Our Panels</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Panel Types</h4>
+        <ul>
+          <li><a href="#">Wood-Look Panels</a></li>
+          <li><a href="#">Textured Panels</a></li>
+          <li><a href="#">Acoustic Panels</a></li>
+          <li><a href="#">Feature Wall Panels</a></li>
+          <li><a href="#">Contemporary Panels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@wallcraft.com">hello@wallcraft.com</a></li>
+          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><a href="#">Montreal, QC &amp; surrounding areas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 WallCraft Panels. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
+const menuBtn=document.getElementById('mobileMenuBtn');
+const mobileNav=document.getElementById('mobileNav');
+menuBtn.addEventListener('click',()=>mobileNav.classList.toggle('open'));
+function closeMobile(){mobileNav.classList.remove('open')}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});
+document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();const btn=e.target.querySelector('.form-submit');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{btn.textContent='\u2713 Quote Requested!';btn.style.background='var(--blue-700)';setTimeout(()=>{btn.textContent='Get My Free Quote';btn.style.background='';btn.disabled=false;e.target.reset()},2500)},1200)});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){const y=t.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:'smooth'})}})});
+</script>
+</body>
+</html>
