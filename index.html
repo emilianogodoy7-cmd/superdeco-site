@@ -76,9 +76,8 @@ button{border:none;cursor:pointer;font-family:inherit}
 .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
 .header.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.07)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-size:1.35rem;font-weight:800;color:var(--gray-900);display:flex;align-items:center;gap:10px;letter-spacing:-.03em}
-.logo-mark{width:34px;height:34px;background:linear-gradient(135deg,var(--blue),var(--blue-700));border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(43,76,126,.3)}
-.logo-mark svg{width:18px;height:18px}
+.logo{display:flex;align-items:center}
+.logo-img{display:block;height:34px;width:auto;flex-shrink:0}
 .nav-links{display:none;align-items:center;gap:6px}
 @media(min-width:940px){.nav-links{display:flex}}
 .nav-links a:not(.btn){font-size:.86rem;font-weight:500;color:var(--gray-500);transition:all .2s;padding:8px 14px;border-radius:var(--radius)}
@@ -382,8 +381,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 <header class="header" id="header">
   <div class="container header-inner">
     <a href="#" class="logo">
-      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".9"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".65"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".4"/></svg></span>
-      SuperDeco Canada
+      <img src="images/logo.svg" alt="SuperDeco Canada decorative wall panels logo" class="logo-img" height="34">
     </a>
     <div class="nav-links">
       <!-- MODIFIED: "Panels" nav link now opens the full catalogue page (panels.html) in a new tab.
@@ -882,8 +880,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">
-          <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".7"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="white" opacity=".3"/></svg></span>
-          SuperDeco Canada
+          <img src="images/logo-white.svg" alt="SuperDeco Canada decorative wall panels logo" class="logo-img" height="34">
         </div>
         <p>Decorative wall panels for homes, offices, and commercial spaces. Quality materials, fair pricing, and reliable service.</p>
       </div>
