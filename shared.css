@@ -121,6 +121,13 @@ section{padding:64px 0}
 .pi-4{background:url('images/mirror-pvc.png') center/cover no-repeat}
 .pi-5{background:url('images/marble-pvc.png') center/cover no-repeat}
 .pi-6{background:url('images/metal-sheet.png') center/cover no-repeat}
+.pi-7{background:url('images/indoor-wall-panels.png') center/cover no-repeat}
+.pi-8{background:url('images/products/wpc-fence/Casa-moderna-con-cerca-elegante.png') center/cover no-repeat}
+.pi-9{background:url('images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png') center/cover no-repeat}
+.pi-10{background:url('images/gallery-1.png') center/cover no-repeat}
+.pi-11{background:url('images/products/kitchen/1-kitchen.png') center/cover no-repeat}
+.pi-12{background:url('images/products/fireplace/ChatGPT-Image-7-oct-2025-12_05_14-a.m.png') center/cover no-repeat}
+.pi-13{background:url('images/products/lights/4db34b66b5437dd643265cf9e27b1a43.png') center/cover no-repeat}
 .product-img-label{position:absolute;top:14px;left:14px;background:var(--blue);color:var(--white);padding:5px 14px;border-radius:50px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 2px 6px rgba(43,76,126,.3)}
 .product-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,28,48,.5) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;justify-content:center;padding:20px}
 .product-card:hover .product-img-overlay{opacity:1}
