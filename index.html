@@ -387,7 +387,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     <div class="nav-links">
       <!-- MODIFIED: "Panels" nav link now opens the full catalogue page (panels.html) in a new tab.
            Styling and position are unchanged. -->
-      <a href="panels.html" target="_blank" rel="noopener">Panels</a>
+      <a href="panels.html">Panels</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#projects">Projects</a>
       <a href="#faq">FAQs</a>
@@ -402,7 +402,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
 <div class="mobile-nav" id="mobileNav">
   <!-- MODIFIED: Mobile "Panels" link mirrors the desktop nav — opens panels.html in a new tab. -->
-  <a href="panels.html" target="_blank" rel="noopener" onclick="closeMobile()">Panels</a>
+  <a href="panels.html" onclick="closeMobile()">Panels</a>
   <a href="#how-it-works" onclick="closeMobile()">How It Works</a>
   <a href="#projects" onclick="closeMobile()">Projects</a>
   <a href="#faq" onclick="closeMobile()">FAQs</a>
@@ -513,14 +513,8 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 <!-- PRODUCTS -->
 <!--
   ============================================================
-  MODIFIED: Each product card is now an <a> tag instead of <div>.
-  - target="_blank" opens the product detail page in a new tab.
-  - rel="noopener" is a security best-practice for target="_blank".
-  - Relative paths point to ./products/<slug>.html
-  - The inner "Request Sample" overlay link uses event.stopPropagation()
-    via a small inline handler so clicking it doesn't also trigger
-    the parent card link.
-  - All visual classes/markup are otherwise unchanged.
+  Product cards are <a> tags linking to ./products/<slug>.html
+  in the same tab for a continuous browsing experience.
   ============================================================
 -->
 <section class="products-section" id="panels">
@@ -533,7 +527,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     <div class="products-grid">
 
       <!-- Product 1: Indoor Wall Panels -->
-      <a href="products/indoor-wall-panels.html" target="_blank" rel="noopener" class="product-card reveal" aria-label="View details: Indoor Wall Panels">
+      <a href="products/indoor-wall-panels.html" class="product-card reveal" aria-label="View details: Indoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-1"></div>
           <span class="product-img-label">Popular</span>
@@ -547,7 +541,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       </a>
 
       <!-- Product 2: Outdoor Wall Panels -->
-      <a href="products/outdoor-wall-panels.html" target="_blank" rel="noopener" class="product-card reveal delay-1" aria-label="View details: Outdoor Wall Panels">
+      <a href="products/outdoor-wall-panels.html" class="product-card reveal delay-1" aria-label="View details: Outdoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-2"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -560,7 +554,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       </a>
 
       <!-- Product 3: Acoustic Panels -->
-      <a href="products/acoustic-panels.html" target="_blank" rel="noopener" class="product-card reveal delay-2" aria-label="View details: Acoustic Panels">
+      <a href="products/acoustic-panels.html" class="product-card reveal delay-2" aria-label="View details: Acoustic Panels">
         <div class="product-img">
           <div class="product-img-bg pi-3"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -573,7 +567,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       </a>
 
       <!-- Product 4: Mirror PVC -->
-      <a href="products/mirror-pvc.html" target="_blank" rel="noopener" class="product-card reveal delay-3" aria-label="View details: Mirror PVC">
+      <a href="products/mirror-pvc.html" class="product-card reveal delay-3" aria-label="View details: Mirror PVC">
         <div class="product-img">
           <div class="product-img-bg pi-4"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -586,7 +580,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       </a>
 
       <!-- Product 5: Marble PVC High Gloss -->
-      <a href="products/marble-pvc-high-gloss.html" target="_blank" rel="noopener" class="product-card reveal delay-4" aria-label="View details: Marble PVC High Gloss">
+      <a href="products/marble-pvc-high-gloss.html" class="product-card reveal delay-4" aria-label="View details: Marble PVC High Gloss">
         <div class="product-img">
           <div class="product-img-bg pi-5"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -599,7 +593,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       </a>
 
       <!-- Product 6: Metal PVC -->
-      <a href="products/metal-pvc.html" target="_blank" rel="noopener" class="product-card reveal" aria-label="View details: Metal PVC">
+      <a href="products/metal-pvc.html" class="product-card reveal" aria-label="View details: Metal PVC">
         <div class="product-img">
           <div class="product-img-bg pi-6"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -613,7 +607,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
     </div>
     <div style="text-align:center;margin-top:2.5rem">
-      <a href="panels.html" target="_blank" rel="noopener" class="btn btn-primary btn-lg" aria-label="View all panel categories">See More Panels</a>
+      <a href="panels.html" class="btn btn-primary btn-lg" aria-label="View all panel categories">See More Panels</a>
     </div>
   </div>
 </section>
@@ -905,12 +899,12 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
         <h4>Panel Types</h4>
         <ul>
           <!-- MODIFIED: Footer "Panel Types" links now point to their dedicated detail pages, opening in new tabs. -->
-          <li><a href="products/indoor-wall-panels.html" target="_blank" rel="noopener">Indoor Wall Panels</a></li>
-          <li><a href="products/outdoor-wall-panels.html" target="_blank" rel="noopener">Outdoor Wall Panels</a></li>
-          <li><a href="products/acoustic-panels.html" target="_blank" rel="noopener">Acoustic Panels</a></li>
-          <li><a href="products/mirror-pvc.html" target="_blank" rel="noopener">Mirror PVC</a></li>
-          <li><a href="products/marble-pvc-high-gloss.html" target="_blank" rel="noopener">Marble PVC High Gloss</a></li>
-          <li><a href="products/metal-pvc.html" target="_blank" rel="noopener">Metal PVC</a></li>
+          <li><a href="products/indoor-wall-panels.html">Indoor Wall Panels</a></li>
+          <li><a href="products/outdoor-wall-panels.html">Outdoor Wall Panels</a></li>
+          <li><a href="products/acoustic-panels.html">Acoustic Panels</a></li>
+          <li><a href="products/mirror-pvc.html">Mirror PVC</a></li>
+          <li><a href="products/marble-pvc-high-gloss.html">Marble PVC High Gloss</a></li>
+          <li><a href="products/metal-pvc.html">Metal PVC</a></li>
         </ul>
       </div>
       <div>
