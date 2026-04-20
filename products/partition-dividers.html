@@ -3,15 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outdoor Wall Panels — SuperDeco Canada</title>
-<meta name="description" content="Weather-resistant WPC panels built for exterior walls, facades, and patios — durable protection with a modern, clean look.">
+<title>Partition Dividers — SuperDeco Canada</title>
+<meta name="description" content="Decorative PVC beams and room dividers that add architectural warmth and character to Canadian interiors. Lightweight, durable, and moisture-resistant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<style>
+.catalogue-section{padding:3rem 0 4rem}
+.catalogue-section h2{font-size:1.6rem;font-weight:700;margin-bottom:1.75rem;color:var(--gray-800)}
+.catalogue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
+.catalogue-card{border:1px solid var(--gray-150);border-radius:var(--radius-lg);overflow:hidden;background:var(--white);transition:box-shadow .2s,transform .2s}
+.catalogue-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.catalogue-thumb{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center;background-color:var(--gray-100)}
+.catalogue-info{padding:1rem}
+.catalogue-sku{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.3rem}
+.catalogue-info h3{font-size:.95rem;font-weight:600;color:var(--gray-800);margin-bottom:.35rem}
+.catalogue-spec{font-size:.8rem;color:var(--gray-500);margin-bottom:.85rem}
+.catalogue-info .btn{font-size:.8rem;padding:.4rem .9rem}
+</style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="header" id="header">
   <div class="container header-inner">
     <a href="../index.html" class="logo">
@@ -41,7 +53,6 @@
   <a href="../index.html#quote" class="btn btn-primary" onclick="closeMobile()">Get Quote</a>
 </div>
 
-<!-- ===== PRODUCT DETAIL ===== -->
 <section class="product-detail">
   <div class="container">
 
@@ -55,37 +66,37 @@
       <div class="product-gallery">
         <div class="gallery-main">
           <div class="gallery-main-img" id="mainImage"
-               style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/outdoor-wall-panels.png')"></div>
+               style="background-image:url('../images/products/partition-dividers/nogal-americano.png')"></div>
         </div>
         <div class="gallery-thumbs">
           <button class="gallery-thumb active"
-                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/outdoor-wall-panels.png')"
-                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/outdoor-wall-panels.png"
-                  aria-label="View image 1"></button>
+                  style="background-image:url('../images/products/partition-dividers/nogal-americano.png')"
+                  data-img="../images/products/partition-dividers/nogal-americano.png"
+                  aria-label="View Nogal Americano"></button>
           <button class="gallery-thumb"
-                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/Casa-moderna-con-cerca-elegante.png')"
-                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/Casa-moderna-con-cerca-elegante.png"
-                  aria-label="View image 2"></button>
+                  style="background-image:url('../images/products/partition-dividers/aregue.png')"
+                  data-img="../images/products/partition-dividers/aregue.png"
+                  aria-label="View Aregue"></button>
           <button class="gallery-thumb"
-                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/Interiores-industriales-y-detalles-elegantes.png')"
-                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/Interiores-industriales-y-detalles-elegantes.png"
-                  aria-label="View image 3"></button>
+                  style="background-image:url('../images/products/partition-dividers/Sala-minimalista-con-vigas-de-PVC.png')"
+                  data-img="../images/products/partition-dividers/Sala-minimalista-con-vigas-de-PVC.png"
+                  aria-label="View room scene"></button>
           <button class="gallery-thumb"
-                  style="background-image:url('https://superdecoimport.com/wp-content/uploads/2025/07/banner-1.png')"
-                  data-img="https://superdecoimport.com/wp-content/uploads/2025/07/banner-1.png"
-                  aria-label="View image 4"></button>
+                  style="background-image:url('../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png')"
+                  data-img="../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png"
+                  aria-label="View divider scene"></button>
         </div>
       </div>
 
       <div class="product-info">
-        <div class="pd-eyebrow">Outdoor Collection</div>
-        <h1>Outdoor Wall Panels</h1>
-        <p class="pd-tagline">Weather-resistant WPC panels built for exterior walls, facades, and patios. Durable protection with a modern, clean look.</p>
+        <div class="pd-eyebrow">Space Solutions</div>
+        <h1>Partition Dividers</h1>
+        <p class="pd-tagline">Decorative PVC beams that add warmth, character, and architectural style to any space — versatile enough for ceilings, entryways, and open-plan room dividers.</p>
 
         <div class="pd-meta">
-          <span class="pd-meta-pill">Weatherproof</span>
-          <span class="pd-meta-pill">UV-Stable</span>
-          <span class="pd-meta-pill">Custom Sizes</span>
+          <span class="pd-meta-pill">2 Finishes</span>
+          <span class="pd-meta-pill">Moisture Resistant</span>
+          <span class="pd-meta-pill">Fire Resistant</span>
         </div>
 
         <div class="pd-cta-row">
@@ -95,93 +106,88 @@
 
         <h2 class="pd-section-title">Description</h2>
         <div class="pd-description">
-          <p>Designed to withstand Canadian weather year-round, our outdoor panels are made from wood-plastic composite (WPC) — a tough, low-maintenance material that resists rain, snow, and UV without warping, cracking, or fading.</p>
-          <p>Use them for full-house facades, garden walls, balconies, or patio feature walls. They install over standard battens and arrive ready to mount. The clean horizontal-line profile lends a modern, architectural look to any exterior.</p>
+          <p>These decorative PVC beams replicate the warm, natural appearance of solid wood while offering far superior practical properties. Lightweight and easy to handle, they can be installed by a single person on ceilings, in entranceways, or as freestanding room dividers in open-plan spaces.</p>
+          <p>Unlike natural wood, PVC beams resist moisture, fire, and insects — making them an ideal low-maintenance alternative. Available in Nogal Americano (American walnut) and Aregue finishes.</p>
         </div>
 
         <h2 class="pd-section-title">Features &amp; Specifications</h2>
         <ul class="spec-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Material:</strong> Wood-Plastic Composite (WPC) with UV-protective coating</span>
+            <span><strong>Material:</strong> PVC</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Standard size:</strong> 3000 mm × 156 mm × 21 mm (custom cuts available)</span>
+            <span><strong>Standard size:</strong> 9.84 Ft × 1.91 Inch × 3.94 Inch</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Weather rating:</strong> Suitable for -40°C to +60°C</span>
+            <span><strong>Finishes:</strong> Nogal Americano, Aregue</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Installation:</strong> Mounted on horizontal battens with stainless screws</span>
+            <span><strong>Moisture resistant:</strong> Yes — suitable for humid environments</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Water absorption:</strong> &lt; 0.5% — no swelling or rot</span>
+            <span><strong>Fire resistant:</strong> Yes</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Maintenance:</strong> Rinse with garden hose — no sealing or staining required</span>
+            <span><strong>Insect resistant:</strong> Yes</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Warranty:</strong> 15-year manufacturer warranty</span>
+            <span><strong>Applications:</strong> Ceilings, entryways, living rooms, commercial spaces, room dividers</span>
           </li>
         </ul>
       </div>
     </div>
 
-    <style>
-    .catalogue-section{padding:3rem 0 4rem}
-    .catalogue-section h2{font-size:1.6rem;font-weight:700;margin-bottom:1.75rem;color:var(--gray-800)}
-    .catalogue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.1rem}
-    .catalogue-card{border:1px solid var(--gray-150);border-radius:var(--radius-lg);overflow:hidden;background:var(--white);transition:box-shadow .2s,transform .2s}
-    .catalogue-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-    .catalogue-thumb{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center;background-color:var(--gray-100)}
-    .catalogue-info{padding:.85rem}
-    .catalogue-sku{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.25rem}
-    .catalogue-info h3{font-size:.9rem;font-weight:600;color:var(--gray-800);margin-bottom:.3rem}
-    .catalogue-spec{font-size:.78rem;color:var(--gray-500);margin-bottom:.75rem}
-    .catalogue-info .btn{font-size:.78rem;padding:.35rem .8rem}
-    </style>
     <div class="catalogue-section">
       <h2>Products in this Collection</h2>
       <div class="catalogue-grid">
+
         <div class="catalogue-card">
-          <div class="catalogue-thumb" style="background-image:url('../images/products/outdoor-wall-panels/16.jpg')"></div>
-          <div class="catalogue-info"><div class="catalogue-sku">SKU: K219-26T</div><h3>TEKA</h3><div class="catalogue-spec">9.5 Ft × 8.26 Inch · WPC</div><a href="../index.html#quote" class="btn btn-outline">Quote</a></div>
+          <div class="catalogue-thumb" style="background-image:url('../images/products/partition-dividers/nogal-americano.png')"></div>
+          <div class="catalogue-info">
+            <div class="catalogue-sku">SKU: LK-8152</div>
+            <h3>Nogal Americano</h3>
+            <div class="catalogue-spec">9.84 Ft × 1.91" × 3.94" · PVC</div>
+            <a href="../index.html#quote" class="btn btn-outline">Request Quote</a>
+          </div>
         </div>
+
         <div class="catalogue-card">
-          <div class="catalogue-thumb" style="background-image:url('../images/products/outdoor-wall-panels/17.jpg')"></div>
-          <div class="catalogue-info"><div class="catalogue-sku">SKU: K219-26G</div><h3>Grey</h3><div class="catalogue-spec">9.5 Ft × 8.26 Inch · WPC</div><a href="../index.html#quote" class="btn btn-outline">Quote</a></div>
+          <div class="catalogue-thumb" style="background-image:url('../images/products/partition-dividers/aregue.png')"></div>
+          <div class="catalogue-info">
+            <div class="catalogue-sku">SKU: LK-8140</div>
+            <h3>Aregue</h3>
+            <div class="catalogue-spec">9.84 Ft × 1.91" × 3.94" · PVC</div>
+            <a href="../index.html#quote" class="btn btn-outline">Request Quote</a>
+          </div>
         </div>
-        <div class="catalogue-card">
-          <div class="catalogue-thumb" style="background-image:url('../images/products/outdoor-wall-panels/15.jpg')"></div>
-          <div class="catalogue-info"><div class="catalogue-sku">SKU: K219-26B</div><h3>Dark Brown</h3><div class="catalogue-spec">9.5 Ft × 8.26 Inch · WPC</div><a href="../index.html#quote" class="btn btn-outline">Quote</a></div>
-        </div>
+
       </div>
     </div>
 
     <div class="pd-trust-strip">
       <div class="pd-trust-strip-item">
         <h4>Free Samples</h4>
-        <p>See and feel the panel in your space before you commit.</p>
+        <p>See and feel the beam in your space before you commit.</p>
       </div>
       <div class="pd-trust-strip-item">
         <h4>48-Hour Quote</h4>
         <p>Detailed, no-obligation pricing within two business days.</p>
       </div>
       <div class="pd-trust-strip-item">
-        <h4>15-Year Warranty</h4>
-        <p>Built to last through Canadian winters and summers.</p>
+        <h4>10-Year Warranty</h4>
+        <p>Backed by a decade-long manufacturer guarantee.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
@@ -201,9 +207,8 @@
       <div>
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="../index.html#panels">Our Panels</a></li>
+          <li><a href="../panels.html">All Panels</a></li>
           <li><a href="../index.html#how-it-works">How It Works</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
           <li><a href="../index.html#faq">FAQs</a></li>
           <li><a href="../index.html#quote">Get a Quote</a></li>
         </ul>
@@ -212,19 +217,16 @@
         <h4>Panel Types</h4>
         <ul>
           <li><a href="indoor-wall-panels.html">Indoor Wall Panels</a></li>
-          <li><a href="outdoor-wall-panels.html">Outdoor Wall Panels</a></li>
-          <li><a href="acoustic-panels.html">Acoustic Panels</a></li>
-          <li><a href="mirror-pvc.html">Mirror PVC</a></li>
-          <li><a href="marble-pvc-high-gloss.html">Marble PVC High Gloss</a></li>
-          <li><a href="metal-pvc.html">Metal PVC</a></li>
+          <li><a href="partition-dividers.html">Partition Dividers</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="wpc-fence.html">WPC Fence</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:hello@superdeco.ca">hello@superdeco.ca</a></li>
-          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
-          <li><a href="#">Montreal, QC &amp; surrounding areas</a></li>
+          <li><a href="../index.html#contact">Send a Message</a></li>
         </ul>
       </div>
     </div>

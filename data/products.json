@@ -1,0 +1,1519 @@
+{
+  "categories": [
+    {
+      "name": "Indoor Wall Panels",
+      "slug": "indoor-wall-panels",
+      "description": "Fluted and textured PVC panels with warm wood-look finishes for living rooms, bedrooms, and offices.",
+      "page": "products/indoor-wall-panels.html"
+    },
+    {
+      "name": "Outdoor Wall Panels",
+      "slug": "outdoor-wall-panels",
+      "description": "Weather-resistant WPC panels built for exterior walls, facades, and patios.",
+      "page": "products/outdoor-wall-panels.html"
+    },
+    {
+      "name": "Flat Wall Panels",
+      "slug": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC panels with rich wood-look finishes. Clean, minimal aesthetic ideal for contemporary interiors.",
+      "page": "products/flat-wall-panels.html"
+    },
+    {
+      "name": "Acoustic Panels",
+      "slug": "acoustic-panels",
+      "description": "Sound-absorbing panels that reduce echo and improve room acoustics.",
+      "page": "products/acoustic-panels.html"
+    },
+    {
+      "name": "Mirror PVC",
+      "slug": "mirror-pvc",
+      "description": "Reflective mirror-finish panels that add depth and light to any space.",
+      "page": "products/mirror-pvc.html"
+    },
+    {
+      "name": "Metal PVC",
+      "slug": "metal-pvc",
+      "description": "Metallic-finish PVC panels for an industrial-chic or brushed-metal aesthetic.",
+      "page": "products/metal-pvc.html"
+    },
+    {
+      "name": "Marble PVC High Gloss",
+      "slug": "marble-pvc-high-gloss",
+      "description": "Luxurious high-gloss marble-look panels for sophisticated interiors.",
+      "page": "products/marble-pvc-high-gloss.html"
+    },
+    {
+      "name": "WPC Fence",
+      "slug": "wpc-fence",
+      "description": "Durable wood-plastic composite fence panels designed for outdoor installation on cement surfaces.",
+      "page": "products/wpc-fence.html"
+    },
+    {
+      "name": "Partition Dividers",
+      "slug": "partition-dividers",
+      "description": "Decorative PVC beams and room dividers that add architectural warmth and character to any space.",
+      "page": "products/partition-dividers.html"
+    },
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "description": "Finishing profiles, corner trims, and installation accessories for a professional, polished result.",
+      "page": "products/accessories.html"
+    },
+    {
+      "name": "Kitchen",
+      "slug": "kitchen",
+      "description": "Modern kitchen cabinet door styles available in a range of finishes.",
+      "page": "products/kitchen.html"
+    },
+    {
+      "name": "Fireplace",
+      "slug": "fireplace",
+      "description": "Electric wall-mounted fireplaces with 3D multicolor LED flame effect for residential spaces.",
+      "page": "products/fireplace.html"
+    },
+    {
+      "name": "Lights",
+      "slug": "lights",
+      "description": "LED lighting profiles and exterior wall panel lights designed to complement decorative wall systems.",
+      "page": "products/lights.html"
+    }
+  ],
+  "products": [
+    {
+      "id": "indoor-wall-panels-dark-caramel-lk-3009",
+      "name": "Dark Caramel",
+      "slug": "dark-caramel-lk-3009",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a rich dark caramel wood-look finish. Adds warmth and texture to living rooms, bedrooms, and home offices.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 3009",
+      "images": [
+        "/images/products/indoor-wall-panels/1.jpg",
+        "/images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.54_9d2c6388.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/1.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.54_9d2c6388.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-dark-oak-lk-1019",
+      "name": "Dark Oak",
+      "slug": "dark-oak-lk-1019",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a deep dark oak finish. Creates a dramatic, sophisticated look for accent walls.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 1019",
+      "images": [
+        "/images/products/indoor-wall-panels/5.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/5.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-walnuts-lk-1016",
+      "name": "Walnuts",
+      "slug": "walnuts-lk-1016",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a natural walnut wood-look finish. Timeless warmth for any interior.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK-1016",
+      "images": [
+        "/images/products/indoor-wall-panels/walnuts-3.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/walnuts-3.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-white-ash-0017-46",
+      "name": "White Ash",
+      "slug": "white-ash-0017-46",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a bright white ash finish. Brings a light, airy feel to modern interiors.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "0017-46",
+      "images": [
+        "/images/products/indoor-wall-panels/3.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/3.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-gold-premium-ps-d15020",
+      "name": "Gold Premium",
+      "slug": "gold-premium-ps-d15020",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel with a luxurious gold-tone finish. Perfect for elegant accent walls in offices and reception areas.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with metallic laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "PS-D15020",
+      "images": [
+        "/images/products/indoor-wall-panels/2.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/2.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-calacatta-white-lk-4005",
+      "name": "Calacatta White",
+      "slug": "calacatta-white-lk-4005",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a calacatta white marble-inspired finish. Delivers a clean, refined look.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with stone-look laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK-4005",
+      "images": [
+        "/images/products/indoor-wall-panels/6.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/6.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-black-gold-lk-4010",
+      "name": "Black Gold",
+      "slug": "black-gold-lk-4010",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel with a striking black and gold finish. Ideal for bold accent walls.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with metallic laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK-4010",
+      "images": [
+        "/images/products/indoor-wall-panels/7.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/7.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-ash-wood-lk-1018",
+      "name": "Ash Wood",
+      "slug": "ash-wood-lk-1018",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a natural ash wood finish. A versatile neutral tone for any interior style.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 1018",
+      "images": [
+        "/images/products/indoor-wall-panels/ash-woos.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/ash-woos.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-costa-del-sol-58956-6",
+      "name": "Costa del Sol",
+      "slug": "costa-del-sol-58956-6",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a warm mediterranean-inspired finish. Brings a relaxed, sun-kissed feel to interiors.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "58956-6",
+      "images": [
+        "/images/products/indoor-wall-panels/9.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/9.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-innovation-grey-lk-1021",
+      "name": "Innovation Grey",
+      "slug": "innovation-grey-lk-1021",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a contemporary grey finish. A modern, versatile choice for offices, studios, and living spaces.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 1021",
+      "images": [
+        "/images/products/indoor-wall-panels/10.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/10.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-classic-wood-lk-1017",
+      "name": "Classic Wood",
+      "slug": "classic-wood-lk-1017",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a classic medium-tone wood finish. A timeless option that works in traditional and modern settings.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 1017",
+      "images": [
+        "/images/products/indoor-wall-panels/madera-clasica.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/madera-clasica.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-pure-black-lk-8001",
+      "name": "Pure Black",
+      "slug": "pure-black-lk-8001",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a deep matte black finish. Creates a bold, dramatic statement on feature walls.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with matte finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK 8001",
+      "images": [
+        "/images/products/indoor-wall-panels/12.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/12.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-corners-t",
+      "name": "Corners T-Wall Panels",
+      "slug": "corners-t-wall-panels",
+      "category": "indoor-wall-panels",
+      "description": "Corner trims used to cover and protect the edges where two walls with wall panels meet. Ensures a neat, professional finish on interior and exterior corners. Available in all panel colours.",
+      "specifications": {
+        "compatibility": "Fits all T-wall panel profiles",
+        "application": "Interior and exterior corners",
+        "finish": "Available in all wall panel colours"
+      },
+      "sku": "CORNERS-T",
+      "images": [
+        "/images/products/indoor-wall-panels/esquineros-1.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/esquineros-1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-end-line-lti-ltd",
+      "name": "End Line LTI / LTD",
+      "slug": "end-line-lti-ltd",
+      "category": "indoor-wall-panels",
+      "description": "Finishing trims used to give wall panels a clean and polished look. Covers edges, connects panels at corners or transitions, and protects panel borders from dust and moisture. Available in all panel colours.",
+      "specifications": {
+        "variants": "LTI (left end) and LTD (right end)",
+        "finish": "Available in all wall panel colours",
+        "application": "Edge finishing and corner transitions"
+      },
+      "sku": "LTI-LTD",
+      "images": [
+        "/images/products/indoor-wall-panels/lineas-de-terminacion-1.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/lineas-de-terminacion-1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "indoor-wall-panels-nogal-lk8152",
+      "name": "Nogal",
+      "slug": "nogal-lk8152",
+      "category": "indoor-wall-panels",
+      "description": "Fluted PVC indoor wall panel in a rich nogal (walnut) wood-look finish. Adds warmth and depth to any interior space.",
+      "specifications": {
+        "size": "9.5 Ft x 6.29 Inch",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "installation": "Adhesive mount or screw fixing"
+      },
+      "sku": "LK8152",
+      "images": [
+        "/images/products/indoor-wall-panels/nogal-photoshop.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/12/nogal-photoshop.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "outdoor-wall-panels-teka-k219-26t",
+      "name": "TEKA",
+      "slug": "teka-k219-26t",
+      "category": "outdoor-wall-panels",
+      "description": "Weather-resistant WPC outdoor wall panel in a teak wood-look finish. Clip-on installation, UV-resistant, and low maintenance. Ideal for exterior walls, facades, and patios.",
+      "specifications": {
+        "size": "9.5 Ft x 8.26 Inch",
+        "material": "WPC (Wood Plastic Composite)",
+        "installation": "Clip-on system",
+        "weather_resistance": "UV-resistant, water-resistant"
+      },
+      "sku": "K219-26T",
+      "images": [
+        "/images/products/outdoor-wall-panels/16.jpg",
+        "/images/products/outdoor-wall-panels/teka.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/16.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/teka.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "outdoor-wall-panels-grey-k219-26g",
+      "name": "Grey",
+      "slug": "grey-k219-26g",
+      "category": "outdoor-wall-panels",
+      "description": "Weather-resistant WPC outdoor wall panel in a contemporary grey finish. Clip-on installation, UV-resistant, and built to last in all Canadian climates.",
+      "specifications": {
+        "size": "9.5 Ft x 8.26 Inch",
+        "material": "WPC (Wood Plastic Composite)",
+        "installation": "Clip-on system",
+        "weather_resistance": "UV-resistant, water-resistant"
+      },
+      "sku": "K219-26G",
+      "images": [
+        "/images/products/outdoor-wall-panels/17.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/17.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "outdoor-wall-panels-dark-brown-k219-26b",
+      "name": "Dark Brown",
+      "slug": "dark-brown-k219-26b",
+      "category": "outdoor-wall-panels",
+      "description": "Weather-resistant WPC outdoor wall panel in a rich dark brown finish. Provides a natural wood aesthetic with superior durability for exterior applications.",
+      "specifications": {
+        "size": "9.5 Ft x 8.26 Inch",
+        "material": "WPC (Wood Plastic Composite)",
+        "installation": "Clip-on system",
+        "weather_resistance": "UV-resistant, water-resistant"
+      },
+      "sku": "K219-26B",
+      "images": [
+        "/images/products/outdoor-wall-panels/15.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/15.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-pure-black-flat-lk8001",
+      "name": "Pure Black",
+      "slug": "pure-black-flat-lk8001",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in deep matte black. Clean, minimal aesthetic ideal for contemporary and industrial interiors.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with matte finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK8001",
+      "images": [
+        "/images/products/flat-wall-panels/pure-black-flat.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/pure-black.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-walnut-flat-lk4016",
+      "name": "Walnut",
+      "slug": "walnut-flat-lk4016",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a warm walnut wood-look finish. Brings natural warmth without the fluted texture.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK4016",
+      "images": [
+        "/images/products/flat-wall-panels/walnut-2.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/walnut-2.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-costa-del-sol-flat-58956-6",
+      "name": "Costa del Sol",
+      "slug": "costa-del-sol-flat-58956-6",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a warm mediterranean-toned finish. A sun-kissed look for modern, relaxed interiors.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-58956-6",
+      "images": [
+        "/images/products/flat-wall-panels/24.jpg",
+        "/images/products/flat-wall-panels/costa-del-sol.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/24.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/costa-del-sol.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-dark-gold-flat-4010",
+      "name": "Dark Gold",
+      "slug": "dark-gold-flat-4010",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a rich dark gold metallic finish. Adds a touch of luxury to feature walls.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with metallic laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-4010",
+      "images": [
+        "/images/products/flat-wall-panels/23.jpg",
+        "/images/products/flat-wall-panels/dark-gold.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/23.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/dark-gold.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-ash-wood-flat-lk1018",
+      "name": "Ash Wood",
+      "slug": "ash-wood-flat-lk1018",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a natural ash wood finish. A clean, versatile neutral for any interior.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK1018",
+      "images": [
+        "/images/products/flat-wall-panels/22.jpg",
+        "/images/products/flat-wall-panels/ash-wood.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/22.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/ash-wood.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-dark-oak-flat-lk1019",
+      "name": "Dark Oak",
+      "slug": "dark-oak-flat-lk1019",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a deep dark oak finish. Clean lines meet rich, dark wood tones.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK1019",
+      "images": [
+        "/images/products/flat-wall-panels/21.jpg",
+        "/images/products/flat-wall-panels/dark-oak.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/21.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/dark-oak.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-classic-wood-flat-lk1017",
+      "name": "Classic Wood",
+      "slug": "classic-wood-flat-lk1017",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a classic medium-tone wood finish. A reliable, timeless option for traditional and modern settings.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK1017",
+      "images": [
+        "/images/products/flat-wall-panels/madera-clasica-flat-2.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/madera-clasica-flat-2.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-ash-white-flat-0017-46",
+      "name": "Ash White",
+      "slug": "ash-white-flat-0017-46",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a bright ash white finish. Crisp and clean — perfect for Scandinavian-inspired interiors.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-0017-46",
+      "images": [
+        "/images/products/flat-wall-panels/19.jpg",
+        "/images/products/flat-wall-panels/white-ash.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/19.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/white-ash.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "flat-wall-panels-dark-caramel-flat-lk3009",
+      "name": "Dark Caramel",
+      "slug": "dark-caramel-flat-lk3009",
+      "category": "flat-wall-panels",
+      "description": "Smooth flat-profile PVC wall panel in a warm dark caramel wood finish. A rich, inviting tone for living spaces and offices.",
+      "specifications": {
+        "size": "15.74 Inch x 9.5 Ft",
+        "material": "High-density PVC with wood-grain laminate finish",
+        "profile": "Flat (no fluting)"
+      },
+      "sku": "FLAT-LK3009",
+      "images": [
+        "/images/products/flat-wall-panels/18.jpg",
+        "/images/products/flat-wall-panels/dark-caramel.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/18.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/dark-caramel.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "acoustic-panels-lk-3008",
+      "name": "Acoustic Panel",
+      "slug": "acoustic-panel-lk-3008",
+      "category": "acoustic-panels",
+      "description": "Sound-absorbing acoustic slat wall panel designed to reduce echo and improve room acoustics. Ideal for offices, home theatres, studios, and open-concept living areas.",
+      "specifications": {
+        "material": "Acoustic felt backing with decorative wood slats",
+        "application": "Offices, studios, media rooms, home theatres"
+      },
+      "sku": "LK-3008",
+      "images": [
+        "/images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/wall-panels-acoustic-22_02.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "acoustic-panels-ash-wood-lk-h1018",
+      "name": "Acoustic Panel Ash Wood",
+      "slug": "acoustic-panel-ash-wood-lk-h1018",
+      "category": "acoustic-panels",
+      "description": "Acoustic slat wall panel in an ash wood finish. Combines effective sound absorption with a natural, warm aesthetic.",
+      "specifications": {
+        "material": "Acoustic felt backing with decorative ash wood slats",
+        "application": "Offices, studios, media rooms, home theatres"
+      },
+      "sku": "LK-H1018",
+      "images": [
+        "/images/products/acoustic-panels/wall-panels-acoustic_01.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/wall-panels-acoustic_01.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "acoustic-panels-nogal-americano-lk-h8152",
+      "name": "Acoustic Panel Nogal Americano",
+      "slug": "acoustic-panel-nogal-americano-lk-h8152",
+      "category": "acoustic-panels",
+      "description": "Acoustic slat wall panel in a rich American walnut finish. Premium sound control with a dark, luxurious wood aesthetic.",
+      "specifications": {
+        "material": "Acoustic felt backing with decorative walnut slats",
+        "application": "Offices, studios, media rooms, home theatres"
+      },
+      "sku": "LK-H8152",
+      "images": [
+        "/images/products/acoustic-panels/wall-panels-acoustic_03.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/wall-panels-acoustic_03.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "acoustic-panels-aregue-lk-h8140",
+      "name": "Acoustic Panel Aregue",
+      "slug": "acoustic-panel-aregue-lk-h8140",
+      "category": "acoustic-panels",
+      "description": "Acoustic slat wall panel in the Aregue wood finish. A distinctive tone that adds warmth while controlling unwanted sound reflections.",
+      "specifications": {
+        "material": "Acoustic felt backing with decorative wood slats",
+        "application": "Offices, studios, media rooms, home theatres"
+      },
+      "sku": "LK-H8140",
+      "images": [
+        "/images/products/acoustic-panels/wall-panels-acoustic_02.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/wall-panels-acoustic_02.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "mirror-pvc-classic-mirror-wpc-01",
+      "name": "Classic Mirror",
+      "slug": "classic-mirror-wpc-01",
+      "category": "mirror-pvc",
+      "description": "Mirror-finish PVC panel in a clear classic silver-mirror look. Adds depth and the illusion of space to any room.",
+      "specifications": {
+        "size": "4.5 Ft x 8 Ft x 0.31 Inch",
+        "material": "WPC with mirror-finish laminate",
+        "finish": "Classic silver mirror"
+      },
+      "sku": "WPC-01",
+      "images": [
+        "/images/products/mirror-pvc/25.jpg",
+        "/images/products/mirror-pvc/classic.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/25.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/classic.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "mirror-pvc-steel-mirror-wpc-02",
+      "name": "Steel Mirror",
+      "slug": "steel-mirror-wpc-02",
+      "category": "mirror-pvc",
+      "description": "Mirror-finish PVC panel with a brushed steel mirror appearance. Adds a modern, industrial edge to walls and interiors.",
+      "specifications": {
+        "size": "4.5 Ft x 8 Ft x 0.31 Inch",
+        "material": "WPC with mirror-finish laminate",
+        "finish": "Brushed steel mirror"
+      },
+      "sku": "WPC-02",
+      "images": [
+        "/images/products/mirror-pvc/26.jpg",
+        "/images/products/mirror-pvc/steel.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/26.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/steel.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "mirror-pvc-gold-mirror-wpc-03",
+      "name": "Gold Mirror",
+      "slug": "gold-mirror-wpc-03",
+      "category": "mirror-pvc",
+      "description": "Mirror-finish PVC panel with a warm gold mirror effect. An elegant, eye-catching choice for luxury accent walls.",
+      "specifications": {
+        "size": "4.5 Ft x 8 Ft x 0.31 Inch",
+        "material": "WPC with mirror-finish laminate",
+        "finish": "Gold mirror"
+      },
+      "sku": "WPC-03",
+      "images": [
+        "/images/products/mirror-pvc/27.jpg",
+        "/images/products/mirror-pvc/gold.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/27.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/gold.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "mirror-pvc-pink-mirror-wpc-04",
+      "name": "Pink Mirror",
+      "slug": "pink-mirror-wpc-04",
+      "category": "mirror-pvc",
+      "description": "Mirror-finish PVC panel in a soft rose-gold pink mirror finish. A contemporary, on-trend option for feature walls and boutique interiors.",
+      "specifications": {
+        "size": "4.5 Ft x 8 Ft x 0.31 Inch",
+        "material": "WPC with mirror-finish laminate",
+        "finish": "Rose-gold pink mirror"
+      },
+      "sku": "WPC-04",
+      "images": [
+        "/images/products/mirror-pvc/28.jpg",
+        "/images/products/mirror-pvc/pink.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/28.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/pink.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "metal-pvc-metal-bronze-mmb-03",
+      "name": "Metal Bronze",
+      "slug": "metal-bronze-mmb-03",
+      "category": "metal-pvc",
+      "description": "High-quality metallic PVC decorative panel in a rich bronze finish. Brings a warm, modern sophistication to interior accent walls and commercial spaces.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with metallic bronze finish",
+        "finish": "Uniform metallic texture"
+      },
+      "sku": "MMB-03",
+      "images": [
+        "/images/products/metal-pvc/bronce-metal-2.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/bronce-metal-2.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "metal-pvc-metal-silver-mms-04",
+      "name": "Metal Silver",
+      "slug": "metal-silver-mms-04",
+      "category": "metal-pvc",
+      "description": "High-quality metallic PVC decorative panel in a sleek silver finish. A modern, versatile choice for accent walls, reception areas, and commercial interiors.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with metallic silver finish",
+        "finish": "Uniform metallic texture"
+      },
+      "sku": "MMS-04",
+      "images": [
+        "/images/products/metal-pvc/silver.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/silver.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-marquina-black-kl8233",
+      "name": "Marquina Black",
+      "slug": "marquina-black-kl8233",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in the iconic Marquina black marble pattern. Deep black veining creates a dramatic, luxurious statement on any surface.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Marquina black marble, high gloss"
+      },
+      "sku": "KL8233",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/31.jpg",
+        "/images/products/marble-pvc-high-gloss/negro-marquina.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/31.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/negro-marquina.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-dark-london-kl8226",
+      "name": "Dark London",
+      "slug": "dark-london-kl8226",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in a dark London marble finish. A moody, sophisticated pattern for premium interiors.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Dark London marble, high gloss"
+      },
+      "sku": "KL8226",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/32.jpg",
+        "/images/products/marble-pvc-high-gloss/dark-london.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/32.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/dark-london.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-blanco-carrara-gold-ljb0001t",
+      "name": "Blanco Carrara Gold",
+      "slug": "blanco-carrara-gold-ljb0001t",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in the classic Carrara white marble pattern with subtle gold veining. Elegant and timeless for kitchens, bathrooms, and feature walls.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Carrara white with gold veining, high gloss"
+      },
+      "sku": "LJB0001T",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/33.jpg",
+        "/images/products/marble-pvc-high-gloss/blanco-gold-carrara.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/33.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/blanco-gold-carrara.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-blanco-calacatta-r352",
+      "name": "Blanco Calacatta",
+      "slug": "blanco-calacatta-r352",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in the prestigious Calacatta white marble pattern. Delivers the look of natural stone at a fraction of the cost.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Calacatta white marble, high gloss"
+      },
+      "sku": "R352",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/34.jpg",
+        "/images/products/marble-pvc-high-gloss/blanco-calacatta.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/34.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/blanco-calacatta.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-grey-gold-lj24807-2",
+      "name": "Grey Gold",
+      "slug": "grey-gold-lj24807-2",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in a grey marble finish with gold veining. Contemporary and luxurious — perfect for accent walls and statement installations.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Grey marble with gold veining, high gloss"
+      },
+      "sku": "LJ24807-2",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/35.jpg",
+        "/images/products/marble-pvc-high-gloss/grey-gold.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/35.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/06/grey-gold.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-dark-gold-kl8231",
+      "name": "Dark Gold",
+      "slug": "dark-gold-kl8231",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in a dark marble finish with rich gold veining. A bold, opulent choice for premium commercial and residential interiors.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Dark marble with gold veining, high gloss"
+      },
+      "sku": "KL8231",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/36.jpg",
+        "/images/products/marble-pvc-high-gloss/dark-gold-marble.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/36.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/dark-gold.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "marble-pvc-high-gloss-blanco-ibiza-dy2424",
+      "name": "Blanco Ibiza",
+      "slug": "blanco-ibiza-dy2424",
+      "category": "marble-pvc-high-gloss",
+      "description": "High-gloss PVC panel in a bright Ibiza white marble pattern. Fresh, light, and modern — ideal for kitchens and bathrooms.",
+      "specifications": {
+        "size": "8 Ft x 4 Ft",
+        "material": "PVC with high-gloss marble-look laminate",
+        "finish": "Ibiza white marble, high gloss"
+      },
+      "sku": "DY2424",
+      "images": [
+        "/images/products/marble-pvc-high-gloss/ChatGPT-Image-26-sept-2025-05_37_53-p.m.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/12/ChatGPT-Image-26-sept-2025-05_37_53-p.m.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "wpc-fence-outdoor-wpc-fence",
+      "name": "Outdoor WPC Fence",
+      "slug": "outdoor-wpc-fence",
+      "category": "wpc-fence",
+      "description": "WPC (Wood Plastic Composite) fence panels designed for installation on cement surfaces. Features a metal base with screw-mounted support for secure attachment. High weather resistance makes them suitable for terraces, patios, commercial areas, and urban gardens.",
+      "specifications": {
+        "material": "WPC (Wood Plastic Composite)",
+        "installation": "Metal base with screw-mounted support for cement surfaces",
+        "weather_resistance": "High weather resistance",
+        "applications": "Terraces, patios, commercial areas, urban gardens"
+      },
+      "sku": "WPC-FENCE-001",
+      "images": [
+        "/images/products/wpc-fence/fences.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/fences.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "partition-dividers-nogal-americano-lk-8152",
+      "name": "Nogal Americano",
+      "slug": "nogal-americano-lk-8152",
+      "category": "partition-dividers",
+      "description": "Decorative PVC beams in an American walnut finish that add warmth, character, and architectural style to any space. Lightweight yet durable beams replicate the natural wood appearance while offering moisture, fire, and insect resistance. Suitable for ceilings, entrances, living rooms, commercial spaces, or room dividers.",
+      "specifications": {
+        "size": "9.84 Ft x 1.91 Inch x 3.94 Inch",
+        "material": "PVC",
+        "features": "Moisture-resistant, fire-resistant, insect-resistant, low-maintenance",
+        "finish": "American walnut"
+      },
+      "sku": "LK-8152",
+      "images": [
+        "/images/products/partition-dividers/nogal-americano.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/nogal-americano.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "partition-dividers-aregue-lk-8140",
+      "name": "Aregue",
+      "slug": "aregue-lk-8140",
+      "category": "partition-dividers",
+      "description": "Decorative PVC beams in the Aregue wood finish that add warmth and architectural style to any space. Lightweight, durable, and easy to maintain. Suitable for ceilings, entryways, living areas, commercial settings, and room dividers.",
+      "specifications": {
+        "size": "9.84 Ft x 1.91 Inch x 3.94 Inch",
+        "material": "PVC",
+        "features": "Moisture-resistant, fire-resistant, insect-resistant, low-maintenance",
+        "finish": "Aregue"
+      },
+      "sku": "LK-8140",
+      "images": [
+        "/images/products/partition-dividers/aregue.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/08/aregue.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-end-line-lti-ltd",
+      "name": "End Line LTI / LTD",
+      "slug": "end-line-lti-ltd",
+      "category": "accessories",
+      "description": "Finishing trims used to give wall panels a clean and polished look. Covers edges, connects panels at corners or transitions, and protects borders from dust and moisture. Available in all panel colours.",
+      "specifications": {
+        "variants": "LTI (left end) and LTD (right end)",
+        "finish": "Available in all wall panel colours",
+        "application": "Panel edge finishing and transitions"
+      },
+      "sku": "LTI-LTD",
+      "images": [
+        "/images/products/accessories/lineas-de-terminacion-1.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/lineas-de-terminacion-1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-corners-t-wall-panels",
+      "name": "Corners T-Wall Panels",
+      "slug": "corners-t-wall-panels",
+      "category": "accessories",
+      "description": "Corner trims used to cover and protect the edges where two walls with wall panels meet. Ensures a neat, professional finish on interior and exterior corners. Available in all panel colours.",
+      "specifications": {
+        "compatibility": "Fits all T-wall panel profiles",
+        "application": "Interior and exterior corners",
+        "finish": "Available in all wall panel colours"
+      },
+      "sku": "CORNERS-T",
+      "images": [
+        "/images/products/accessories/esquineros-1.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/esquineros-1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-silver-profile-sp-002",
+      "name": "Silver Profile",
+      "slug": "silver-profile-sp-002",
+      "category": "accessories",
+      "description": "Decorative silver finishing profile for wall panel installations. Provides a clean, professional edge transition between panels and adjacent surfaces.",
+      "specifications": {
+        "finish": "Silver",
+        "application": "Wall panel edge trim and transitions"
+      },
+      "sku": "SP-002",
+      "images": [
+        "/images/products/accessories/3-s.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/3-s.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-gold-profile-bp-001",
+      "name": "Gold Profile",
+      "slug": "gold-profile-bp-001",
+      "category": "accessories",
+      "description": "Decorative gold finishing profile for wall panel installations. Adds a luxurious accent and clean edge to panel transitions.",
+      "specifications": {
+        "finish": "Gold",
+        "application": "Wall panel edge trim and transitions"
+      },
+      "sku": "BP-001",
+      "images": [
+        "/images/products/accessories/1-acc.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/1.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-black-profile-u-corner-bpuc-003",
+      "name": "Black Profile U-Corner",
+      "slug": "black-profile-u-corner-bpuc-003",
+      "category": "accessories",
+      "description": "Black U-shaped corner profile for wall panel installations. Provides a clean, finished look at panel edges and wall transitions.",
+      "specifications": {
+        "size": "8 Ft x 3/16 Inch",
+        "finish": "Black",
+        "type": "U-Corner"
+      },
+      "sku": "BPUC-003",
+      "images": [
+        "/images/products/accessories/2-5.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/2-5.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-aluminium-profile-u-corner-apuc-003",
+      "name": "Aluminium Profile U-Corner",
+      "slug": "aluminium-profile-u-corner-apuc-003",
+      "category": "accessories",
+      "description": "Aluminium U-shaped corner profile for wall panel installations. Available in multiple finishes for seamless integration with any panel collection.",
+      "specifications": {
+        "size": "8 Ft x 3/16 Inch",
+        "finish": "Aluminium (also available in black and gold)",
+        "type": "U-Corner"
+      },
+      "sku": "APUC-003",
+      "images": [
+        "/images/products/accessories/1-6.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/1-6.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-gold-profile-u-corner-gpuc-003",
+      "name": "Gold Profile U-Corner",
+      "slug": "gold-profile-u-corner-gpuc-003",
+      "category": "accessories",
+      "description": "Gold U-shaped corner profile for wall panel installations. Adds a refined, luxurious finish at panel edges.",
+      "specifications": {
+        "size": "8 Ft x 3/16 Inch",
+        "finish": "Gold",
+        "type": "U-Corner"
+      },
+      "sku": "GPUC-003",
+      "images": [
+        "/images/products/accessories/3-4.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/3-4.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-black-profile-corner-bpc-003",
+      "name": "Black Profile Corner",
+      "slug": "black-profile-corner-bpc-003",
+      "category": "accessories",
+      "description": "Black L-shaped corner profile for wall panel installations. Clean and discreet finishing for interior corners.",
+      "specifications": {
+        "finish": "Black",
+        "type": "L-Corner"
+      },
+      "sku": "BPC-003",
+      "images": [
+        "/images/products/accessories/3-2.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/3-2.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-aluminium-profile-corner-apc-001",
+      "name": "Aluminium Profile Corner",
+      "slug": "aluminium-profile-corner-apc-001",
+      "category": "accessories",
+      "description": "Aluminium L-shaped corner profile for wall panel installations. A neutral, versatile finish for interior corner transitions.",
+      "specifications": {
+        "finish": "Aluminium",
+        "type": "L-Corner"
+      },
+      "sku": "APC-001",
+      "images": [
+        "/images/products/accessories/1-4.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/1-4.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-gold-profile-corner-gpc-002",
+      "name": "Gold Profile Corner",
+      "slug": "gold-profile-corner-gpc-002",
+      "category": "accessories",
+      "description": "Gold L-shaped corner profile for wall panel installations. Adds a premium accent finish at panel corners.",
+      "specifications": {
+        "finish": "Gold",
+        "type": "L-Corner"
+      },
+      "sku": "GPC-002",
+      "images": [
+        "/images/products/accessories/2-3.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/2-3.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-black-profile-union-bpu-002",
+      "name": "Black Profile Union",
+      "slug": "black-profile-union-bpu-002",
+      "category": "accessories",
+      "description": "Black joining profile for connecting wall panels end-to-end. Provides a seamless, finished seam between adjacent panels.",
+      "specifications": {
+        "finish": "Black",
+        "type": "Union/joining profile"
+      },
+      "sku": "BPU-002",
+      "images": [
+        "/images/products/accessories/2-4.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/2-4.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-aluminium-profile-union-apu-002",
+      "name": "Aluminium Profile Union",
+      "slug": "aluminium-profile-union-apu-002",
+      "category": "accessories",
+      "description": "Aluminium joining profile for connecting wall panels end-to-end. Neutral finish for clean, professional seam coverage.",
+      "specifications": {
+        "finish": "Aluminium",
+        "type": "Union/joining profile"
+      },
+      "sku": "APU-002",
+      "images": [
+        "/images/products/accessories/1-5.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/1-5.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-golden-profile-union-gpu-002",
+      "name": "Golden Profile Union",
+      "slug": "golden-profile-union-gpu-002",
+      "category": "accessories",
+      "description": "Gold joining profile for connecting wall panels end-to-end. Adds a luxurious gold accent at panel seams.",
+      "specifications": {
+        "finish": "Gold",
+        "type": "Union/joining profile"
+      },
+      "sku": "GPU-002",
+      "images": [
+        "/images/products/accessories/3-3.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/3-3.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-black-profile-round-corner-bprc-004",
+      "name": "Black Profile Round Corner",
+      "slug": "black-profile-round-corner-bprc-004",
+      "category": "accessories",
+      "description": "Black round-corner profile for wall panel installations. Provides a smooth, radiused finish at exposed panel edges and corners.",
+      "specifications": {
+        "finish": "Black",
+        "type": "Round corner profile"
+      },
+      "sku": "BPRC-004",
+      "images": [
+        "/images/products/accessories/3-2-round.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/3-2-247x296.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-aluminium-profile-round-corner-aprc-004",
+      "name": "Aluminium Profile Round Corner",
+      "slug": "aluminium-profile-round-corner-aprc-004",
+      "category": "accessories",
+      "description": "Aluminium round-corner profile for wall panel installations. A neutral finish for smooth, radiused panel edges.",
+      "specifications": {
+        "finish": "Aluminium",
+        "type": "Round corner profile"
+      },
+      "sku": "APRC-004",
+      "images": [
+        "/images/products/accessories/2-6.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/2-6.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-golden-profile-round-corner-gprc-004",
+      "name": "Golden Profile Round Corner",
+      "slug": "golden-profile-round-corner-gprc-004",
+      "category": "accessories",
+      "description": "Gold round-corner profile for wall panel installations. A premium, lustrous finish for exposed panel edges and corners.",
+      "specifications": {
+        "finish": "Gold",
+        "type": "Round corner profile"
+      },
+      "sku": "GPRC-004",
+      "images": [
+        "/images/products/accessories/1-7.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/1-7.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "accessories-instalations-clip-a-01",
+      "name": "Installation Clip",
+      "slug": "installation-clip-a-01",
+      "category": "accessories",
+      "description": "Standard installation clip for secure wall panel mounting. Ensures consistent spacing and alignment during installation.",
+      "specifications": {
+        "application": "Wall panel clip-on installation system",
+        "compatibility": "Compatible with all clip-on panel systems"
+      },
+      "sku": "A-01",
+      "images": [
+        "/images/products/accessories/14.jpg"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/06/14.jpg"
+      ],
+      "price": null
+    },
+    {
+      "id": "kitchen-white-shaker",
+      "name": "White Shaker",
+      "slug": "white-shaker",
+      "category": "kitchen",
+      "description": "Classic white shaker-style kitchen cabinet doors. Timeless design with clean recessed panel detailing — suitable for traditional and transitional kitchens.",
+      "specifications": {
+        "style": "Shaker",
+        "finish": "White",
+        "application": "Kitchen cabinet doors"
+      },
+      "sku": "KITCHEN-WS",
+      "images": [
+        "/images/products/kitchen/gabinetes-cocinas-2.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/gabinetes-cocinas-2.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "kitchen-white-high-gloss-flat-panel",
+      "name": "White High Gloss Flat Panel",
+      "slug": "white-high-gloss-flat-panel",
+      "category": "kitchen",
+      "description": "Sleek white high-gloss flat-panel kitchen cabinet doors. A modern, minimalist style that reflects light and keeps spaces feeling open and bright.",
+      "specifications": {
+        "style": "Flat panel",
+        "finish": "White high gloss",
+        "application": "Kitchen cabinet doors"
+      },
+      "sku": "KITCHEN-WHGFP",
+      "images": [
+        "/images/products/kitchen/gabinetes-cocinas.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/gabinetes-cocinas.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "kitchen-oak-shaker",
+      "name": "Oak Shaker",
+      "slug": "oak-shaker",
+      "category": "kitchen",
+      "description": "Warm oak-finish shaker-style kitchen cabinet doors. Brings natural wood warmth to contemporary and transitional kitchen designs.",
+      "specifications": {
+        "style": "Shaker",
+        "finish": "Oak",
+        "application": "Kitchen cabinet doors"
+      },
+      "sku": "KITCHEN-OS",
+      "images": [
+        "/images/products/kitchen/1-kitchen.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "fireplace-fp-001",
+      "name": "Electric Fireplace",
+      "slug": "electric-fireplace-fp-001",
+      "category": "fireplace",
+      "description": "Wall-mounted or recessed electric fireplace featuring a 3D multicolor LED flame effect. Adjustable heat settings, remote and touch-panel controls, and a quiet operation make it ideal for residential living rooms and bedrooms.",
+      "specifications": {
+        "power": "1500W",
+        "voltage": "120V",
+        "dimensions": "60\" x 5.9\" x 17.7\" (152 x 15 x 45 cm)",
+        "flame_effect": "3D multicolor LED",
+        "installation": "Wall-mounted or recessed",
+        "heating_area": "160–270 ft² (15–25 m²)",
+        "controls": "Remote & touch panel",
+        "heat_modes": "Flame only, Low, High",
+        "timer": "Up to 8 hours",
+        "thermostat": "Adjustable",
+        "safety": "Overheat protection",
+        "front_material": "Tempered glass + metal frame"
+      },
+      "sku": "FP-001",
+      "images": [
+        "/images/products/fireplace/Sin-titulo-1-1.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/10/Sin-titulo-1-1.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "lights-exterior-wall-panel-light-ewpl-002",
+      "name": "Exterior Wall Panel Light",
+      "slug": "exterior-wall-panel-light-ewpl-002",
+      "category": "lights",
+      "description": "LED exterior wall panel light designed for outdoor wall cladding systems. Adds ambient lighting to exterior facades and outdoor living areas.",
+      "specifications": {
+        "type": "LED",
+        "application": "Exterior wall panels and facades"
+      },
+      "sku": "EWPL-002",
+      "images": [
+        "/images/products/lights/4db34b66b5437dd643265cf9e27b1a43.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/12/4db34b66b5437dd643265cf9e27b1a43.png"
+      ],
+      "price": null
+    },
+    {
+      "id": "lights-led-light-profile-llp-01",
+      "name": "LED Light Profile",
+      "slug": "led-light-profile-llp-01",
+      "category": "lights",
+      "description": "LED light profile designed to integrate with decorative wall panel systems. Provides subtle, elegant ambient lighting along panel edges and seams.",
+      "specifications": {
+        "type": "LED profile",
+        "application": "Wall panel integrated lighting"
+      },
+      "sku": "LLP-01",
+      "images": [
+        "/images/products/lights/2-lights.jpg",
+        "/images/products/lights/led-light-profile.png"
+      ],
+      "sourceImages": [
+        "https://superdecoimport.com/wp-content/uploads/2025/07/2.jpg",
+        "https://superdecoimport.com/wp-content/uploads/2025/07/led-light-profile.png"
+      ],
+      "price": null
+    }
+  ]
+}
