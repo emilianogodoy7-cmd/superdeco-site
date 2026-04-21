@@ -143,10 +143,32 @@ var SKU_DATA = {
   ]},
 
   /* ── ACOUSTIC PANELS ─────────────────────────────────────────────────── */
-  'LK-3008':  { images: ['../images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_01.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_02.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_03.jpg'] },
-  'LK-H1018': { images: ['../images/products/acoustic-panels/wall-panels-acoustic_01.jpg',    '../images/products/acoustic-panels/wall-panels-acoustic_02.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_03.jpg', '../images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg'] },
-  'LK-H8152': { images: ['../images/products/acoustic-panels/wall-panels-acoustic_03.jpg',    '../images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_01.jpg', '../images/products/acoustic-panels/wall-panels-acoustic_02.jpg'] },
-  'LK-H8140': { images: ['../images/products/acoustic-panels/wall-panels-acoustic_02.jpg',    '../images/products/acoustic-panels/wall-panels-acoustic_03.jpg',    '../images/products/acoustic-panels/wall-panels-acoustic_01.jpg', '../images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg'] },
+  'LK-3008':  { images: [
+    '../images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg',
+    '../images/products/acoustic-panels/superdecoimport_1753491465075.jpg',
+    '../images/products/acoustic-panels/superdecoimport_1753491467169.jpg',
+    '../images/products/acoustic-panels/superdecoimport_1753491466804.jpg',
+    '../images/products/acoustic-panels/superdecoimport_1753491466372.jpg',
+    '../images/products/acoustic-panels/superdecoimport_1753491465932.jpg',
+  ] },
+  'LK-H1018': { images: [
+    '../images/products/acoustic-panels/wall-panels-acoustic_01.jpg',
+    '../images/products/acoustic-panels/Imagen-de-WhatsApp-2025-09-13-a-las-13.53.31_1c650a9c.jpg',
+    '../images/products/acoustic-panels/akupanel-stone-showcase2-1536x1536-1.jpg',
+    '../images/products/acoustic-panels/akupanel-stone-showcase-1536x1536-1.jpg',
+    '../images/products/acoustic-panels/Akupanel_Stone_240_3-1536x1536-1.jpg',
+  ] },
+  'LK-H8152': { images: [
+    '../images/products/acoustic-panels/wall-panels-acoustic_03.jpg',
+    '../images/products/acoustic-panels/akupanel-clay-showcase2-1536x1536-1.jpg',
+    '../images/products/acoustic-panels/akupanel-clay-showcase-1536x1536-1.jpg',
+  ] },
+  'LK-H8140': { images: [
+    '../images/products/acoustic-panels/wall-panels-acoustic_02.jpg',
+    '../images/products/acoustic-panels/Akupanel_ClassicOakBlackFelt_240_9.jpg',
+    '../images/products/acoustic-panels/akupanel-classic-oak-showcase2.jpg',
+    '../images/products/acoustic-panels/classic-grey-300-cgi.jpg',
+  ] },
 
   /* ── MIRROR PVC ───────────────────────────────────────────────────────── */
   'WPC-01': { images: ['../images/products/mirror-pvc/25.jpg', '../images/products/mirror-pvc/classic.png'] },
@@ -158,23 +180,35 @@ var SKU_DATA = {
   'KL8233':    { images: ['../images/products/marble-pvc-high-gloss/31.jpg', '../images/products/marble-pvc-high-gloss/negro-marquina.jpg'] },
   'KL8226':    { images: ['../images/products/marble-pvc-high-gloss/32.jpg', '../images/products/marble-pvc-high-gloss/dark-london.jpg'] },
   'LJB0001T':  { images: ['../images/products/marble-pvc-high-gloss/33.jpg', '../images/products/marble-pvc-high-gloss/blanco-gold-carrara.jpg'] },
-  'R352':      { images: ['../images/products/marble-pvc-high-gloss/34.jpg', '../images/products/marble-pvc-high-gloss/blanco-calacatta.jpg'] },
+  'R352':      { images: ['../images/products/marble-pvc-high-gloss/34.jpg', '../images/products/marble-pvc-high-gloss/blanco-calacatta.jpg', '../images/products/marble-pvc-high-gloss/Sala-moderna-con-detalles-elegantes.png'] },
   'LJ24807-2': { images: ['../images/products/marble-pvc-high-gloss/35.jpg', '../images/products/marble-pvc-high-gloss/grey-gold.jpg'] },
-  'KL8231':    { images: ['../images/products/marble-pvc-high-gloss/36.jpg', '../images/products/marble-pvc-high-gloss/grey-gold.jpg'] },
-  'DY2424':    { images: ['../images/products/marble-pvc-high-gloss/ChatGPT-Image-26-sept-2025-05_37_53-p.m.png', '../images/products/marble-pvc-high-gloss/blanco-calacatta.jpg'] },
+  'KL8231':    { images: ['../images/products/marble-pvc-high-gloss/36.jpg', '../images/products/marble-pvc-high-gloss/dark-gold.jpg'] },
+  'DY2424':    { images: ['../images/products/marble-pvc-high-gloss/ChatGPT-Image-26-sept-2025-05_37_53-p.m.png', '../images/products/marble-pvc-high-gloss/ChatGPT-Image-1-oct-2025-01_56_18-a.m.png'] },
 
   /* ── METAL PVC ───────────────────────────────────────────────────────── */
-  'MMB-03': { images: ['../images/products/metal-pvc/bronce-metal-2.png', '../images/products/metal-pvc/silver.png'] },
-  'MMS-04': { images: ['../images/products/metal-pvc/silver.png',          '../images/products/metal-pvc/bronce-metal-2.png'] },
+  'MMB-03': { images: [
+    '../images/products/metal-pvc/bronce-metal-2.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_38_37-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_17-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_31-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_26-p.m.png',
+  ] },
+  'MMS-04': { images: [
+    '../images/products/metal-pvc/silver.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_58_33-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-08_38_30-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-08_37_09-p.m.png',
+    '../images/products/metal-pvc/ChatGPT-Image-25-jul-2025-08_37_05-p.m.png',
+  ] },
 
   /* ── FLAT WALL PANELS ────────────────────────────────────────────────── */
-  'FLAT-LK8001':  { images: ['../images/products/flat-wall-panels/pure-black-flat.png',       '../images/products/flat-wall-panels/18.jpg'] },
-  'FLAT-LK4016':  { images: ['../images/products/flat-wall-panels/walnut-2.png',              '../images/products/flat-wall-panels/22.jpg'] },
+  'FLAT-LK8001':  { images: ['../images/products/flat-wall-panels/pure-black.png',            '../images/products/flat-wall-panels/ChatGPT-Image-21-ago-2025-01_09_33-a.m.png', '../images/products/flat-wall-panels/ChatGPT-Image-21-ago-2025-12_23_59-a.m.png'] },
+  'FLAT-LK4016':  { images: ['../images/products/flat-wall-panels/walnut-2.png',              '../images/products/flat-wall-panels/wallnut.png'] },
   'FLAT-58956-6': { images: ['../images/products/flat-wall-panels/24.jpg',                    '../images/products/flat-wall-panels/costa-del-sol.jpg'] },
   'FLAT-4010':    { images: ['../images/products/flat-wall-panels/23.jpg',                    '../images/products/flat-wall-panels/dark-gold.jpg'] },
   'FLAT-LK1018':  { images: ['../images/products/flat-wall-panels/22.jpg',                    '../images/products/flat-wall-panels/ash-wood.jpg'] },
   'FLAT-LK1019':  { images: ['../images/products/flat-wall-panels/21.jpg',                    '../images/products/flat-wall-panels/dark-oak.jpg'] },
-  'FLAT-LK1017':  { images: ['../images/products/flat-wall-panels/madera-clasica-flat-2.png', '../images/products/flat-wall-panels/19.jpg'] },
+  'FLAT-LK1017':  { images: ['../images/products/flat-wall-panels/madera-clasica-flat-2.png', '../images/products/flat-wall-panels/ChatGPT-Image-17-jul-2025-07_42_51-p.m.png'] },
   'FLAT-0017-46': { images: ['../images/products/flat-wall-panels/19.jpg',                    '../images/products/flat-wall-panels/white-ash.jpg'] },
   'FLAT-LK3009':  { images: ['../images/products/flat-wall-panels/18.jpg',                    '../images/products/flat-wall-panels/dark-caramel.jpg'] },
 
@@ -182,39 +216,52 @@ var SKU_DATA = {
   'WPC-FENCE-001': { images: ['../images/products/wpc-fence/fences.png', '../images/products/wpc-fence/Casa-moderna-con-cerca-elegante.png', '../images/products/wpc-fence/Vivienda-moderna-con-cerca-oscura.png'] },
 
   /* ── PARTITION DIVIDERS ──────────────────────────────────────────────── */
-  'LK-8152': { images: ['../images/products/partition-dividers/nogal-americano.png', '../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png', '../images/products/partition-dividers/Sala-minimalista-con-vigas-de-PVC.png'] },
-  'LK-8140': { images: ['../images/products/partition-dividers/aregue.png',          '../images/products/partition-dividers/Sala-minimalista-con-vigas-de-PVC.png',       '../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png'] },
+  'LK-8152': { images: ['../images/products/partition-dividers/nogal-americano.png', '../images/products/partition-dividers/Sala-minimalista-con-vigas-de-PVC.png', '../images/products/partition-dividers/Sala-de-estar-moderna-con-lamas-de-madera.png'] },
+  'LK-8140': { images: ['../images/products/partition-dividers/aregue.png',          '../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png'] },
 
   /* ── ACCESSORIES ─────────────────────────────────────────────────────── */
-  'CORNERS-T': { images: ['../images/products/accessories/esquineros-1.png',        '../images/products/accessories/14.jpg',   '../images/products/accessories/2-3.jpg'] },
-  'LTI-LTD':   { images: ['../images/products/accessories/lineas-de-terminacion-1.png','../images/products/accessories/1-4.jpg','../images/products/accessories/1-5.jpg'] },
-  'SP-002':    { images: ['../images/products/accessories/3-s.png',   '../images/products/accessories/3-2.jpg',  '../images/products/accessories/3-3.jpg',  '../images/products/accessories/3-4.jpg'] },
-  'BP-001':    { images: ['../images/products/accessories/1-acc.jpg', '../images/products/accessories/1-4.jpg',  '../images/products/accessories/1-5.jpg',  '../images/products/accessories/1-7.jpg'] },
-  'BPUC-003':  { images: ['../images/products/accessories/2-5.jpg',   '../images/products/accessories/2-4.jpg',  '../images/products/accessories/2-6.jpg',  '../images/products/accessories/2-3.jpg'] },
-  'APUC-003':  { images: ['../images/products/accessories/1-6.jpg',   '../images/products/accessories/1-5.jpg',  '../images/products/accessories/1-4.jpg',  '../images/products/accessories/1-7.jpg'] },
-  'GPUC-003':  { images: ['../images/products/accessories/3-4.jpg',   '../images/products/accessories/3-3.jpg',  '../images/products/accessories/3-2.jpg'] },
-  'BPC-003':   { images: ['../images/products/accessories/3-2.jpg',   '../images/products/accessories/3-3.jpg',  '../images/products/accessories/3-4.jpg'] },
-  'APC-001':   { images: ['../images/products/accessories/1-4.jpg',   '../images/products/accessories/1-5.jpg',  '../images/products/accessories/1-6.jpg',  '../images/products/accessories/1-7.jpg'] },
-  'GPC-002':   { images: ['../images/products/accessories/2-3.jpg',   '../images/products/accessories/2-4.jpg',  '../images/products/accessories/2-5.jpg',  '../images/products/accessories/2-6.jpg'] },
-  'BPU-002':   { images: ['../images/products/accessories/2-4.jpg',   '../images/products/accessories/2-5.jpg',  '../images/products/accessories/2-6.jpg',  '../images/products/accessories/2-3.jpg'] },
-  'APU-002':   { images: ['../images/products/accessories/1-5.jpg',   '../images/products/accessories/1-4.jpg',  '../images/products/accessories/1-6.jpg',  '../images/products/accessories/1-7.jpg'] },
-  'GPU-002':   { images: ['../images/products/accessories/3-3.jpg',   '../images/products/accessories/3-2.jpg',  '../images/products/accessories/3-4.jpg'] },
-  'BPRC-004':  { images: ['../images/products/accessories/3-2.jpg',   '../images/products/accessories/3-3.jpg',  '../images/products/accessories/3-4.jpg'] },
-  'APRC-004':  { images: ['../images/products/accessories/2-6.jpg',   '../images/products/accessories/2-5.jpg',  '../images/products/accessories/2-4.jpg'] },
-  'GPRC-004':  { images: ['../images/products/accessories/1-7.jpg',   '../images/products/accessories/1-6.jpg',  '../images/products/accessories/1-5.jpg',  '../images/products/accessories/1-4.jpg'] },
-  'A-01':      { images: ['../images/products/accessories/14.jpg',    '../images/products/accessories/esquineros-1.png'] },
+  'CORNERS-T': { images: ['../images/products/accessories/esquineros-1.png',          '../images/products/accessories/para-cambiar-volteado.png'] },
+  'LTI-LTD':   { images: ['../images/products/accessories/lineas-de-terminacion-1.png','../images/products/accessories/lineas-de-terminacion-2.png'] },
+  'SP-002':    { images: ['../images/products/accessories/3-s.png',    '../images/products/accessories/silver-profile-2.png',   '../images/products/accessories/Sala-moderna-con-pantalla-plana-y-plantas.png'] },
+  'BP-001':    { images: ['../images/products/accessories/1.jpg',      '../images/products/accessories/gold-profile.png',        '../images/products/accessories/Salon-moderno-con-acentos-dorados.png'] },
+  'BPUC-003':  { images: ['../images/products/accessories/2-5.jpg',    '../images/products/accessories/lineas-u-corner_05.png'] },
+  'APUC-003':  { images: ['../images/products/accessories/1-6.jpg',    '../images/products/accessories/lineas-u-corner_06.png'] },
+  'GPUC-003':  { images: ['../images/products/accessories/3-4.jpg',    '../images/products/accessories/lineas-u-corner_04.png'] },
+  'BPC-003':   { images: ['../images/products/accessories/3-2.jpg',    '../images/products/accessories/round-corner_05.png'] },
+  'APC-001':   { images: ['../images/products/accessories/1-4.jpg',    '../images/products/accessories/round-corner_04.png'] },
+  'GPC-002':   { images: ['../images/products/accessories/2-3.jpg',    '../images/products/accessories/round-corner_06.png'] },
+  'BPU-002':   { images: ['../images/products/accessories/2-4.jpg',    '../images/products/accessories/lineas-h_05.png'] },
+  'APU-002':   { images: ['../images/products/accessories/1-5.jpg',    '../images/products/accessories/lineas-h_04.png'] },
+  'GPU-002':   { images: ['../images/products/accessories/3-3.jpg',    '../images/products/accessories/lineas-h_06.png'] },
+  'BPRC-004':  { images: ['../images/products/accessories/3-2.png',    '../images/products/accessories/profile_05.png'] },
+  'APRC-004':  { images: ['../images/products/accessories/2-6.jpg',    '../images/products/accessories/profile_06.png'] },
+  'GPRC-004':  { images: ['../images/products/accessories/1-7.jpg',    '../images/products/accessories/profile_04.png'] },
+  'A-01':      { images: ['../images/products/accessories/14.jpg',     '../images/products/accessories/ChatGPT-Image-26-jul-2025-11_58_49-a.m.png'] },
 
   /* ── KITCHEN ─────────────────────────────────────────────────────────── */
-  'KITCHEN-WS':    { images: ['../images/products/kitchen/gabinetes-cocinas-2.png', '../images/products/kitchen/gabinetes-cocinas.png', '../images/products/kitchen/1-kitchen.png'] },
-  'KITCHEN-WHGFP': { images: ['../images/products/kitchen/gabinetes-cocinas.png',   '../images/products/kitchen/gabinetes-cocinas-2.png','../images/products/kitchen/1-kitchen.png'] },
-  'KITCHEN-OS':    { images: ['../images/products/kitchen/1-kitchen.png',           '../images/products/kitchen/gabinetes-cocinas-2.png','../images/products/kitchen/gabinetes-cocinas.png'] },
+  'KITCHEN-WS':    { images: [
+    '../images/products/kitchen/gabinetes-cocinas-2.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205216.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205251.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205340.png',
+  ] },
+  'KITCHEN-WHGFP': { images: [
+    '../images/products/kitchen/gabinetes-cocinas.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205638.png',
+  ] },
+  'KITCHEN-OS':    { images: [
+    '../images/products/kitchen/1.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205424.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205504.png',
+    '../images/products/kitchen/Captura-de-pantalla-2025-07-10-205539.png',
+  ] },
 
   /* ── FIREPLACE ───────────────────────────────────────────────────────── */
   'FP-001': { images: ['../images/products/fireplace/Sin-titulo-1-1.png', '../images/products/fireplace/Sala-moderna-con-pampas-y-chimenea.png', '../images/products/fireplace/ChatGPT-Image-7-oct-2025-12_05_14-a.m.png', '../images/products/fireplace/ChatGPT-Image-7-oct-2025-12_05_11-a.m.png'] },
 
   /* ── LIGHTS ──────────────────────────────────────────────────────────── */
-  'LLP-01':   { images: ['../images/products/lights/led-light-profile.png',                '../images/products/lights/2-lights.jpg', '../images/products/lights/4db34b66b5437dd643265cf9e27b1a43.png'] },
-  'EWPL-002': { images: ['../images/products/lights/4db34b66b5437dd643265cf9e27b1a43.png', '../images/products/lights/2-lights.jpg', '../images/products/lights/led-light-profile.png'] }
+  'LLP-01':   { images: ['../images/products/lights/led-light-profile.png', '../images/products/lights/2.jpg'] },
+  'EWPL-002': { images: ['../images/products/lights/4db34b66b5437dd643265cf9e27b1a43.png', '../images/products/lights/4db34b66b5437dd643265cf9e27b1a43.jpg'] }
 };
 
 /* ─── Inject modal HTML (single instance, reused for all cards) ─── */
