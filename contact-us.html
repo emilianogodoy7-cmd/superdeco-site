@@ -243,9 +243,11 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
+  var formData = new FormData(form);
+  formData.delete('attachment'); // free tier does not support file uploads
   fetch('https://formspree.io/f/xjgjkqye', {
     method: 'POST',
-    body: new FormData(form),
+    body: formData,
     headers: { 'Accept': 'application/json' }
   })
   .then(function(response) {
