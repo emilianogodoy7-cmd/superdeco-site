@@ -94,6 +94,7 @@ button{border:none;cursor:pointer;font-family:inherit}
 .mobile-nav a:hover{color:var(--blue)}
 .mobile-nav a:last-child{border:none}
 .mobile-nav .btn{margin-top:12px;text-align:center;justify-content:center}
+.mobile-nav .btn-primary{color:var(--white)}
 
 /* ===== HERO ===== */
 .hero{background:var(--blue-900);position:relative;overflow:hidden;padding:0}
@@ -407,6 +408,80 @@ section{padding:72px 0}
    ============================================================ */
 a.product-card{display:block;color:inherit;text-decoration:none}
 a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media(max-width:768px){
+
+  /* --- Hero --- */
+  .hero-inner{padding:24px 0 64px}
+  .hero::after{height:56px}
+  .hero-grid{gap:28px}
+  .hero-badge{font-size:.73rem;padding:6px 13px;margin-bottom:16px}
+  .hero h1{font-size:clamp(1.85rem,7.5vw,2.4rem);margin-bottom:12px;line-height:1.18}
+  .hero-desc{font-size:.97rem;margin-bottom:24px;line-height:1.65;max-width:100%}
+  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:28px}
+  .hero .btn-primary,
+  .hero .btn-outline{width:100%;justify-content:center;min-height:52px;padding:14px 20px;font-size:.95rem;border-radius:12px}
+  .hero-trust{gap:8px}
+  .hero-trust-item{padding:9px 13px;flex:1;min-width:0}
+  .hero-cards-row{flex-direction:column;gap:8px;margin-top:10px}
+  .hero-float-card{flex:none;padding:10px 14px}
+
+  /* --- Mobile nav --- */
+  .mobile-nav a{padding:16px 8px;font-size:1.05rem}
+  .mobile-nav .btn{min-height:52px;font-size:.95rem}
+  .mobile-menu-btn{width:46px;height:46px}
+
+  /* --- Carousel --- */
+  .carousel-btn{width:38px;height:38px}
+  .carousel-btn svg{width:15px;height:15px}
+  .carousel-dot{width:8px;height:8px;padding:5px;box-sizing:content-box}
+  .carousel-dots{gap:2px;bottom:8px}
+
+  /* --- Section spacing --- */
+  section{padding:56px 0}
+  .section-header{margin-bottom:36px}
+
+  /* --- Why cards --- */
+  .why-card{padding:24px 20px}
+  .why-icon{width:44px;height:44px;margin-bottom:16px}
+
+  /* --- Products --- */
+  .product-img{height:200px}
+  .product-body{padding:20px 20px 16px}
+
+  /* --- Steps --- */
+  .step-card{padding:22px 18px}
+
+  /* --- Testimonials --- */
+  .testimonial-card{padding:24px 20px}
+  .testimonials-grid{gap:16px}
+
+  /* --- Stats --- */
+  .stats-bar{padding:40px 0}
+  .stats-grid{gap:20px}
+
+  /* --- Quote form --- */
+  .quote-form-card{padding:28px 20px;border-radius:var(--radius-xl)}
+  .quote-form-card::before{left:16px;right:16px}
+  .form-submit{min-height:52px;font-size:.95rem}
+
+  /* --- FAQ --- */
+  .faq-q{padding:16px 20px;font-size:.9rem}
+  .faq-a p{padding:0 20px 18px;font-size:.85rem}
+  .faq-sidebar-cta{padding:20px}
+
+  /* --- Final CTA --- */
+  .final-cta{padding:56px 0}
+  .final-cta-btns{flex-direction:column;align-items:center;gap:10px}
+  .final-cta-btns .btn{width:100%;max-width:300px;min-height:52px}
+
+  /* --- Footer --- */
+  .footer{padding:48px 0 24px}
+  .footer-top{margin-bottom:28px;padding-bottom:24px}
+  .footer-grid{gap:28px}
+
+}
 </style>
 </head>
 <body>
