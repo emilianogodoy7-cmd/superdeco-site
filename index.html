@@ -127,7 +127,7 @@ button{border:none;cursor:pointer;font-family:inherit}
 
 /* Trust indicators — lighter, flatter, unified 12px radius */
 .hero-trust{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.hero-trust-item{display:flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:12px;transition:background .2s ease}
+.hero-trust-item{display:flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(255,255,255,.05);border:none;border-radius:12px;transition:background .2s ease}
 .hero-trust-item:hover{background:rgba(255,255,255,.08)}
 .hero-trust-icon{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hero-trust-icon svg{width:16px;height:16px;stroke:var(--blue-200);fill:none;stroke-width:2}
@@ -136,6 +136,8 @@ button{border:none;cursor:pointer;font-family:inherit}
 .hero-trust-text span{color:rgba(255,255,255,.42);font-size:.72rem}
 
 /* Visual column */
+.hero-trust--mobile{display:none}
+.hero-ctas--mobile{display:none}
 .hero-visual{position:relative}
 /* Unified 12px radius, single clean shadow */
 .hero-image-wrapper{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:5/4;box-shadow:0 4px 40px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.07)}
@@ -258,7 +260,7 @@ section{padding:72px 0}
 .gallery-grid .gallery-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
 @media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid .gallery-item:first-child{grid-column:span 1;grid-row:span 1}}
 @media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
-.gallery-item{border-radius:var(--radius-xl);overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;box-shadow:var(--shadow-sm)}
+.gallery-item{border-radius:var(--radius-xl);overflow:hidden;position:relative;aspect-ratio:3/4;cursor:pointer;box-shadow:var(--shadow-sm)}
 .gallery-item-bg{width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}
 .gallery-item:hover .gallery-item-bg{transform:scale(1.05)}
 .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,28,48,.65) 0%,transparent 55%);display:flex;align-items:flex-end;padding:22px;opacity:0;transition:opacity .35s}
@@ -412,74 +414,141 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 /* ===== MOBILE OPTIMIZATIONS ===== */
 @media(max-width:768px){
 
-  /* --- Hero --- */
-  .hero-inner{padding:24px 0 64px}
-  .hero::after{height:56px}
-  .hero-grid{gap:28px}
-  .hero-badge{font-size:.73rem;padding:6px 13px;margin-bottom:16px}
-  .hero h1{font-size:clamp(1.85rem,7.5vw,2.4rem);margin-bottom:12px;line-height:1.18}
-  .hero-desc{font-size:.97rem;margin-bottom:24px;line-height:1.65;max-width:100%}
-  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:28px}
-  .hero .btn-primary,
-  .hero .btn-outline{width:100%;justify-content:center;min-height:52px;padding:14px 20px;font-size:.95rem;border-radius:12px}
-  .hero-trust{gap:8px}
-  .hero-trust-item{padding:9px 13px;flex:1;min-width:0}
-  .hero-cards-row{flex-direction:column;gap:8px;margin-top:10px}
-  .hero-float-card{flex:none;padding:10px 14px}
+  /* --- Container --- */
+  .container{padding:0 20px}
 
   /* --- Mobile nav --- */
-  .mobile-nav a{padding:16px 8px;font-size:1.05rem}
-  .mobile-nav .btn{min-height:52px;font-size:.95rem}
+  .mobile-nav{padding:8px 20px 40px}
+  .mobile-nav a{padding:18px 4px;font-size:1.02rem;font-weight:500}
+  .mobile-nav .btn{min-height:54px;font-size:1rem;margin-top:8px}
+  .mobile-nav .btn-primary{color:var(--white)}
   .mobile-menu-btn{width:46px;height:46px}
 
-  /* --- Carousel --- */
-  .carousel-btn{width:38px;height:38px}
-  .carousel-btn svg{width:15px;height:15px}
-  .carousel-dot{width:8px;height:8px;padding:5px;box-sizing:content-box}
-  .carousel-dots{gap:2px;bottom:8px}
+  /* --- Hero --- */
+  .hero-inner{padding:32px 0 72px}
+  .hero::after{height:56px}
+  .hero-grid{gap:32px}
 
-  /* --- Section spacing --- */
-  section{padding:56px 0}
-  .section-header{margin-bottom:36px}
+  /* Center the text column on mobile */
+  .hero-grid > div:first-child{
+    display:flex;flex-direction:column;align-items:center;text-align:center
+  }
+  .hero-badge{font-size:.73rem;padding:6px 14px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,8vw,2.6rem);margin-bottom:16px;line-height:1.16;max-width:340px}
+  .hero-desc{font-size:.97rem;margin-bottom:28px;line-height:1.68;max-width:340px}
+  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:28px;width:100%}
+  .hero .btn-primary,
+  .hero .btn-outline{width:100%;justify-content:center;min-height:54px;padding:15px 20px;font-size:.97rem;border-radius:12px}
+
+  /* Trust badges — centered row */
+  .hero-trust{gap:10px;justify-content:center;flex-wrap:wrap}
+  .hero-trust-item{padding:8px 12px;flex:0 1 auto}
+  .hero-trust-text strong{font-size:.78rem}
+  .hero-trust-text span{font-size:.68rem}
+
+  /* Hide the info cards below carousel — reduce visual noise */
+  .hero-cards-row{display:none}
+
+  /* Trust badges: hide from text column, show below carousel — smaller on mobile */
+  .hero-grid > div:first-child .hero-trust{display:none}
+  .hero-trust--mobile{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .hero-trust--mobile .hero-trust-item{padding:6px 10px;gap:7px}
+  .hero-trust--mobile .hero-trust-icon{width:24px;height:24px;border-radius:6px}
+  .hero-trust--mobile .hero-trust-icon svg{width:12px;height:12px}
+  .hero-trust--mobile .hero-trust-text strong{font-size:.68rem}
+  .hero-trust--mobile .hero-trust-text span{font-size:.62rem}
+
+  /* CTAs: hide from text column, show full-width stacked below trust badges */
+  .hero-grid > div:first-child .hero-ctas{display:none}
+  .hero-ctas--mobile{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:14px}
+  .hero-ctas--mobile .btn{width:100%;justify-content:center;min-height:54px;padding:15px 20px;font-size:.97rem;border-radius:12px}
+
+  /* --- Carousel --- */
+  .carousel-btn{width:36px;height:36px}
+  .carousel-btn svg{width:14px;height:14px}
+  .carousel-dot{width:8px;height:8px;padding:4px;box-sizing:content-box}
+  .carousel-dots{gap:2px;bottom:10px}
+
+  /* --- Sections --- */
+  section{padding:64px 0}
+  .section-header{margin-bottom:40px}
+  .section-title{font-size:clamp(1.7rem,6.5vw,2.2rem)}
+  .section-desc{font-size:.93rem}
 
   /* --- Why cards --- */
-  .why-card{padding:24px 20px}
+  .why-card{padding:28px 22px}
   .why-icon{width:44px;height:44px;margin-bottom:16px}
+  .why-card h3{font-size:1rem}
+  .why-card p{font-size:.875rem}
 
   /* --- Products --- */
-  .product-img{height:200px}
-  .product-body{padding:20px 20px 16px}
+  .product-img{height:220px}
+  .product-body{padding:22px 22px 18px}
+  .product-body h3{font-size:1rem}
+  .product-body p{font-size:.86rem}
 
   /* --- Steps --- */
-  .step-card{padding:22px 18px}
+  .step-card{padding:24px 20px}
+  .step-card h3{font-size:.95rem}
+  .step-card p{font-size:.83rem}
 
   /* --- Testimonials --- */
-  .testimonial-card{padding:24px 20px}
+  .testimonial-card{padding:28px 22px}
   .testimonials-grid{gap:16px}
 
   /* --- Stats --- */
-  .stats-bar{padding:40px 0}
-  .stats-grid{gap:20px}
+  .stats-bar{padding:48px 0}
+  .stats-grid{gap:24px}
 
   /* --- Quote form --- */
-  .quote-form-card{padding:28px 20px;border-radius:var(--radius-xl)}
+  .quote-form-card{padding:32px 22px;border-radius:var(--radius-xl)}
   .quote-form-card::before{left:16px;right:16px}
-  .form-submit{min-height:52px;font-size:.95rem}
+  .quote-form-title{font-size:1.1rem}
+  .form-submit{min-height:54px;font-size:.97rem}
 
   /* --- FAQ --- */
-  .faq-q{padding:16px 20px;font-size:.9rem}
-  .faq-a p{padding:0 20px 18px;font-size:.85rem}
+  .faq-q{padding:18px 20px;font-size:.9rem}
+  .faq-a p{padding:0 20px 20px;font-size:.86rem}
   .faq-sidebar-cta{padding:20px}
 
   /* --- Final CTA --- */
-  .final-cta{padding:56px 0}
-  .final-cta-btns{flex-direction:column;align-items:center;gap:10px}
-  .final-cta-btns .btn{width:100%;max-width:300px;min-height:52px}
+  .final-cta{padding:64px 0}
+  .final-cta h2{font-size:clamp(1.7rem,6vw,2.2rem)}
+  .final-cta p{font-size:.95rem}
+  .final-cta-btns{flex-direction:column;align-items:stretch;gap:10px;max-width:300px;margin-left:auto;margin-right:auto}
+  .final-cta-btns .btn{width:100%;min-height:54px;justify-content:center}
 
-  /* --- Footer --- */
-  .footer{padding:48px 0 24px}
-  .footer-top{margin-bottom:28px;padding-bottom:24px}
-  .footer-grid{gap:28px}
+  /* --- Footer — extra bottom clearance for sticky CTA --- */
+  .footer{padding:56px 0 100px}
+  .footer-top{margin-bottom:32px;padding-bottom:28px}
+  .footer-grid{gap:32px}
+
+  /* --- Sticky CTA --- */
+  .mobile-sticky-cta{
+    display:block;
+    position:fixed;
+    bottom:0;left:0;right:0;
+    z-index:89;
+    padding:20px 20px max(20px,env(safe-area-inset-bottom));
+    background:linear-gradient(to top,rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%);
+    opacity:0;
+    transform:translateY(12px);
+    transition:opacity .3s ease,transform .3s ease;
+    pointer-events:none
+  }
+  .mobile-sticky-cta.visible{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto
+  }
+  .mobile-sticky-cta .btn{
+    width:100%;
+    min-height:54px;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:14px;
+    box-shadow:0 6px 24px rgba(43,76,126,.38)
+  }
 
 }
 </style>
@@ -596,6 +665,32 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
             </div>
             <div class="float-text">48hr Quote Turnaround<span>Fast &amp; detailed response</span></div>
           </div>
+        </div>
+        <!-- Mobile-only trust badges rendered below carousel -->
+        <div class="hero-trust hero-trust--mobile">
+          <div class="hero-trust-item">
+            <div class="hero-trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="hero-trust-text">
+              <strong>10+ Years in Business</strong>
+              <span>Established &amp; reliable</span>
+            </div>
+          </div>
+          <div class="hero-trust-item">
+            <div class="hero-trust-icon">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="hero-trust-text">
+              <strong>4.9 ★ Average Rating</strong>
+              <span>350+ verified reviews</span>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile-only CTAs rendered below trust badges -->
+        <div class="hero-ctas hero-ctas--mobile">
+          <a href="contact-us.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+          <a href="#panels" class="btn btn-outline btn-lg">View Panels</a>
         </div>
       </div>
     </div>
@@ -1062,6 +1157,11 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   </div>
 </footer>
 
+<!-- MOBILE STICKY CTA — hidden on desktop via CSS -->
+<div class="mobile-sticky-cta" id="mobileStickyCtA" aria-hidden="true">
+  <a href="contact-us.html" class="btn btn-primary" tabindex="-1">Get a Free Quote</a>
+</div>
+
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -1249,6 +1349,28 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
   loadSlide(1);
   syncUI(0);
   startAuto();
+})();
+
+// ===== MOBILE STICKY CTA =====
+(function(){
+  var cta=document.getElementById('mobileStickyCtA');
+  if(!cta)return;
+  var hero=document.querySelector('.hero');
+  var quoteEl=document.getElementById('quote');
+  var footer=document.querySelector('.footer');
+  var ctaLink=cta.querySelector('a');
+  function update(){
+    var wh=window.innerHeight;
+    var heroDone=hero.getBoundingClientRect().bottom<wh*0.25;
+    var atQuote=quoteEl&&quoteEl.getBoundingClientRect().top<wh*0.65;
+    var atFooter=footer&&footer.getBoundingClientRect().top<wh;
+    var show=heroDone&&!atQuote&&!atFooter;
+    cta.classList.toggle('visible',show);
+    cta.setAttribute('aria-hidden',show?'false':'true');
+    if(ctaLink)ctaLink.tabIndex=show?0:-1;
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
 })();
 
 // MODIFIED smooth-scroll: skip anchors that point to other pages (e.g. panels.html)
