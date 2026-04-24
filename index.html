@@ -1304,7 +1304,8 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
 
   function startAuto(){
     if(autoTimer)return;
-    autoTimer=setInterval(function(){if(!isHovered)goTo(current+1,false);},5000);
+    var delay=window.innerWidth<=768?3000:5000;
+    autoTimer=setInterval(function(){if(!isHovered)goTo(current+1,false);},delay);
   }
 
   prevBtn.addEventListener('click',function(){goTo(current-1,true);});
