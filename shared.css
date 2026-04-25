@@ -140,6 +140,9 @@ button{border:none;cursor:pointer;font-family:inherit}
   transition:transform .25s ease;
 }
 .nav-links .btn:hover::after,.nav-links .btn-primary:hover::after{transform:scaleX(1)}
+.nav-links .nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600;padding:8px 18px!important;border-radius:4px!important;transition:background .2s ease}
+.nav-links .nav-cta:hover{background:var(--blue-600)!important;color:#fff!important;transform:none}
+.nav-links .nav-cta::after{display:none!important}
 
 .mobile-menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:4px;background:var(--gray-50);color:var(--gray-600);transition:background .2s}
 .mobile-menu-btn:hover{background:var(--gray-100)}
