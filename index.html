@@ -393,21 +393,23 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .mobile-nav a{padding:18px 4px;font-size:.95rem}
   .mobile-menu-btn{width:46px;height:46px}
 
-  /* --- Hero: magazine-cover three-zone layout --- */
-  .hero{min-height:78svh;height:78svh;align-items:stretch}
+  /* --- Hero: centered flex column layout --- */
+  .hero{min-height:78svh;height:78svh;align-items:flex-start}
   .hero-carousel,.hero-img-placeholder{background-position:center 30%}
   .hero::after{background:radial-gradient(ellipse at 50% 50%,transparent 22%,rgba(10,10,10,.55) 100%),linear-gradient(to bottom,rgba(20,20,20,.75) 0%,rgba(20,20,20,.08) 32%,rgba(20,20,20,.08) 68%,rgba(20,20,20,.65) 100%)}
-  .hero-inner{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:84px 0 24px}
-  .hero h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px}
-  .hero-desc{font-size:.86rem;margin-bottom:0;max-width:100%;color:rgba(255,255,255,.72)}
-  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:0}
-  .hero-btn-primary{width:100%;justify-content:center;min-height:50px;background:rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.6);color:var(--white);font-weight:700}
-  .hero-btn-ghost{width:100%;justify-content:center;min-height:46px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82)}
-  .hero-bottom{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .hero-inner{display:flex;flex-direction:column;align-items:center;height:100%;padding:88px 24px 0;width:100%}
+  .hero-top{width:100%;text-align:center}
+  .hero h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px;max-width:100%;text-align:center}
+  .hero-desc{font-size:.86rem;margin-bottom:0;max-width:100%;color:rgba(255,255,255,.72);text-align:center}
+  /* push CTAs below carousel arrows (arrows are at top:50% of hero = 39svh) */
+  .hero-mid{width:100%;padding-top:calc(39svh - 160px);text-align:center}
+  .hero-ctas{flex-direction:column;align-items:center;gap:10px;margin-bottom:0;width:100%}
+  .hero-btn-primary{width:min(100%,320px);justify-content:center;min-height:50px;background:rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.6);color:var(--white);font-weight:700}
+  .hero-btn-ghost{width:min(100%,320px);justify-content:center;min-height:46px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82)}
+  .hero-bottom{margin-top:auto;padding-bottom:28px;width:100%;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
   .hero-trust-line{text-align:center}
-  .hero-top{text-align:center}
   .hero-scroll-indicator{display:flex;flex-direction:column;align-items:center;gap:6px}
-  .carousel-dots{right:16px;bottom:16px}
+  .carousel-dots{right:auto;left:50%;transform:translateX(-50%);bottom:16px}
 
   /* --- Sections --- */
   section{padding:64px 0}
@@ -578,123 +580,6 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   </div>
 </section>
 
-<!-- STYLE FINDER -->
-<section class="style-finder" id="style-finder">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-label">Style Guide</div>
-      <h2 class="section-title">Find the Right Style<br><em>for Your Space</em></h2>
-      <p class="section-desc">From warm natural textures to sleek high-gloss finishes — explore our collections to match your vision.</p>
-    </div>
-    <div class="style-grid">
-
-      <a href="products/indoor-wall-panels.html" class="style-card reveal">
-        <div class="style-card-bg" style="background-image:url('images/indoor-wall-panels.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Interior</div>
-          <div class="style-card-title">Indoor Wall Panels</div>
-          <div class="style-card-mood">Warm, textured, residential — perfect for living rooms, bedrooms &amp; offices.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-      <a href="products/marble-pvc-high-gloss.html" class="style-card reveal delay-1">
-        <div class="style-card-bg" style="background-image:url('images/marble-pvc.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Luxury</div>
-          <div class="style-card-title">Marble PVC High Gloss</div>
-          <div class="style-card-mood">Bold, dramatic, sophisticated — the look of real stone without the cost.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-      <a href="products/outdoor-wall-panels.html" class="style-card reveal delay-2">
-        <div class="style-card-bg" style="background-image:url('images/outdoor-wall-panels.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Exterior</div>
-          <div class="style-card-title">Outdoor Wall Panels</div>
-          <div class="style-card-mood">Weather-resistant, modern facades for patios, balconies &amp; commercial fronts.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-      <a href="products/acoustic-panels.html" class="style-card reveal delay-1">
-        <div class="style-card-bg" style="background-image:url('images/acoustic-wall-panels.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Acoustic</div>
-          <div class="style-card-title">Acoustic Panels</div>
-          <div class="style-card-mood">Quiet, functional beauty — studios, home theaters &amp; open-plan offices.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-      <a href="products/mirror-pvc.html" class="style-card reveal delay-2">
-        <div class="style-card-bg" style="background-image:url('images/mirror-pvc.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Reflective</div>
-          <div class="style-card-title">Mirror PVC</div>
-          <div class="style-card-mood">Light-amplifying and expansive — ideal for small rooms &amp; modern gyms.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-      <a href="products/metal-pvc.html" class="style-card reveal delay-3">
-        <div class="style-card-bg" style="background-image:url('images/metal-sheet.png')"></div>
-        <div class="style-card-overlay">
-          <div class="style-card-tag">Industrial</div>
-          <div class="style-card-title">Metal PVC</div>
-          <div class="style-card-mood">Raw, edgy, contemporary — restaurants, retail spaces &amp; feature walls.</div>
-        </div>
-        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section class="bg-blue-subtle">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-label">Why SuperDeco Canada</div>
-      <h2 class="section-title">Quality Panels, Reliable Service</h2>
-      <p class="section-desc">We make it easy to upgrade your walls with panels that look great, last long, and install without hassle.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Durable Materials</h3>
-        <p>Built with high-quality MDF, natural veneers, and moisture-resistant composites that hold up for years.</p>
-      </div>
-      <div class="why-card reveal delay-1">
-        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>Stylish Designs</h3>
-        <p>From warm wood-look finishes to modern textures, our designs complement any room style.</p>
-      </div>
-      <div class="why-card reveal delay-2">
-        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Easy Installation</h3>
-        <p>Precision-cut panels with simple mounting. Most walls can be done in a day — DIY or professional.</p>
-      </div>
-      <div class="why-card reveal delay-3">
-        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <h3>Low Maintenance</h3>
-        <p>Wipe-clean surfaces that resist dust, moisture, and everyday wear. No repainting needed.</p>
-      </div>
-      <div class="why-card reveal delay-4">
-        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
-        <h3>Custom Sizes</h3>
-        <p>Every room is different. We cut panels to your exact dimensions for a perfect fit.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <h3>Fast, Reliable Service</h3>
-        <p>Quick turnaround on quotes, timely delivery, and real support from people who care.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PRODUCTS -->
 <!--
   ============================================================
@@ -793,6 +678,49 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     </div>
     <div style="text-align:center;margin-top:2.5rem">
       <a href="panels.html" class="btn btn-primary btn-lg" aria-label="View all panel categories">See More Panels</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="bg-blue-subtle">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Why SuperDeco Canada</div>
+      <h2 class="section-title">Quality Panels, Reliable Service</h2>
+      <p class="section-desc">We make it easy to upgrade your walls with panels that look great, last long, and install without hassle.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Durable Materials</h3>
+        <p>Built with high-quality MDF, natural veneers, and moisture-resistant composites that hold up for years.</p>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Stylish Designs</h3>
+        <p>From warm wood-look finishes to modern textures, our designs complement any room style.</p>
+      </div>
+      <div class="why-card reveal delay-2">
+        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Easy Installation</h3>
+        <p>Precision-cut panels with simple mounting. Most walls can be done in a day — DIY or professional.</p>
+      </div>
+      <div class="why-card reveal delay-3">
+        <div class="why-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Low Maintenance</h3>
+        <p>Wipe-clean surfaces that resist dust, moisture, and everyday wear. No repainting needed.</p>
+      </div>
+      <div class="why-card reveal delay-4">
+        <div class="why-icon amber"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3>Custom Sizes</h3>
+        <p>Every room is different. We cut panels to your exact dimensions for a perfect fit.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon warm"><svg viewBox="0 0 24 24" fill="none"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Fast, Reliable Service</h3>
+        <p>Quick turnaround on quotes, timely delivery, and real support from people who care.</p>
+      </div>
     </div>
   </div>
 </section>
