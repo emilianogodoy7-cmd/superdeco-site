@@ -92,6 +92,9 @@ button{border:none;cursor:pointer;font-family:inherit}
 .nav-links .btn:hover,.nav-links .btn-primary:hover{background:none;color:var(--gray-800);transform:none;box-shadow:none}
 .nav-links .btn::after,.nav-links .btn-primary::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;height:1px;background:var(--gray-800);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
 .nav-links .btn:hover::after,.nav-links .btn-primary:hover::after{transform:scaleX(1)}
+.nav-links .nav-cta{background:#003366!important;color:#ffffff!important;font-weight:600;padding:8px 18px!important;border-radius:4px!important;transition:background .2s ease}
+.nav-links .nav-cta:hover{background:#1a5276!important;color:#ffffff!important;transform:none}
+.nav-links .nav-cta::after{display:none!important}
 .mobile-menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:4px;background:var(--gray-50);color:var(--gray-600);transition:background .2s}
 .mobile-menu-btn:hover{background:var(--gray-100)}
 @media(min-width:940px){.mobile-menu-btn{display:none}}
@@ -510,7 +513,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       <a href="projects.html">Projects</a>
       <a href="#faq">FAQs</a>
       <a href="contact-us.html">Contact</a>
-      <a href="contact-us.html" class="btn btn-primary">Get Quote</a>
+      <a href="contact-us.html" class="btn btn-primary nav-cta">Get Quote</a>
     </div>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
