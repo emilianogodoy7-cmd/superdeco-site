@@ -117,6 +117,13 @@ button{border:none;cursor:pointer;font-family:inherit}
 .hero-btn-ghost:hover{border-color:rgba(255,255,255,.7);color:var(--white)}
 .hero-trust-line{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);font-weight:500;font-family:var(--font)}
 
+/* Hero zone wrappers — block on desktop, flex children on mobile */
+.hero-top,.hero-mid,.hero-bottom{width:100%}
+.hero-scroll-indicator{display:none}
+.scroll-label{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:var(--font);font-weight:500}
+.scroll-line{width:1px;height:28px;background:rgba(255,255,255,.48);transform-origin:top;animation:scrollPulse 1.8s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.25;transform:scaleY(.65)}50%{opacity:.85;transform:scaleY(1)}}
+
 /* ===== HERO CAROUSEL ===== */
 .hero-carousel{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 .carousel-track{display:flex;height:100%;transition:transform 400ms cubic-bezier(.4,0,.2,1);will-change:transform}
@@ -342,6 +349,23 @@ section{padding:88px 0}
 .footer-bottom a:hover{color:rgba(255,255,255,.6)}
 .footer-legal{display:flex;gap:16px;flex-wrap:wrap}
 
+/* ===== STYLE FINDER ===== */
+.style-finder{background:var(--gray-50)}
+.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.style-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.style-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+.style-card{position:relative;border-radius:2px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;display:block;color:inherit;text-decoration:none}
+.style-card-bg{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.style-card:hover .style-card-bg{transform:scale(1.06)}
+.style-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,15,.82) 0%,rgba(15,15,15,.35) 45%,rgba(15,15,15,.08) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px;transition:background .35s}
+.style-card:hover .style-card-overlay{background:linear-gradient(to top,rgba(15,15,15,.9) 0%,rgba(15,15,15,.45) 50%,rgba(15,15,15,.1) 100%)}
+.style-card-tag{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;font-family:var(--font)}
+.style-card-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:6px}
+.style-card-mood{font-size:.74rem;color:rgba(255,255,255,.6);line-height:1.5;font-family:var(--font)}
+.style-card-arrow{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s,background .25s}
+.style-card:hover .style-card-arrow{opacity:1;background:rgba(255,255,255,.2)}
+.style-card-arrow svg{width:12px;height:12px;stroke:var(--white)}
+
 /* ===== ANIMATIONS ===== */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -369,14 +393,21 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .mobile-nav a{padding:18px 4px;font-size:.95rem}
   .mobile-menu-btn{width:46px;height:46px}
 
-  /* --- Hero --- */
-  .hero{min-height:100svh}
-  .hero-inner{padding:100px 0 64px}
-  .hero h1{font-size:clamp(2.2rem,9vw,3rem);margin-bottom:16px}
-  .hero-desc{font-size:.92rem;margin-bottom:28px}
-  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:20px}
-  .hero-btn-primary,.hero-btn-ghost{width:100%;justify-content:center;min-height:52px}
-  .carousel-dots{right:20px;bottom:20px}
+  /* --- Hero: magazine-cover three-zone layout --- */
+  .hero{min-height:78svh;height:78svh;align-items:stretch}
+  .hero-carousel,.hero-img-placeholder{background-position:center 30%}
+  .hero::after{background:radial-gradient(ellipse at 50% 50%,transparent 22%,rgba(10,10,10,.55) 100%),linear-gradient(to bottom,rgba(20,20,20,.75) 0%,rgba(20,20,20,.08) 32%,rgba(20,20,20,.08) 68%,rgba(20,20,20,.65) 100%)}
+  .hero-inner{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:84px 0 24px}
+  .hero h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px}
+  .hero-desc{font-size:.86rem;margin-bottom:0;max-width:100%;color:rgba(255,255,255,.72)}
+  .hero-ctas{flex-direction:column;gap:10px;margin-bottom:0}
+  .hero-btn-primary{width:100%;justify-content:center;min-height:50px;background:rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.6);color:var(--white);font-weight:700}
+  .hero-btn-ghost{width:100%;justify-content:center;min-height:46px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82)}
+  .hero-bottom{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .hero-trust-line{text-align:center}
+  .hero-top{text-align:center}
+  .hero-scroll-indicator{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .carousel-dots{right:16px;bottom:16px}
 
   /* --- Sections --- */
   section{padding:64px 0}
@@ -524,15 +555,99 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     </button>
     <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation"></div>
   </div>
-  <!-- Overlaid content -->
+  <!-- Overlaid content — three-zone magazine layout -->
   <div class="container hero-inner">
-    <h1>Beautiful Walls That<br><em>Transform Any Room</em></h1>
-    <p class="hero-desc">Durable, stylish decorative panels that are easy to install and built to last. The smart way to upgrade living rooms, bedrooms, offices, and more.</p>
-    <div class="hero-ctas">
-      <a href="contact-us.html" class="hero-btn-primary">Get a Free Quote</a>
-      <a href="#panels" class="hero-btn-ghost">View Panels</a>
+    <div class="hero-top">
+      <h1>Beautiful Walls That<br><em>Transform Any Room</em></h1>
+      <p class="hero-desc">Durable, stylish decorative panels that are easy to install and built to last. The smart way to upgrade living rooms, bedrooms, offices, and more.</p>
     </div>
-    <p class="hero-trust-line">Free samples &nbsp;·&nbsp; 48-hr quote &nbsp;·&nbsp; 2,000+ homeowners served</p>
+    <div class="hero-mid">
+      <div class="hero-ctas">
+        <a href="#panels" class="hero-btn-ghost">View Panels</a>
+        <a href="contact-us.html" class="hero-btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-trust-line">Free samples &nbsp;·&nbsp; 48-hr quote &nbsp;·&nbsp; 2,000+ homeowners served</p>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="scroll-label">Scroll to Explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STYLE FINDER -->
+<section class="style-finder" id="style-finder">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Style Guide</div>
+      <h2 class="section-title">Find the Right Style<br><em>for Your Space</em></h2>
+      <p class="section-desc">From warm natural textures to sleek high-gloss finishes — explore our collections to match your vision.</p>
+    </div>
+    <div class="style-grid">
+
+      <a href="products/indoor-wall-panels.html" class="style-card reveal">
+        <div class="style-card-bg" style="background-image:url('images/indoor-wall-panels.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Interior</div>
+          <div class="style-card-title">Indoor Wall Panels</div>
+          <div class="style-card-mood">Warm, textured, residential — perfect for living rooms, bedrooms &amp; offices.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+      <a href="products/marble-pvc-high-gloss.html" class="style-card reveal delay-1">
+        <div class="style-card-bg" style="background-image:url('images/marble-pvc.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Luxury</div>
+          <div class="style-card-title">Marble PVC High Gloss</div>
+          <div class="style-card-mood">Bold, dramatic, sophisticated — the look of real stone without the cost.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+      <a href="products/outdoor-wall-panels.html" class="style-card reveal delay-2">
+        <div class="style-card-bg" style="background-image:url('images/outdoor-wall-panels.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Exterior</div>
+          <div class="style-card-title">Outdoor Wall Panels</div>
+          <div class="style-card-mood">Weather-resistant, modern facades for patios, balconies &amp; commercial fronts.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+      <a href="products/acoustic-panels.html" class="style-card reveal delay-1">
+        <div class="style-card-bg" style="background-image:url('images/acoustic-wall-panels.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Acoustic</div>
+          <div class="style-card-title">Acoustic Panels</div>
+          <div class="style-card-mood">Quiet, functional beauty — studios, home theaters &amp; open-plan offices.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+      <a href="products/mirror-pvc.html" class="style-card reveal delay-2">
+        <div class="style-card-bg" style="background-image:url('images/mirror-pvc.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Reflective</div>
+          <div class="style-card-title">Mirror PVC</div>
+          <div class="style-card-mood">Light-amplifying and expansive — ideal for small rooms &amp; modern gyms.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+      <a href="products/metal-pvc.html" class="style-card reveal delay-3">
+        <div class="style-card-bg" style="background-image:url('images/metal-sheet.png')"></div>
+        <div class="style-card-overlay">
+          <div class="style-card-tag">Industrial</div>
+          <div class="style-card-title">Metal PVC</div>
+          <div class="style-card-mood">Raw, edgy, contemporary — restaurants, retail spaces &amp; feature walls.</div>
+        </div>
+        <div class="style-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      </a>
+
+    </div>
   </div>
 </section>
 
