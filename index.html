@@ -1270,7 +1270,7 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
 
   function startAuto(){
     if(autoTimer)return;
-    var delay=window.innerWidth<=768?3000:4000;
+    var delay=window.innerWidth<=768?3000:3000;
     autoTimer=setInterval(function(){if(!isHovered)goTo(current+1,false);},delay);
   }
 
