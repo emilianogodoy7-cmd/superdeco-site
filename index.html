@@ -547,14 +547,15 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
         <div class="hero-img-placeholder" data-bg="url('images/products/outdoor-wall-panels/Imagen-de-WhatsApp-2025-07-29-a-las-13.25.01_b5797b6d-1.jpg')"></div>
       </div>
     </div>
-    <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation"></div>
   </div>
+  <!-- Buttons/dots outside hero-carousel so z-index:10 beats hero-inner z-index:2 -->
+  <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation"></div>
   <!-- Overlaid content — three-zone magazine layout -->
   <div class="container hero-inner">
     <div class="hero-top">
