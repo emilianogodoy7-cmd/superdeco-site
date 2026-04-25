@@ -153,6 +153,7 @@ button{border:none;cursor:pointer;font-family:inherit}
 .mobile-nav a{padding:16px 8px;font-size:.9rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
 .mobile-nav a:last-child{border:none}
 .mobile-nav .btn,.mobile-nav .btn-primary{margin-top:12px;text-align:center;justify-content:center;background:none;color:var(--gray-600);box-shadow:none;border:none;padding:16px 8px;font-size:.9rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--gray-100)}
+.mobile-nav .nav-cta{background:var(--blue)!important;color:#fff!important;border-radius:4px!important;border-bottom:none!important;padding:14px 18px!important;margin-top:16px}
 
 /* ===== SECTION + HEADERS ===== */
 section{padding:88px 0}
