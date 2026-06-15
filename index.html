@@ -660,6 +660,55 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .city-pill svg{width:10px;height:10px;stroke:var(--blue);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ===== MOBILE TRANSFORMATIONS + TRUST ===== */
+/* ===== INSTALL VIDEO SECTION ===== */
+.install-video-section{background:var(--charcoal);position:relative;overflow:hidden;padding:96px 0}
+.install-video-section .section-label{color:rgba(255,255,255,.45)}
+.install-video-section .section-label::before{background:rgba(255,255,255,.22)}
+.install-video-section .section-title{color:var(--white)}
+.install-video-section .section-desc{color:rgba(255,255,255,.62);max-width:100%}
+/* Editorial 2-col layout: ALL text content (eyebrow → title → desc → sub-h3 → bullets → CTAs → meta) lives in the LEFT column so every line shares the same left vertical axis. The video frame sits in the RIGHT column. */
+.install-video-layout{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start;margin-top:0}
+@media(max-width:900px){.install-video-layout{grid-template-columns:1fr;gap:36px}}
+.install-video-section .section-header{margin-bottom:32px}
+.install-video-copy{display:flex;flex-direction:column}
+.install-video-copy>*{margin-left:0;margin-right:0}
+.install-video-copy .section-header{margin-bottom:28px}
+.install-video-copy h3{font-family:var(--font);font-size:1.25rem;font-weight:700;color:var(--white);letter-spacing:-.005em;margin-bottom:14px;line-height:1.35;padding-top:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;margin-top:8px}
+.install-video-copy p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:22px;letter-spacing:.015em}
+.install-checks{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.install-check{display:flex;align-items:flex-start;gap:12px;font-size:.88rem;color:rgba(255,255,255,.82);line-height:1.6}
+.install-check svg{width:18px;height:18px;flex-shrink:0;margin-top:2px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;background:rgba(255,255,255,.1);border-radius:50%;padding:3px;box-sizing:border-box}
+.install-video-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.install-video-ctas .btn-white{padding:14px 30px;font-weight:700}
+.install-video-ctas .btn-ghost-dark{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.28);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 30px;border-radius:2px;transition:border-color .22s,color .22s,background .22s}
+.install-video-ctas .btn-ghost-dark:hover{border-color:rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.04)}
+.install-video-frame{position:relative;border-radius:2px;overflow:hidden;background:#000;aspect-ratio:3/4;width:100%;max-width:480px;margin:0 auto;box-shadow:0 30px 60px rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08)}
+@media(min-width:900px){.install-video-frame{margin:0 0 0 auto;align-self:start}}
+.install-video-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.install-video-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.42) 100%);cursor:pointer;transition:opacity .35s ease,background .35s ease;z-index:2;border:none;color:inherit;font-family:inherit}
+.install-video-play:hover{background:linear-gradient(135deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,.32) 100%)}
+.install-video-play.hidden{opacity:0;pointer-events:none}
+.install-play-btn{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 36px rgba(0,0,0,.4);transition:transform .25s ease}
+.install-video-play:hover .install-play-btn{transform:scale(1.06)}
+.install-play-btn svg{width:30px;height:30px;fill:var(--charcoal);margin-left:5px}
+.install-video-caption{position:absolute;bottom:18px;left:18px;right:18px;display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px 14px;border-radius:2px;font-size:.74rem;color:#fff;letter-spacing:.02em;z-index:3;pointer-events:none}
+.install-video-caption .live-dot{width:7px;height:7px;border-radius:50%;background:#ff4d4d;flex-shrink:0;box-shadow:0 0 0 3px rgba(255,77,77,.25);animation:pulseDot 1.6s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 3px rgba(255,77,77,.25)}50%{box-shadow:0 0 0 6px rgba(255,77,77,0)}}
+.install-video-caption strong{font-weight:700;color:#fff;margin-right:2px}
+.install-video-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.install-video-meta span{display:inline-flex;align-items:center;gap:6px}
+.install-video-meta svg{width:11px;height:11px;stroke:rgba(255,255,255,.5);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:768px){
+  .install-video-section{padding:64px 0}
+  .install-video-copy h3{font-size:1.15rem}
+  .install-video-copy p{font-size:.9rem}
+  .install-play-btn{width:72px;height:72px}
+  .install-play-btn svg{width:24px;height:24px}
+  .install-video-ctas{flex-direction:column;align-items:stretch}
+  .install-video-ctas .btn-white,.install-video-ctas .btn-ghost-dark{width:100%;text-align:center;justify-content:center;min-height:50px}
+}
+
 @media(max-width:768px){
   .transformations-section{padding:64px 0}
   .ba-meta{padding:18px 18px 22px}
@@ -1023,6 +1072,98 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       setPos(50);
     }
     document.querySelectorAll('[data-ba-card]').forEach(initBA);
+  })();
+  </script>
+</section>
+
+<!-- ============================================================
+     INSTALL VIDEO — real contractor installing panels.
+     Click-to-play (no autoplay) so the page stays light on load.
+     Sourced & re-encoded for web from the SuperDeco install footage.
+     ============================================================ -->
+<section class="install-video-section" id="install-video">
+  <div class="container">
+    <div class="install-video-layout">
+      <!-- LEFT COLUMN: all editorial text shares one vertical axis -->
+      <div class="install-video-copy reveal">
+        <div class="section-header">
+          <div class="section-label">How It Installs</div>
+          <h2 class="section-title">Watch a Real Install Happen</h2>
+          <p class="section-desc">Real contractor, real kitchen island, no time-lapse magic. Most accent walls go up in a single afternoon — clean cuts, simple mounting, zero demolition.</p>
+        </div>
+        <h3>From bare drywall to designer finish — same day.</h3>
+        <p>Our panels are precision-cut to your wall dimensions before they ship, so install crews skip the on-site measuring, sawing, and trim work that eats most of a renovation budget.</p>
+        <div class="install-checks">
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>No demolition, drywall replacement, or paint cleanup</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Panels ship pre-cut to your exact dimensions</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>DIY-friendly — or we can connect you with a local installer</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Most accent walls finished in 3–6 hours</span>
+          </div>
+        </div>
+        <div class="install-video-ctas">
+          <a href="contact-us.html?intent=samples" class="btn btn-white btn-lg">Order Free Samples</a>
+          <a href="how-it-works.html" class="btn-ghost-dark">See the Full Process</a>
+        </div>
+        <div class="install-video-meta">
+          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>43 seconds</span>
+          <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Verified contractor footage</span>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: video frame only -->
+      <div class="install-video-frame reveal delay-1" id="installVideoFrame">
+        <video id="installVideo" preload="metadata" playsinline muted poster="images/contractor-install-poster.jpg">
+          <source src="videos/contractor-install.webm" type="video/webm">
+          <source src="videos/contractor-install.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <button type="button" class="install-video-play" id="installVideoPlay" aria-label="Play install video">
+          <span class="install-play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </span>
+        </button>
+        <div class="install-video-caption">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span><strong>Live install footage</strong> — Fluted indoor panels on kitchen island</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var frame = document.getElementById('installVideoFrame');
+    var video = document.getElementById('installVideo');
+    var play  = document.getElementById('installVideoPlay');
+    if(!frame || !video || !play) return;
+    function start(){
+      video.muted = false;
+      video.controls = true;
+      var p = video.play();
+      if(p && typeof p.catch === 'function'){
+        p.catch(function(){
+          // If unmuted autoplay was blocked, fall back to muted playback so user still sees the video.
+          video.muted = true;
+          video.play().catch(function(){});
+        });
+      }
+      play.classList.add('hidden');
+    }
+    play.addEventListener('click', start);
+    video.addEventListener('ended', function(){
+      play.classList.remove('hidden');
+      video.controls = false;
+    });
   })();
   </script>
 </section>
