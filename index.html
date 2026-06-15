@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SuperDeco Canada — Decorative Wall Panels for Beautiful Homes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -38,7 +38,7 @@
   --amber:#c07830;
   --amber-50:#fef5ec;
   --amber-100:#fce8d2;
-  --font:'Outfit',system-ui,-apple-system,sans-serif;
+  --font:'Montserrat','Inter',system-ui,-apple-system,sans-serif;
   --serif:'Playfair Display',Georgia,serif;
   --shadow-xs:0 1px 2px rgba(0,0,0,.04);
   --shadow-sm:0 1px 4px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
@@ -70,7 +70,7 @@ body{font-family:var(--font);color:var(--gray-600);background:var(--white);line-
 .utility-social svg{width:14px;height:14px}
 @media(max-width:768px){.utility-address{display:none}.utility-left{gap:14px}.utility-item{font-size:.65rem}}
 @media(max-width:480px){.utility-item.utility-email{display:none}}
-h1,h2,h3{font-family:var(--serif);letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--font);letter-spacing:-.01em}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button{border:none;cursor:pointer;font-family:inherit}
@@ -171,7 +171,7 @@ section{padding:88px 0}
 .section-label{font-family:var(--font);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gray-400);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .section-header.center .section-label{justify-content:center}
 .section-label::before{content:'';width:24px;height:1px;background:var(--gray-300)}
-.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;color:var(--gray-900);line-height:1.15;letter-spacing:-.01em}
+.section-title{font-family:var(--font);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;color:var(--gray-900);line-height:1.2;text-transform:uppercase;letter-spacing:.05em}
 .section-desc{font-family:var(--font);font-size:.96rem;color:var(--gray-500);margin-top:16px;max-width:520px;line-height:1.8;letter-spacing:.02em}
 .section-header.center .section-desc{margin-left:auto;margin-right:auto}
 .bg-light{background:var(--gray-50)}
@@ -192,7 +192,7 @@ section{padding:88px 0}
 .why-icon.amber svg{stroke:var(--amber);fill:none;stroke-width:1.8}
 .why-icon.warm{background:var(--warm-100);color:var(--gray-600)}
 .why-icon.warm svg{stroke:var(--gray-600);fill:none;stroke-width:1.8}
-.why-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--gray-800);margin-bottom:8px}
+.why-card h3{font-family:var(--font);font-size:1.05rem;font-weight:700;color:var(--gray-800);margin-bottom:8px}
 .why-card p{font-size:.87rem;color:var(--gray-500);line-height:1.7}
 
 /* ===== PRODUCTS ===== */
@@ -216,7 +216,7 @@ section{padding:88px 0}
 .product-card:hover .product-img-overlay{opacity:1}
 .product-img-overlay .btn{font-size:.82rem;padding:10px 22px}
 .product-body{padding:32px 16px 8px;display:flex;flex-direction:column;flex:1;align-items:center;width:100%;max-width:340px}
-.product-body h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gray-800);margin-bottom:8px;letter-spacing:-.01em}
+.product-body h3{font-family:var(--font);font-size:1.1rem;font-weight:700;color:var(--gray-800);margin-bottom:8px;letter-spacing:-.01em}
 .product-body p{font-size:.85rem;color:var(--gray-500);line-height:1.65;margin-bottom:14px;flex:1}
 
 /* ===== HOW IT WORKS ===== */
@@ -231,7 +231,7 @@ section{padding:88px 0}
 .step-card{padding:28px 22px;border-radius:2px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);text-align:center;transition:all .25s ease}
 .step-card:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.14);transform:translateY(-3px)}
 .step-num{width:48px;height:48px;border-radius:2px;background:var(--white);color:var(--charcoal);display:flex;align-items:center;justify-content:center;font-size:.92rem;font-weight:700;margin:0 auto 16px}
-.step-card h3{font-family:var(--serif);font-size:.98rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.step-card h3{font-family:var(--font);font-size:.98rem;font-weight:700;color:var(--white);margin-bottom:6px}
 .step-card p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.65}
 
 /* ===== GALLERY ===== */
@@ -246,7 +246,7 @@ section{padding:88px 0}
 .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,20,.72) 0%,transparent 55%);display:flex;align-items:flex-end;padding:22px;opacity:0;transition:opacity .35s}
 .gallery-item:hover .gallery-overlay{opacity:1}
 .gallery-overlay-text{color:var(--white)}
-.gallery-overlay-text strong{display:block;font-size:.92rem;font-weight:700;font-family:var(--serif)}
+.gallery-overlay-text strong{display:block;font-size:.92rem;font-weight:700;font-family:var(--font)}
 .gallery-overlay-text span{font-size:.75rem;opacity:.6;letter-spacing:.06em;text-transform:uppercase}
 .gi-1{background:url('images/gallery-1.png') center/cover no-repeat}
 .gi-2{background:url('images/gallery-2.png') center/cover no-repeat}
@@ -264,12 +264,12 @@ section{padding:88px 0}
 .testimonial-card{padding:32px;border-radius:2px;background:var(--white);border:1px solid var(--gray-150);transition:all .25s ease;position:relative;overflow:hidden}
 .testimonial-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
 .testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--charcoal)}
-.testimonial-card::after{content:'\201C';position:absolute;top:24px;right:24px;font-size:4rem;font-weight:700;color:var(--gray-100);line-height:1;font-family:var(--serif);pointer-events:none}
+.testimonial-card::after{content:'\201C';position:absolute;top:24px;right:24px;font-size:4rem;font-weight:700;color:var(--gray-100);line-height:1;font-family:var(--font);pointer-events:none}
 .testimonial-stars{color:var(--amber);font-size:.9rem;margin-bottom:16px;letter-spacing:2px}
 .testimonial-card blockquote{font-size:.92rem;color:var(--gray-600);line-height:1.8;margin-bottom:24px;position:relative;z-index:1}
 .testimonial-footer{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--gray-100)}
 .testimonial-avatar{width:40px;height:40px;border-radius:2px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--gray-600)}
-.testimonial-name strong{display:block;font-family:var(--serif);font-size:.92rem;font-weight:700;color:var(--gray-800)}
+.testimonial-name strong{display:block;font-family:var(--font);font-size:.92rem;font-weight:700;color:var(--gray-800)}
 .testimonial-name span{font-size:.76rem;color:var(--gray-400)}
 
 /* ===== STATS BAR ===== */
@@ -281,7 +281,7 @@ section{padding:88px 0}
 @media(max-width:768px){.stat-item::after{display:none!important}}
 .stat-icon{width:44px;height:44px;border-radius:2px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
 .stat-icon svg{width:20px;height:20px;stroke:rgba(255,255,255,.45);fill:none;stroke-width:1.8}
-.stat-item h3{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:4px;letter-spacing:-.01em}
+.stat-item h3{font-family:var(--font);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:4px;letter-spacing:-.01em}
 .stat-item p{font-family:var(--font);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.35)}
 
 /* ===== QUOTE FORM ===== */
@@ -297,7 +297,7 @@ section{padding:88px 0}
 .quote-form-card{background:var(--white);border-radius:0;padding:36px;box-shadow:none;border:1px solid var(--gray-150);position:relative}
 .quote-form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--charcoal)}
 @media(min-width:768px){.quote-form-card{padding:44px}}
-.quote-form-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gray-800);margin-bottom:28px;display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
+.quote-form-title{font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--gray-800);margin-bottom:28px;display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
 .quote-form-title .form-badge{font-family:var(--font);font-size:.65rem;font-weight:600;background:var(--gray-100);color:var(--gray-500);padding:4px 12px;border-radius:2px;text-transform:uppercase;letter-spacing:.08em}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
@@ -345,7 +345,7 @@ section{padding:88px 0}
 /* ===== FINAL CTA ===== */
 .final-cta{background:var(--charcoal);padding:88px 0;text-align:center;position:relative;overflow:hidden}
 @media(min-width:768px){.final-cta{padding:112px 0}}
-.final-cta h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:16px;letter-spacing:-.01em;position:relative}
+.final-cta h2{font-family:var(--font);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:16px;letter-spacing:-.01em;position:relative}
 .final-cta p{font-size:.97rem;color:rgba(255,255,255,.6);margin-bottom:40px;max-width:460px;margin-left:auto;margin-right:auto;position:relative;line-height:1.8;letter-spacing:.025em}
 .final-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
 .final-cta .btn-white{color:var(--charcoal);font-weight:700}
@@ -383,7 +383,7 @@ section{padding:88px 0}
 .style-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,15,.82) 0%,rgba(15,15,15,.35) 45%,rgba(15,15,15,.08) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px;transition:background .35s}
 .style-card:hover .style-card-overlay{background:linear-gradient(to top,rgba(15,15,15,.9) 0%,rgba(15,15,15,.45) 50%,rgba(15,15,15,.1) 100%)}
 .style-card-tag{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;font-family:var(--font)}
-.style-card-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:6px}
+.style-card-title{font-family:var(--font);font-size:1.05rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:6px}
 .style-card-mood{font-size:.74rem;color:rgba(255,255,255,.6);line-height:1.5;font-family:var(--font)}
 .style-card-arrow{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s,background .25s}
 .style-card:hover .style-card-arrow{opacity:1;background:rgba(255,255,255,.2)}
@@ -437,7 +437,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   /* --- Sections --- */
   section{padding:64px 0}
   .section-header{margin-bottom:40px}
-  .section-title{font-size:clamp(1.7rem,6.5vw,2.2rem)}
+  .section-title{font-size:clamp(1.2rem,5vw,1.7rem)}
   .section-desc{font-size:.93rem}
 
   /* --- Why cards --- */

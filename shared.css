@@ -34,7 +34,7 @@
   --charcoal:#1a1a1a;
   --amber:#c07830;
   --amber-50:#fef5ec;
-  --font:'Outfit',system-ui,-apple-system,sans-serif;
+  --font:'Montserrat','Inter',system-ui,-apple-system,sans-serif;
   --serif:'Playfair Display',Georgia,serif;
   --shadow-xs:0 1px 2px rgba(0,0,0,.04);
   --shadow-sm:0 1px 4px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
@@ -66,7 +66,7 @@ body{font-family:var(--font);color:var(--gray-600);background:var(--white);line-
 .utility-social svg{width:14px;height:14px}
 @media(max-width:768px){.utility-address{display:none}.utility-left{gap:14px}.utility-item{font-size:.65rem}}
 @media(max-width:480px){.utility-item.utility-email{display:none}}
-h1,h2,h3{font-family:var(--serif);letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--font);font-weight:700;letter-spacing:.01em}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button{border:none;cursor:pointer;font-family:inherit}
@@ -163,7 +163,7 @@ section{padding:88px 0}
 .section-label{font-family:var(--font);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gray-400);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .section-header.center .section-label{justify-content:center}
 .section-label::before{content:'';width:24px;height:1px;background:var(--gray-300)}
-.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;color:var(--gray-900);line-height:1.15;letter-spacing:-.01em}
+.section-title{font-family:var(--font);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;color:var(--gray-900);line-height:1.2;text-transform:uppercase;letter-spacing:.05em}
 .section-desc{font-family:var(--font);font-size:.96rem;color:var(--gray-500);margin-top:16px;max-width:520px;line-height:1.8;letter-spacing:.02em}
 .section-header.center .section-desc{margin-left:auto;margin-right:auto}
 
@@ -195,12 +195,12 @@ section{padding:88px 0}
 .product-card:hover .product-img-overlay{opacity:1}
 .product-img-overlay .btn{font-size:.82rem;padding:10px 22px}
 .product-body{padding:24px 24px 20px}
-.product-body h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gray-800);margin-bottom:8px;letter-spacing:-.01em}
+.product-body h3{font-family:var(--font);font-size:1.1rem;font-weight:700;color:var(--gray-800);margin-bottom:8px;letter-spacing:-.01em}
 .product-body p{font-size:.85rem;color:var(--gray-500);line-height:1.65;margin-bottom:14px}
 
 /* ===== PAGE BANNER ===== */
 .page-banner{background:var(--charcoal);color:var(--white);padding:88px 0 72px;text-align:center;position:relative;overflow:hidden}
-.page-banner h1{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:700;margin-bottom:16px;letter-spacing:-.01em;position:relative}
+.page-banner h1{font-family:var(--font);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:700;margin-bottom:16px;letter-spacing:-.01em;position:relative}
 .page-banner p{font-family:var(--font);font-size:.96rem;color:rgba(255,255,255,.55);max-width:520px;margin:0 auto;position:relative;line-height:1.8;letter-spacing:.03em}
 .breadcrumb{font-size:.7rem;color:rgba(255,255,255,.4);margin-bottom:20px;position:relative;letter-spacing:.1em;text-transform:uppercase}
 .breadcrumb a{color:rgba(255,255,255,.55);transition:color .2s}
@@ -225,7 +225,7 @@ section{padding:88px 0}
 
 /* Info column */
 .product-info .pd-eyebrow{font-family:var(--font);font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gray-400);margin-bottom:14px}
-.product-info h1{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--gray-900);line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
+.product-info h1{font-family:var(--font);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:var(--gray-900);line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
 .product-info .pd-tagline{font-family:var(--font);font-size:.97rem;color:var(--gray-500);line-height:1.8;margin-bottom:28px;letter-spacing:.025em}
 .pd-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
 .pd-meta-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:var(--gray-100);color:var(--gray-600);border-radius:2px;font-family:var(--font);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
@@ -244,7 +244,7 @@ section{padding:88px 0}
 /* Trust strip below detail */
 .pd-trust-strip{margin-top:72px;padding:40px;background:var(--gray-50);border-radius:0;border:1px solid var(--gray-150);display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
 @media(max-width:700px){.pd-trust-strip{grid-template-columns:1fr;text-align:left}}
-.pd-trust-strip-item h4{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:6px}
+.pd-trust-strip-item h4{font-family:var(--font);font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:6px}
 .pd-trust-strip-item p{font-family:var(--font);font-size:.84rem;color:var(--gray-500);letter-spacing:.02em}
 
 /* Back link */
@@ -420,7 +420,7 @@ section{padding:88px 0}
   overflow:hidden;
 }
 .contact-banner h1{
-  font-family:var(--serif);
+  font-family:var(--font);
   font-size:clamp(2.2rem,5vw,3.4rem);
   font-weight:700;
   color:#fff;
@@ -560,7 +560,7 @@ section{padding:88px 0}
 }
 .contact-form-header{margin-bottom:28px}
 .contact-form-header h3{
-  font-family:var(--serif);
+  font-family:var(--font);
   font-size:1.3rem;font-weight:700;
   color:var(--gray-800);margin-bottom:6px;
   letter-spacing:-.01em;
@@ -606,7 +606,7 @@ section{padding:88px 0}
 .quote-form-card{background:var(--white);border-radius:0;padding:36px;box-shadow:none;border:1px solid var(--gray-150);position:relative}
 .quote-form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--charcoal)}
 @media(min-width:768px){.quote-form-card{padding:44px}}
-.quote-form-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gray-800);margin-bottom:28px;display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
+.quote-form-title{font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--gray-800);margin-bottom:28px;display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
 .quote-form-title .form-badge{font-family:var(--font);font-size:.65rem;font-weight:600;background:var(--gray-100);color:var(--gray-500);padding:4px 12px;border-radius:2px;text-transform:uppercase;letter-spacing:.08em}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
