@@ -221,22 +221,33 @@ section{padding:88px 0}
 
 /* ===== BEST SELLERS ===== */
 .bestsellers-section{background:#ffffff;padding:80px 0}
-.bestsellers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:48px}
-@media(max-width:1100px){.bestsellers-grid{grid-template-columns:repeat(3,1fr);gap:36px}}
-@media(max-width:720px){.bestsellers-grid{grid-template-columns:repeat(2,1fr);gap:40px}}
-@media(max-width:480px){.bestsellers-grid{grid-template-columns:1fr;gap:48px}}
-.bestseller-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:#ffffff;height:100%}
-.bestseller-img{position:relative;width:100%;aspect-ratio:1/1;background:#ffffff;margin-bottom:24px;overflow:hidden;display:block}
+.bestsellers-slider{position:relative;margin-top:48px}
+.bestsellers-viewport{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.bestsellers-viewport::-webkit-scrollbar{display:none}
+.bestsellers-track{display:flex;gap:28px;padding:4px 2px}
+.bestseller-card{flex:0 0 calc((100% - 3 * 28px) / 4);display:flex;flex-direction:column;align-items:center;text-align:center;background:#ffffff;scroll-snap-align:start;min-width:0}
+@media(max-width:1100px){.bestseller-card{flex-basis:calc((100% - 2 * 28px) / 3)}}
+@media(max-width:720px){.bestseller-card{flex-basis:calc((100% - 24px) / 2)}.bestsellers-track{gap:24px}}
+@media(max-width:480px){.bestseller-card{flex-basis:82%}.bestsellers-track{gap:20px}}
+.bestseller-img{position:relative;width:100%;aspect-ratio:1/1;background:#ffffff;margin-bottom:16px;overflow:hidden;display:block}
 .bs-thumb{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.4,0,.2,1)}
 .bestseller-card:hover .bs-thumb{transform:scale(1.04)}
 .bs-hover-layer{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .45s ease;pointer-events:none;z-index:1}
 .bestseller-card:hover .bs-hover-layer{opacity:1}
+.bestseller-tag-slot{height:22px;margin-bottom:10px;display:flex;align-items:center;justify-content:center}
+.bestseller-tag{font-family:var(--font);font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#ffffff;background:#c8102e;border:1px solid #c8102e;padding:4px 12px;line-height:1;border-radius:999px}
 .bestseller-sku{font-family:var(--font);font-size:.68rem;font-weight:500;color:#888888;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
 .bestseller-title{font-family:var(--font);font-size:1rem;font-weight:700;color:#000000;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;line-height:1.3}
 .bestseller-desc{font-family:var(--font);font-size:.78rem;font-weight:400;color:#555555;line-height:1.5;letter-spacing:.01em;max-width:260px;margin:0 auto 20px;font-style:italic;min-height:2.34em}
 .bestseller-btn{display:inline-block;background:#000000;color:#ffffff;font-family:var(--font);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:14px 28px;border:1px solid #000000;transition:background .2s ease,color .2s ease;margin-top:auto;align-self:center}
 .bestseller-btn:hover{background:#ffffff;color:#000000}
-@media(max-width:560px){.bestsellers-section{padding:60px 0}.bestsellers-grid{margin-top:36px}}
+.bestsellers-arrow{position:absolute;top:38%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:#ffffff;border:1px solid rgba(0,0,0,.12);color:#000000;font-size:1.4rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.08);transition:opacity .25s ease,transform .25s ease,background .25s ease,color .25s ease;padding:0}
+.bestsellers-arrow:hover{background:#000000;color:#ffffff;transform:translateY(-50%) scale(1.05)}
+.bestsellers-arrow:disabled{opacity:0;pointer-events:none}
+.bestsellers-arrow-prev{left:-22px}
+.bestsellers-arrow-next{right:-22px}
+@media(max-width:720px){.bestsellers-arrow{display:none}}
+@media(max-width:560px){.bestsellers-section{padding:60px 0}.bestsellers-slider{margin-top:36px}}
 
 /* ===== HOW IT WORKS ===== */
 .steps-section{background:var(--charcoal);position:relative;overflow:hidden;color:var(--white)}
@@ -661,58 +672,190 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       <div class="section-label">Best Sellers</div>
       <h2 class="section-title">Our Most Popular Products</h2>
     </div>
-    <div class="bestsellers-grid">
+    <div class="bestsellers-slider reveal">
+      <button class="bestsellers-arrow bestsellers-arrow-prev" type="button" aria-label="Previous best sellers">&#8249;</button>
+      <button class="bestsellers-arrow bestsellers-arrow-next" type="button" aria-label="Next best sellers">&#8250;</button>
+      <div class="bestsellers-viewport">
+        <div class="bestsellers-track">
 
-      <div class="bestseller-card reveal">
-        <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 3009" aria-label="View Dark Caramel panel">
-          <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/1.jpg')"></div>
-        </a>
-        <div class="bestseller-sku">SKU: LK 3009</div>
-        <h3 class="bestseller-title">Dark Caramel</h3>
-        <p class="bestseller-desc">A deep, sophisticated finish for modern executive spaces.</p>
-        <a href="contact-us.html?sku=LK-3009" class="bestseller-btn">Request Quote</a>
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 3009" aria-label="View Dark Caramel panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/1.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"><span class="bestseller-tag">Best Seller</span></div>
+            <div class="bestseller-sku">SKU: LK 3009</div>
+            <h3 class="bestseller-title">Dark Caramel</h3>
+            <p class="bestseller-desc">A deep, sophisticated finish for modern executive spaces.</p>
+            <a href="contact-us.html?sku=LK-3009" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 1019" aria-label="View Dark Oak panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/5.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"><span class="bestseller-tag">Best Seller</span></div>
+            <div class="bestseller-sku">SKU: LK 1019</div>
+            <h3 class="bestseller-title">Dark Oak</h3>
+            <p class="bestseller-desc">The warmth of natural oak with the durability of modern PVC.</p>
+            <a href="contact-us.html?sku=LK-1019" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK-1016" aria-label="View Walnuts panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/walnuts-3.png')"></div>
+            </a>
+            <div class="bestseller-tag-slot"><span class="bestseller-tag">Best Seller</span></div>
+            <div class="bestseller-sku">SKU: LK-1016</div>
+            <h3 class="bestseller-title">Walnuts</h3>
+            <p class="bestseller-desc">Rich grain and timeless character for inviting, lived-in interiors.</p>
+            <a href="contact-us.html?sku=LK-1016" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="PS-D15020" aria-label="View Gold Premium panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/2.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: PS-D15020</div>
+            <h3 class="bestseller-title">Gold Premium</h3>
+            <p class="bestseller-desc">Subtle luminous accents that elevate any refined room.</p>
+            <a href="contact-us.html?sku=PS-D15020" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK-4005" aria-label="View Calacatta White panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/6.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK-4005</div>
+            <h3 class="bestseller-title">Calacatta White</h3>
+            <p class="bestseller-desc">Crisp marble veining for a luminous, gallery-like statement.</p>
+            <a href="contact-us.html?sku=LK-4005" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 1018" aria-label="View Ash Wood panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/ash-woos.png')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK 1018</div>
+            <h3 class="bestseller-title">Ash Wood</h3>
+            <p class="bestseller-desc">Pale grain that brings airy Scandinavian calm to any room.</p>
+            <a href="contact-us.html?sku=LK-1018" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK-4010" aria-label="View Black Gold panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/7.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK-4010</div>
+            <h3 class="bestseller-title">Black Gold</h3>
+            <p class="bestseller-desc">Dramatic obsidian threaded with gilded veins for statement walls.</p>
+            <a href="contact-us.html?sku=LK-4010" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="58956-6" aria-label="View Costa del Sol panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/9.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: 58956-6</div>
+            <h3 class="bestseller-title">Costa del Sol</h3>
+            <p class="bestseller-desc">Sun-warmed tones for inviting, Mediterranean-inspired interiors.</p>
+            <a href="contact-us.html?sku=58956-6" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 1021" aria-label="View Innovation Grey panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/10.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK 1021</div>
+            <h3 class="bestseller-title">Innovation Grey</h3>
+            <p class="bestseller-desc">Modern matte grey with refined texture for contemporary spaces.</p>
+            <a href="contact-us.html?sku=LK-1021" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 1017" aria-label="View Classic Wood panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/madera-clasica.png')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK 1017</div>
+            <h3 class="bestseller-title">Classic Wood</h3>
+            <p class="bestseller-desc">Timeless mid-tone oak that pairs with traditional and modern decor.</p>
+            <a href="contact-us.html?sku=LK-1017" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="0017-46" aria-label="View White Ash panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/3.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: 0017-46</div>
+            <h3 class="bestseller-title">White Ash</h3>
+            <p class="bestseller-desc">Soft neutral grain that brightens compact and open rooms alike.</p>
+            <a href="contact-us.html?sku=0017-46" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 8001" aria-label="View Pure Black panel">
+              <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/12.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK 8001</div>
+            <h3 class="bestseller-title">Pure Black</h3>
+            <p class="bestseller-desc">Bold matte black that anchors minimalist, gallery-style interiors.</p>
+            <a href="contact-us.html?sku=LK-8001" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/outdoor-wall-panels.html" class="bestseller-img" data-sku="K219-26T" aria-label="View TEKA outdoor panel">
+              <div class="bs-thumb" style="background-image:url('images/products/outdoor-wall-panels/16.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: K219-26T</div>
+            <h3 class="bestseller-title">Teka Outdoor</h3>
+            <p class="bestseller-desc">Warm outdoor teak finish built to weather rain, sun, and time.</p>
+            <a href="contact-us.html?sku=K219-26T" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/marble-pvc-high-gloss.html" class="bestseller-img" data-sku="KL8233" aria-label="View Negro Marquina marble panel">
+              <div class="bs-thumb" style="background-image:url('images/products/marble-pvc-high-gloss/31.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: KL8233</div>
+            <h3 class="bestseller-title">Negro Marquina</h3>
+            <p class="bestseller-desc">High-gloss black marble veining for dramatic statement walls.</p>
+            <a href="contact-us.html?sku=KL8233" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/metal-pvc.html" class="bestseller-img" data-sku="MMB-03" aria-label="View Brushed Bronze metal panel">
+              <div class="bs-thumb" style="background-image:url('images/products/metal-pvc/bronce-metal-2.png')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: MMB-03</div>
+            <h3 class="bestseller-title">Brushed Bronze</h3>
+            <p class="bestseller-desc">Soft metallic warmth that elevates lobbies and hospitality spaces.</p>
+            <a href="contact-us.html?sku=MMB-03" class="bestseller-btn">Request Quote</a>
+          </div>
+
+          <div class="bestseller-card">
+            <a href="products/acoustic-panels.html" class="bestseller-img" data-sku="LK-3008" aria-label="View Acoustic Oak panel">
+              <div class="bs-thumb" style="background-image:url('images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg')"></div>
+            </a>
+            <div class="bestseller-tag-slot"></div>
+            <div class="bestseller-sku">SKU: LK-3008</div>
+            <h3 class="bestseller-title">Acoustic Oak</h3>
+            <p class="bestseller-desc">Slatted oak that softens sound while warming the room visually.</p>
+            <a href="contact-us.html?sku=LK-3008" class="bestseller-btn">Request Quote</a>
+          </div>
+
+        </div>
       </div>
-
-      <div class="bestseller-card reveal delay-1">
-        <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK 1019" aria-label="View Dark Oak panel">
-          <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/5.jpg')"></div>
-        </a>
-        <div class="bestseller-sku">SKU: LK 1019</div>
-        <h3 class="bestseller-title">Dark Oak</h3>
-        <p class="bestseller-desc">The warmth of natural oak with the durability of modern PVC.</p>
-        <a href="contact-us.html?sku=LK-1019" class="bestseller-btn">Request Quote</a>
-      </div>
-
-      <div class="bestseller-card reveal delay-2">
-        <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK-1016" aria-label="View Walnuts panel">
-          <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/walnuts-3.png')"></div>
-        </a>
-        <div class="bestseller-sku">SKU: LK-1016</div>
-        <h3 class="bestseller-title">Walnuts</h3>
-        <p class="bestseller-desc">Rich grain and timeless character for inviting, lived-in interiors.</p>
-        <a href="contact-us.html?sku=LK-1016" class="bestseller-btn">Request Quote</a>
-      </div>
-
-      <div class="bestseller-card reveal delay-3">
-        <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="PS-D15020" aria-label="View Gold Premium panel">
-          <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/2.jpg')"></div>
-        </a>
-        <div class="bestseller-sku">SKU: PS-D15020</div>
-        <h3 class="bestseller-title">Gold Premium</h3>
-        <p class="bestseller-desc">Subtle luminous accents that elevate any refined room.</p>
-        <a href="contact-us.html?sku=PS-D15020" class="bestseller-btn">Request Quote</a>
-      </div>
-
-      <div class="bestseller-card reveal delay-4">
-        <a href="products/indoor-wall-panels.html" class="bestseller-img" data-sku="LK-4005" aria-label="View Calacatta White panel">
-          <div class="bs-thumb" style="background-image:url('images/products/indoor-wall-panels/6.jpg')"></div>
-        </a>
-        <div class="bestseller-sku">SKU: LK-4005</div>
-        <h3 class="bestseller-title">Calacatta White</h3>
-        <p class="bestseller-desc">Crisp marble veining for a luminous, gallery-like statement.</p>
-        <a href="contact-us.html?sku=LK-4005" class="bestseller-btn">Request Quote</a>
-      </div>
-
     </div>
   </div>
   <script>
@@ -722,7 +865,18 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       'LK 1019':   'images/products/indoor-wall-panels/ppure-black-3.jpg',
       'LK-1016':   'images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-09-18-a-las-10.32.32_7037e3b1.jpg',
       'PS-D15020': 'images/products/indoor-wall-panels/Esquina-Moderna-de-Oficina-Elegante.png',
-      'LK-4005':   'images/products/indoor-wall-panels/Imagen-de-WhatsApp-2024-06-03-a-las-20.36.24_aee0334e.jpg'
+      'LK-4005':   'images/products/indoor-wall-panels/Imagen-de-WhatsApp-2024-06-03-a-las-20.36.24_aee0334e.jpg',
+      'LK 1018':   'images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-10_25_56-p.m.png',
+      'LK-4010':   'images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-11_25_18-p.m.png',
+      '58956-6':   'images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.15.13_4d6a012a.jpg',
+      'LK 1021':   'images/products/indoor-wall-panels/ChatGPT-Image-13-jul-2025-05_12_26-p.m.png',
+      'LK 1017':   'images/products/indoor-wall-panels/2-2.png',
+      '0017-46':   'images/products/indoor-wall-panels/descarga-34.jpeg',
+      'LK 8001':   'images/products/indoor-wall-panels/ppure-black2.jpg',
+      'K219-26T':  'images/products/outdoor-wall-panels/teka.jpg',
+      'KL8233':    'images/products/marble-pvc-high-gloss/negro-marquina.jpg',
+      'MMB-03':    'images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_38_37-p.m.png',
+      'LK-3008':   'images/products/acoustic-panels/superdecoimport_1753491465075.jpg'
     };
     document.querySelectorAll('.bestseller-img[data-sku]').forEach(function(el){
       var src = BS_HOVER[el.getAttribute('data-sku')];
@@ -732,6 +886,21 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       layer.style.backgroundImage = "url('" + src + "')";
       el.appendChild(layer);
     });
+
+    var viewport = document.querySelector('.bestsellers-viewport');
+    var prevBtn  = document.querySelector('.bestsellers-arrow-prev');
+    var nextBtn  = document.querySelector('.bestsellers-arrow-next');
+    if (!viewport || !prevBtn || !nextBtn) return;
+    function updateArrows(){
+      var max = viewport.scrollWidth - viewport.clientWidth - 1;
+      prevBtn.disabled = viewport.scrollLeft <= 0;
+      nextBtn.disabled = viewport.scrollLeft >= max;
+    }
+    prevBtn.addEventListener('click', function(){ viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' }); });
+    nextBtn.addEventListener('click', function(){ viewport.scrollBy({ left:  viewport.clientWidth, behavior: 'smooth' }); });
+    viewport.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
   })();
   </script>
 </section>
