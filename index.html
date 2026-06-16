@@ -743,8 +743,11 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .hero h1 em{font-style:normal;font-weight:400;color:rgba(255,255,255,.92)}
   .hero h1 .h1-eyebrow{font-size:.62rem;letter-spacing:.2em;margin-bottom:12px;color:rgba(255,255,255,.78);font-weight:600}
   .hero h1 .h1-eyebrow::before{display:none}
-  .hero-mid{padding-top:calc(36svh - 130px)}
+  /* Trust pills are hidden on mobile; the CTAs sit near the bottom of the hero
+     so the carousel image remains the focal point. */
+  .hero-mid{padding-top:calc(80svh - 130px)}
   .hero-ctas{gap:10px}
+  .hero-trust-grid{display:none}
   .hero-btn-primary{min-height:52px;font-size:.74rem;letter-spacing:.14em;padding:16px 28px;background:#fff;color:var(--charcoal);border:1px solid #fff;font-weight:700}
   .hero-btn-primary:hover{background:transparent;color:#fff}
   .hero-btn-ghost{min-height:48px;font-size:.72rem;letter-spacing:.14em;padding:14px 28px;background:transparent;border:1px solid rgba(255,255,255,.42);color:rgba(255,255,255,.92);font-weight:600}
@@ -753,7 +756,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .hero-trust-pill svg{width:11px;height:11px}
   /* Push the "Trusted by 2,400+" line distinctly to the bottom of the hero,
      away from the trust-pill row, so the two trust signals don't crowd. */
-  .hero-bottom{margin-top:48px;padding-top:24px;padding-bottom:22px;gap:8px;border-top:1px solid rgba(255,255,255,.08)}
+  .hero-bottom{margin-top:18px;padding-top:14px;padding-bottom:16px;gap:8px;border-top:1px solid rgba(255,255,255,.08)}
   .hero-trust-line{font-size:.6rem;letter-spacing:.16em;color:rgba(255,255,255,.55)}
   .hero-scroll-indicator{display:none}
   .carousel-btn{width:34px;height:34px;background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.18)}
@@ -916,7 +919,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .hero-trust-pill{justify-content:flex-start}
   /* On the smallest screens, the 1-col trust grid is taller — give the
      bottom trust line an even bigger gap so the two never visually collide. */
-  .hero-bottom{margin-top:56px}
+  .hero-bottom{margin-top:18px}
   /* No bestseller-card override here — let the 768px rule above (2 cards + peek)
      apply on the smallest phones too. Overriding to 82% showed only 1 card. */
   .stats-grid{grid-template-columns:1fr 1fr;gap:22px 14px}
