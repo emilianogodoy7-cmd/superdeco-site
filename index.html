@@ -667,13 +667,17 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .install-video-section .section-label::before{background:rgba(255,255,255,.22)}
 .install-video-section .section-title{color:var(--white)}
 .install-video-section .section-desc{color:rgba(255,255,255,.62);max-width:100%}
-/* Editorial 2-col layout: ALL text content (eyebrow → title → desc → sub-h3 → bullets → CTAs → meta) lives in the LEFT column so every line shares the same left vertical axis. The video frame sits in the RIGHT column. */
-.install-video-layout{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start;margin-top:0}
-@media(max-width:900px){.install-video-layout{grid-template-columns:1fr;gap:36px}}
+/* Editorial 2-col layout: header + body share the LEFT column; the video
+   spans the RIGHT column across both rows. On mobile the areas reflow to
+   header → video → body so the video sits right under the H2. */
+.install-video-layout{display:grid;grid-template-columns:5fr 7fr;column-gap:56px;row-gap:0;align-items:start;margin-top:0;grid-template-areas:"head frame" "copy frame"}
+.install-video-layout > .install-video-header{grid-area:head;margin-bottom:28px}
+.install-video-layout > .install-video-copy{grid-area:copy}
+.install-video-layout > .install-video-frame{grid-area:frame}
+@media(max-width:900px){.install-video-layout{grid-template-columns:1fr;column-gap:0;row-gap:28px;grid-template-areas:"head" "frame" "copy"}.install-video-layout > .install-video-header{margin-bottom:0}}
 .install-video-section .section-header{margin-bottom:32px}
 .install-video-copy{display:flex;flex-direction:column}
 .install-video-copy>*{margin-left:0;margin-right:0}
-.install-video-copy .section-header{margin-bottom:28px}
 .install-video-copy h3{font-family:var(--font);font-size:1.25rem;font-weight:700;color:var(--white);letter-spacing:-.005em;margin-bottom:14px;line-height:1.35;padding-top:8px;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;margin-top:8px}
 .install-video-copy p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:22px;letter-spacing:.015em}
 .install-checks{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
@@ -1285,13 +1289,16 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 <section class="install-video-section" id="install-video">
   <div class="container">
     <div class="install-video-layout">
-      <!-- LEFT COLUMN: all editorial text shares one vertical axis -->
+      <!-- Section header is promoted to a direct grid child so it can sit
+           above the video frame on mobile while keeping its desktop position. -->
+      <div class="section-header install-video-header reveal">
+        <div class="section-label">How It Installs</div>
+        <h2 class="section-title">Watch a Real Install Happen</h2>
+        <p class="section-desc">Real contractor, real kitchen island. Most accent walls go up in a single afternoon — clean cuts, simple mounting, zero demolition.</p>
+      </div>
+
+      <!-- LEFT COLUMN body: all editorial text shares one vertical axis -->
       <div class="install-video-copy reveal">
-        <div class="section-header">
-          <div class="section-label">How It Installs</div>
-          <h2 class="section-title">Watch a Real Install Happen</h2>
-          <p class="section-desc">Real contractor, real kitchen island, no time-lapse magic. Most accent walls go up in a single afternoon — clean cuts, simple mounting, zero demolition.</p>
-        </div>
         <h3>From bare drywall to designer finish — same day.</h3>
         <p>Our panels are precision-cut to your wall dimensions before they ship, so install crews skip the on-site measuring, sawing, and trim work that eats most of a renovation budget.</p>
         <div class="install-checks">
