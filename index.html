@@ -477,10 +477,13 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .why-card p{font-size:.875rem}
 
   /* --- Products --- */
-  .product-img{height:220px}
-  .product-body{padding:22px 22px 18px}
-  .product-body h3{font-size:1rem}
-  .product-body p{font-size:.86rem}
+  /* Lock image and body to the same centered column so the title, description
+     and Learn More button line up perfectly under each picture. */
+  .product-img{width:min(260px,72%);height:auto;aspect-ratio:1/1;margin:0 auto}
+  .product-body{padding:18px 0 8px;width:min(260px,72%);max-width:none;margin:0 auto;text-align:center;align-items:center}
+  .product-body h3{font-size:1rem;text-align:center;width:100%}
+  .product-body p{font-size:.86rem;text-align:center;max-width:none;margin-bottom:12px;width:100%}
+  .product-body .btn-ghost{align-self:center;margin-top:auto}
 
   /* --- Steps --- */
   .step-card{padding:24px 20px}
