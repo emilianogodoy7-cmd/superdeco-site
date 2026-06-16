@@ -807,15 +807,16 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .bestsellers-section{padding:56px 0 8px}
   .bestsellers-slider{margin-top:28px}
   .bestsellers-viewport{padding-left:20px;margin-left:-20px;padding-right:20px;margin-right:-20px;scroll-padding-left:20px}
-  .bestsellers-track{gap:14px;padding:2px 0}
-  .bestseller-card{flex:0 0 78%}
-  .bestseller-img{margin-bottom:14px}
-  .bestseller-tag-slot{height:20px;margin-bottom:8px}
-  .bestseller-tag{font-size:.55rem;letter-spacing:.2em;padding:3px 10px}
-  .bestseller-sku{font-size:.6rem;letter-spacing:.16em;margin-bottom:6px}
-  .bestseller-title{font-size:.92rem;letter-spacing:.03em;margin-bottom:6px;line-height:1.25}
-  .bestseller-desc{font-size:.74rem;line-height:1.5;max-width:none;margin-bottom:16px;min-height:0}
-  .bestseller-btn{padding:12px 22px;font-size:.66rem;letter-spacing:.16em;min-height:42px;line-height:1}
+  .bestsellers-track{gap:12px;padding:2px 0}
+  /* Show 2 full cards + a peek of the 3rd so users immediately see more variety */
+  .bestseller-card{flex:0 0 calc((100% - 12px - 32px) / 2)}
+  .bestseller-img{margin-bottom:12px}
+  .bestseller-tag-slot{height:18px;margin-bottom:6px}
+  .bestseller-tag{font-size:.5rem;letter-spacing:.18em;padding:2px 8px}
+  .bestseller-sku{font-size:.56rem;letter-spacing:.14em;margin-bottom:4px}
+  .bestseller-title{font-size:.84rem;letter-spacing:.03em;margin-bottom:5px;line-height:1.25}
+  .bestseller-desc{font-size:.7rem;line-height:1.45;max-width:none;margin-bottom:12px;min-height:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .bestseller-btn{padding:10px 14px;font-size:.6rem;letter-spacing:.14em;min-height:38px;line-height:1;width:100%}
 
   /* ---------- HOW IT WORKS (homepage steps) ---------- */
   .steps-grid{gap:12px}
