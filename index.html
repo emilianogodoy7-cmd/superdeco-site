@@ -839,6 +839,8 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .gallery-section{padding:56px 0}
   .gallery-grid{gap:10px}
   .gallery-item{height:auto;aspect-ratio:4/5;border-radius:4px}
+  /* Trim the last two tiles on mobile to keep the section scannable */
+  .gallery-grid .gallery-item:nth-last-child(-n+2){display:none}
   .gallery-overlay{padding:16px;opacity:1;background:linear-gradient(to top,rgba(20,20,20,.78) 0%,transparent 50%)}
   .gallery-overlay-text strong{font-size:.88rem}
   .gallery-overlay-text span{font-size:.66rem;letter-spacing:.1em}
