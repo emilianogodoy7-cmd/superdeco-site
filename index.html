@@ -2373,11 +2373,17 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
   var dotsContainer=document.getElementById('carouselDots');
   var carousel=document.getElementById('heroCarousel');
   if(!track||!carousel)return;
+  // On mobile, drop the first slide (banner-1.png) and use a faster autoplay.
+  var isMobile=window.matchMedia('(max-width: 768px)').matches;
+  if(isMobile){
+    var firstSlide=track.querySelector('.carousel-slide');
+    if(firstSlide)firstSlide.parentNode.removeChild(firstSlide);
+  }
   var slides=track.querySelectorAll('.carousel-slide');
   var total=slides.length;
   if(total<2)return;
 
-  var INTERVAL_MS=3000;
+  var INTERVAL_MS=isMobile?2500:3000;
   var current=0;
   var autoTimer=null;
   var paused=false;
