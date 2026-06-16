@@ -130,6 +130,7 @@ button{border:none;cursor:pointer;font-family:inherit}
 @media(min-width:768px){.hero-inner{padding:140px 0 96px}}
 .hero h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:700;line-height:1.1;color:var(--white);letter-spacing:-.01em;margin-bottom:150px;max-width:700px}
 .hero h1 em{font-style:italic;font-weight:400}
+.hero h1 .h1-m-only{display:none}
 .hero-desc{font-size:.97rem;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:480px;line-height:1.75;letter-spacing:.025em}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
 .hero-btn-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--white);color:var(--charcoal);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:17px 44px;border-radius:2px;border:1px solid var(--white);transition:background .22s,color .22s;white-space:nowrap}
@@ -453,6 +454,8 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .hero-inner{display:flex;flex-direction:column;align-items:center;height:100%;padding:88px 24px 0;width:100%}
   .hero-top{width:100%;text-align:center}
   .hero h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px;max-width:100%;text-align:center}
+  .hero h1 .h1-m-only{display:inline}
+  .hero h1 .h1-d-only{display:none}
   .hero-desc{font-size:.86rem;margin-bottom:0;max-width:100%;color:rgba(255,255,255,.72);text-align:center}
   /* push CTAs below carousel arrows (arrows are at top:50% of hero = 39svh) */
   .hero-mid{width:100%;padding-top:calc(39svh - 160px);text-align:center}
@@ -1032,7 +1035,7 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   <!-- Overlaid content — three-zone magazine layout -->
   <div class="container hero-inner">
     <div class="hero-top">
-      <h1><span class="h1-eyebrow">Premium Decorative Wall Panels — Made for Canadian Homes</span>Transform Any Wall Into a<br><em>Designer Statement</em></h1>
+      <h1><span class="h1-eyebrow">Premium Decorative Wall Panels — Made for Canadian Homes</span>Transform Any Wall Into<span class="h1-d-only"> a<br></span><span class="h1-m-only"><br>a </span><em>Designer Statement</em></h1>
     </div>
     <div class="hero-mid">
       <div class="hero-ctas">
