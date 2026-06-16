@@ -917,7 +917,8 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   /* On the smallest screens, the 1-col trust grid is taller — give the
      bottom trust line an even bigger gap so the two never visually collide. */
   .hero-bottom{margin-top:56px}
-  .bestseller-card{flex:0 0 82%}
+  /* No bestseller-card override here — let the 768px rule above (2 cards + peek)
+     apply on the smallest phones too. Overriding to 82% showed only 1 card. */
   .stats-grid{grid-template-columns:1fr 1fr;gap:22px 14px}
   .ba-slider-wrap{aspect-ratio:1/1}
 }
