@@ -1350,20 +1350,47 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     var video = document.getElementById('installVideo');
     var play  = document.getElementById('installVideoPlay');
     if(!frame || !video || !play) return;
-    function start(){
+
+    function tryPlay(){
+      var p = video.play();
+      if(p && typeof p.catch === 'function') p.catch(function(){});
+    }
+
+    // Manual click on the big overlay button: unmute + start.
+    play.addEventListener('click', function(){
       video.muted = false;
       video.controls = true;
       var p = video.play();
       if(p && typeof p.catch === 'function'){
         p.catch(function(){
-          // If unmuted autoplay was blocked, fall back to muted playback so user still sees the video.
           video.muted = true;
-          video.play().catch(function(){});
+          tryPlay();
         });
       }
       play.classList.add('hidden');
+    });
+
+    // Autoplay (muted, per browser policy) when the section scrolls into view.
+    // Pauses when it leaves so it doesn't run off-screen, resumes on return.
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window && !prefersReduced){
+      var started = false;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting && entry.intersectionRatio >= 0.25){
+            video.muted = true;
+            video.controls = true;
+            play.classList.add('hidden');
+            tryPlay();
+            started = true;
+          } else if(started && entry.intersectionRatio === 0 && !video.paused){
+            video.pause();
+          }
+        });
+      }, { threshold: [0, 0.25] });
+      io.observe(frame);
     }
-    play.addEventListener('click', start);
+
     video.addEventListener('ended', function(){
       play.classList.remove('hidden');
       video.controls = false;
