@@ -2465,10 +2465,19 @@ document.getElementById('quoteForm').addEventListener('reset', function() {
     else if(e.key==='ArrowRight')manualGoTo(current+1);
   });
 
-  carousel.addEventListener('touchstart',function(e){touchX0=e.changedTouches[0].screenX;},{passive:true});
-  carousel.addEventListener('touchend',function(e){
+  // Bind swipe to the parent .hero section so touches on the overlay
+  // (hero-inner) still register — hero-inner sits above #heroCarousel.
+  var swipeTarget=carousel.parentNode||carousel;
+  var touchY0=0;
+  swipeTarget.addEventListener('touchstart',function(e){
+    touchX0=e.changedTouches[0].screenX;
+    touchY0=e.changedTouches[0].screenY;
+  },{passive:true});
+  swipeTarget.addEventListener('touchend',function(e){
     var dx=touchX0-e.changedTouches[0].screenX;
-    if(Math.abs(dx)>40)manualGoTo(dx>0?current+1:current-1);
+    var dy=touchY0-e.changedTouches[0].screenY;
+    // Only treat as swipe if mostly horizontal — don't hijack vertical scroll
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))manualGoTo(dx>0?current+1:current-1);
   },{passive:true});
 
   carousel.addEventListener('mouseenter',function(){paused=true;});
