@@ -10,6 +10,40 @@
 <!-- Shared stylesheet — header, footer, buttons, and product card styles
      mirrored from the homepage so this page matches visually 1:1. -->
 <link rel="stylesheet" href="shared.css">
+
+<!-- Page-local styles: banner stats, samples CTA, category chips.
+     Inlined (not in shared.css) because they only exist on this page. -->
+<style>
+  .banner-stats{display:flex;gap:0;justify-content:center;margin-top:22px;flex-wrap:wrap}
+  .banner-stats span{font-size:.72rem;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:0 18px;border-right:1px solid rgba(255,255,255,.18)}
+  .banner-stats span:last-child{border-right:none}
+  @media(max-width:560px){.banner-stats span{padding:4px 12px;border-right:none}}
+
+  .page-banner{padding-bottom:36px}
+  .products-section{padding-top:0}
+  .category-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:20px 0 24px}
+  .chip{appearance:none;border:1px solid var(--gray-200);background:var(--white);color:var(--gray-700);padding:9px 20px;border-radius:999px;font-family:var(--font);font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .2s ease}
+  .chip:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-1px)}
+  .chip.active{background:var(--blue);border-color:var(--blue);color:var(--white)}
+  .chip.active:hover{background:var(--blue-700);color:var(--white)}
+
+  /* Square-thumbnail treatment for all panel categories on this page.
+     Class-selector specificity (0,1,0) is matched by the shared.css
+     hover rule .product-card:hover .product-img-bg (0,2,0), so the
+     hover rule below repeats the selector to win on cascade order. */
+  .products-grid .product-card .product-img{
+    height:auto;
+    aspect-ratio:1 / 1;
+    border-radius:0;
+  }
+  .products-grid .product-card .product-img-bg{
+    transform:scale(1.08);
+    transform-origin:center center;
+  }
+  .products-grid .product-card:hover .product-img-bg{
+    transform:scale(1.14);
+  }
+</style>
 </head>
 <body>
 
@@ -17,13 +51,9 @@
 <div class="utility-bar">
   <div class="utility-inner">
     <div class="utility-left">
-      <a href="tel:+15551234567" class="utility-item">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16z"/></svg>
-        (555) 123-4567
-      </a>
-      <a href="mailto:hello@superdeco.ca" class="utility-item utility-email">
+      <a href="mailto:info@superdecoimport.com" class="utility-item utility-email">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        hello@superdeco.ca
+        info@superdecoimport.com
       </a>
       <span class="utility-item utility-address">
         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -79,19 +109,35 @@
 <section class="page-banner">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Products</div>
-    <h1>Our Complete Product Catalogue</h1>
-    <p>Explore every collection — from warm wood-look interiors to weather-resistant exterior systems and sound-absorbing acoustic finishes.</p>
+    <h1>Decorative Wall Panels — Shipped Across Quebec</h1>
+    <p>From fluted wood-look interiors to weather-resistant exterior systems and sound-absorbing acoustic finishes. Free samples in 48 hours.</p>
+    <div class="banner-stats">
+      <span>13 collections</span>
+      <span>50+ finishes</span>
+      <span>Fire &amp; moisture rated</span>
+    </div>
   </div>
 </section>
 
 <!-- ===== PRODUCT GRID =====
      Same product card markup as the homepage. Each card is an
      <a> wrapping the image + body, opening its detail page in a new tab. -->
-<section>
+<section class="products-section">
   <div class="container">
+
+    <!-- Category filter chips — JS at bottom of page toggles card visibility. -->
+    <div class="category-chips" role="tablist" aria-label="Filter products by category">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="chip" data-filter="interior" role="tab" aria-selected="false">Interior</button>
+      <button class="chip" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
+      <button class="chip" data-filter="acoustic" role="tab" aria-selected="false">Acoustic</button>
+      <button class="chip" data-filter="kitchen" role="tab" aria-selected="false">Kitchen &amp; Fireplace</button>
+      <button class="chip" data-filter="accessories" role="tab" aria-selected="false">Accessories &amp; Lighting</button>
+    </div>
+
     <div class="products-grid">
 
-      <a href="products/indoor-wall-panels.html" class="product-card" aria-label="View details: Indoor Wall Panels">
+      <a href="products/indoor-wall-panels.html" class="product-card" data-category="interior" data-thumb="square" aria-label="View details: Indoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-1"></div>
           <span class="product-img-label">Popular</span>
@@ -99,14 +145,15 @@
         </div>
         <div class="product-body">
           <h3>Indoor Wall Panels</h3>
-          <p>Fluted and textured PVC panels with warm wood-look finishes that bring depth and character to living rooms, bedrooms, and offices.</p>
+          <p>Fluted &amp; 3D-textured PVC panels in warm wood-look finishes. Adds depth and character to living rooms, bedrooms, and offices.</p>
           <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </a>
 
-      <a href="products/outdoor-wall-panels.html" class="product-card" aria-label="View details: Outdoor Wall Panels">
+      <a href="products/outdoor-wall-panels.html" class="product-card" data-category="exterior" data-thumb="square" aria-label="View details: Outdoor Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-2"></div>
+          <span class="product-img-label">Weather-rated</span>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
@@ -116,9 +163,10 @@
         </div>
       </a>
 
-      <a href="products/acoustic-panels.html" class="product-card" aria-label="View details: Acoustic Panels">
+      <a href="products/acoustic-panels.html" class="product-card" data-category="acoustic" data-thumb="square" aria-label="View details: Acoustic Panels">
         <div class="product-img">
           <div class="product-img-bg pi-3"></div>
+          <span class="product-img-label">New</span>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
@@ -128,7 +176,7 @@
         </div>
       </a>
 
-      <a href="products/mirror-pvc.html" class="product-card" aria-label="View details: Mirror PVC">
+      <a href="products/mirror-pvc.html" class="product-card" data-category="interior" data-thumb="square" aria-label="View details: Mirror PVC">
         <div class="product-img">
           <div class="product-img-bg pi-4"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -140,7 +188,7 @@
         </div>
       </a>
 
-      <a href="products/marble-pvc-high-gloss.html" class="product-card" aria-label="View details: Marble PVC High Gloss">
+      <a href="products/marble-pvc-high-gloss.html" class="product-card" data-category="interior" data-thumb="square" aria-label="View details: Marble PVC High Gloss">
         <div class="product-img">
           <div class="product-img-bg pi-5"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -152,7 +200,7 @@
         </div>
       </a>
 
-      <a href="products/metal-pvc.html" class="product-card" aria-label="View details: Metal PVC">
+      <a href="products/metal-pvc.html" class="product-card" data-category="interior" data-thumb="square" aria-label="View details: Metal PVC">
         <div class="product-img">
           <div class="product-img-bg pi-6"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -164,21 +212,23 @@
         </div>
       </a>
 
-      <a href="products/flat-wall-panels.html" class="product-card" aria-label="View details: Flat Wall Panels">
+      <a href="products/flat-wall-panels.html" class="product-card" data-category="interior" aria-label="View details: Flat Wall Panels">
         <div class="product-img">
           <div class="product-img-bg pi-7" role="img" aria-label="Smooth flat-profile PVC wall panels installed in a contemporary interior"></div>
+          <span class="product-img-label">9 finishes</span>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
           <h3>Flat Wall Panels</h3>
-          <p>Smooth flat-profile PVC panels in rich wood-look finishes. A clean, minimal aesthetic for contemporary interiors — 9 finishes available.</p>
+          <p>Smooth flat-profile PVC in rich wood-look finishes. Clean, minimal aesthetic — the right pick when you want the look of fluted panels without the texture.</p>
           <span class="btn-ghost">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </a>
 
-      <a href="products/wpc-fence.html" class="product-card" aria-label="View details: WPC Fence">
+      <a href="products/wpc-fence.html" class="product-card" data-category="exterior" aria-label="View details: WPC Fence">
         <div class="product-img">
           <div class="product-img-bg pi-8" role="img" aria-label="Modern home exterior with elegant WPC fence installation"></div>
+          <span class="product-img-label">Built for QC winters</span>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
@@ -188,7 +238,7 @@
         </div>
       </a>
 
-      <a href="products/partition-dividers.html" class="product-card" aria-label="View details: Partition Dividers">
+      <a href="products/partition-dividers.html" class="product-card" data-category="interior" aria-label="View details: Partition Dividers">
         <div class="product-img">
           <div class="product-img-bg pi-9" role="img" aria-label="Modern living room featuring wood PVC partition dividers as a decorative room separator"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -200,9 +250,10 @@
         </div>
       </a>
 
-      <a href="products/accessories.html" class="product-card" aria-label="View details: Accessories">
+      <a href="products/accessories.html" class="product-card" data-category="accessories" aria-label="View details: Accessories">
         <div class="product-img">
           <div class="product-img-bg pi-10" role="img" aria-label="Professional wall panel installation showing finishing profiles and corner accessories"></div>
+          <span class="product-img-label">Contractor pick</span>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
         </div>
         <div class="product-body">
@@ -212,7 +263,7 @@
         </div>
       </a>
 
-      <a href="products/kitchen.html" class="product-card" aria-label="View details: Kitchen">
+      <a href="products/kitchen.html" class="product-card" data-category="kitchen" aria-label="View details: Kitchen">
         <div class="product-img">
           <div class="product-img-bg pi-11" role="img" aria-label="Modern kitchen with PVC cabinet doors installed in a Canadian home renovation"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -224,7 +275,7 @@
         </div>
       </a>
 
-      <a href="products/fireplace.html" class="product-card" aria-label="View details: Fireplace">
+      <a href="products/fireplace.html" class="product-card" data-category="kitchen" aria-label="View details: Fireplace">
         <div class="product-img">
           <div class="product-img-bg pi-12" role="img" aria-label="Modern living room with wall-mounted electric fireplace as a stylish feature wall centrepiece"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -236,7 +287,7 @@
         </div>
       </a>
 
-      <a href="products/lights.html" class="product-card" aria-label="View details: Lights">
+      <a href="products/lights.html" class="product-card" data-category="accessories" aria-label="View details: Lights">
         <div class="product-img">
           <div class="product-img-bg pi-13" role="img" aria-label="Exterior wall panel light installed for architectural accent lighting on a modern facade"></div>
           <div class="product-img-overlay"><span class="btn btn-white btn-sm">View Details</span></div>
@@ -299,8 +350,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:hello@superdeco.ca">hello@superdeco.ca</a></li>
-          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><a href="mailto:info@superdecoimport.com">info@superdecoimport.com</a></li>
           <li><a href="#">Montreal, QC &amp; surrounding areas</a></li>
         </ul>
       </div>
@@ -317,5 +367,30 @@
 </footer>
 
 <script src="shared.js"></script>
+
+<!-- Category-chip filter: toggles product card visibility by data-category. -->
+<script>
+(function(){
+  var chips = document.querySelectorAll('.category-chips .chip');
+  var cards = document.querySelectorAll('.products-grid .product-card');
+  if(!chips.length || !cards.length) return;
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var filter = chip.getAttribute('data-filter');
+      chips.forEach(function(c){
+        var on = (c === chip);
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      cards.forEach(function(card){
+        var cats = (card.getAttribute('data-category') || '').split(/\s+/);
+        var show = (filter === 'all' || cats.indexOf(filter) >= 0);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>

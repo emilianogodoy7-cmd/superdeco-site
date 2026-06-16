@@ -177,13 +177,13 @@ section{padding:88px 0}
 .product-img{height:240px;overflow:hidden;position:relative}
 .product-img-bg{width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}
 .product-card:hover .product-img-bg{transform:scale(1.06)}
-.pi-1{background:url('images/indoor-wall-panels.png') center/cover no-repeat}
-.pi-2{background:url('images/outdoor-wall-panels.png') center/cover no-repeat}
-.pi-3{background:url('images/acoustic-wall-panels.png') center/cover no-repeat}
-.pi-4{background:url('images/mirror-pvc.png') center/cover no-repeat}
-.pi-5{background:url('images/marble-pvc.png') center/cover no-repeat}
-.pi-6{background:url('images/metal-sheet.png') center/cover no-repeat}
-.pi-7{background:url('images/indoor-wall-panels.png') center/cover no-repeat}
+.pi-1{background:url('images/products/indoor-wall-panels/Lobby-elegante-con-detalles-dorados-y-verdes.png') center/cover no-repeat}
+.pi-2{background:url('images/products/outdoor-wall-panels/Arkowood-Paineis-Ripados.jpeg') center/cover no-repeat}
+.pi-3{background:url('images/products/acoustic-panels/akupanel-classic-oak-showcase2.jpg') center/cover no-repeat}
+.pi-4{background:url('images/products/mirror-pvc/gold.jpg') center/cover no-repeat}
+.pi-5{background:url('images/products/marble-pvc-high-gloss/Sala-moderna-con-detalles-elegantes.png') center/cover no-repeat}
+.pi-6{background:url('images/products/metal-pvc/ChatGPT-Image-25-jul-2025-08_38_30-p.m.png') center/cover no-repeat}
+.pi-7{background:url('images/products/flat-wall-panels/ChatGPT-Image-21-ago-2025-01_09_33-a.m.png') center/cover no-repeat}
 .pi-8{background:url('images/products/wpc-fence/Casa-moderna-con-cerca-elegante.png') center/cover no-repeat}
 .pi-9{background:url('images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png') center/cover no-repeat}
 .pi-10{background:url('images/products/accessories/Salon-moderno-con-acentos-dorados.png') center/cover no-repeat}
