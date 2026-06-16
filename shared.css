@@ -629,3 +629,171 @@ section{padding:88px 0}
 .form-submit{width:100%;margin-top:8px;padding:15px 34px;font-size:.94rem}
 .form-note{text-align:center;margin-top:12px;font-size:.75rem;color:var(--gray-400);display:flex;align-items:center;justify-content:center;gap:6px}
 .form-note svg{width:13px;height:13px;stroke:var(--gray-300);flex-shrink:0}
+
+/* ============================================================
+   MOBILE PREMIUM REFINEMENT  (Smeg-inspired)
+   Applies a calmer spacing scale, tighter typographic hierarchy,
+   larger tap targets, and quieter section transitions on mobile.
+   Scoped under (max-width:768px) so desktop is untouched.
+   ============================================================ */
+:root{
+  --space-mobile-xs:8px;
+  --space-mobile-sm:14px;
+  --space-mobile-md:20px;
+  --space-mobile-lg:28px;
+  --space-mobile-xl:40px;
+  --space-mobile-section:56px;
+  --tap-target:48px;
+  --radius-mobile-card:4px;
+}
+
+@media(max-width:768px){
+  /* ---------- Global rhythm ---------- */
+  body{letter-spacing:.01em}
+  .container{padding:0 20px}
+  section{padding:var(--space-mobile-section) 0}
+  h1,h2,h3{letter-spacing:-.005em}
+
+  /* Section headers — quieter eyebrow, tighter title, breathing room */
+  .section-header{margin-bottom:32px}
+  .section-label{font-size:.66rem;letter-spacing:.18em;margin-bottom:12px;color:var(--gray-500)}
+  .section-label::before{width:18px}
+  .section-title{font-size:clamp(1.35rem,5.5vw,1.75rem);line-height:1.18;letter-spacing:.02em}
+  .section-desc{font-size:.92rem;line-height:1.7;margin-top:14px;letter-spacing:.015em}
+
+  /* ---------- Utility bar — restrained on mobile ---------- */
+  .utility-bar{height:32px}
+  body{padding-top:32px}
+  .header{top:32px}
+  .mobile-nav{top:104px}
+  .utility-item{font-size:.62rem;gap:4px}
+  .utility-item svg{width:10px;height:10px}
+  .utility-right{gap:10px}
+  .utility-social svg{width:13px;height:13px}
+
+  /* ---------- Header — slimmer, premium ---------- */
+  .header-inner{height:64px}
+  .header .logo-img{height:32px}
+  .mobile-menu-btn{width:44px;height:44px;background:transparent;color:var(--gray-700)}
+  .mobile-menu-btn:hover{background:var(--gray-50)}
+
+  /* ---------- Mobile nav — generous tap targets ---------- */
+  .mobile-nav{padding:14px 20px 44px}
+  .mobile-nav.open{gap:0}
+  .mobile-nav a{padding:18px 4px;font-size:.84rem;font-weight:600;letter-spacing:.14em;color:var(--gray-800);border-bottom:1px solid var(--gray-100);min-height:var(--tap-target);display:flex;align-items:center}
+  .mobile-nav .nav-cta{margin-top:24px;padding:18px 20px!important;font-size:.78rem!important;letter-spacing:.12em!important;font-weight:700!important;min-height:54px;display:flex;align-items:center;justify-content:center}
+
+  /* ---------- Buttons — larger tap targets, calmer scale ---------- */
+  .btn{padding:14px 28px;font-size:.78rem;letter-spacing:.1em;min-height:48px}
+  .btn-lg{padding:16px 30px;font-size:.8rem;min-height:52px}
+  .btn-sm{padding:11px 20px;font-size:.72rem;min-height:42px}
+  .btn-ghost{font-size:.82rem;min-height:auto}
+
+  /* ---------- Page banner (subpages) — quieter, less aggressive ---------- */
+  .page-banner{padding:56px 0 44px}
+  .page-banner h1{font-size:clamp(1.8rem,7vw,2.4rem);line-height:1.15;margin-bottom:12px;letter-spacing:-.01em}
+  .page-banner p{font-size:.9rem;line-height:1.7;max-width:340px}
+  .breadcrumb{font-size:.64rem;margin-bottom:16px;letter-spacing:.14em}
+
+  /* ---------- Product cards (shared layout) ---------- */
+  .products-grid{gap:18px}
+  .product-card{border-radius:var(--radius-mobile-card)}
+  .product-img{height:220px}
+  .product-body{padding:20px 18px 18px}
+  .product-body h3{font-size:.98rem;letter-spacing:-.005em}
+  .product-body p{font-size:.85rem;line-height:1.65}
+
+  /* ---------- Product detail page ---------- */
+  .product-detail{padding:40px 0 56px}
+  .product-detail-grid{gap:32px}
+  .gallery-main{aspect-ratio:1/1}
+  .gallery-thumbs{gap:6px;margin-top:6px}
+  .product-info .pd-eyebrow{font-size:.62rem;letter-spacing:.16em;margin-bottom:10px}
+  .product-info h1{font-size:clamp(1.55rem,5.5vw,1.95rem);line-height:1.15;margin-bottom:12px}
+  .product-info .pd-tagline{font-size:.92rem;line-height:1.7;margin-bottom:22px}
+  .pd-meta{margin-bottom:24px}
+  .pd-meta-pill{font-size:.65rem;padding:5px 12px;letter-spacing:.1em}
+  .pd-cta-row{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:24px}
+  .pd-cta-row .btn{width:100%;justify-content:center}
+  .pd-section-title{font-size:.62rem;letter-spacing:.16em;margin:28px 0 12px}
+  .pd-description{font-size:.9rem;line-height:1.75}
+  .spec-list li{padding:12px 14px;font-size:.84rem}
+  .pd-trust-strip{margin-top:48px;padding:24px 20px;gap:18px;text-align:center;grid-template-columns:1fr}
+  .pd-trust-strip-item h4{font-size:.92rem}
+  .pd-trust-strip-item p{font-size:.78rem}
+  .back-link{font-size:.78rem;margin-bottom:18px}
+
+  /* ---------- Contact page ---------- */
+  .contact-banner{padding:56px 0 44px}
+  .contact-banner h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px}
+  .contact-banner p{font-size:.88rem;line-height:1.7;max-width:320px}
+  .contact-section{padding:48px 0 64px;background-size:18px 18px}
+  .contact-grid{gap:32px}
+  .contact-info-col h2{font-size:1.25rem;margin-bottom:10px;letter-spacing:-.005em}
+  .contact-intro{font-size:.9rem;line-height:1.7;margin-bottom:24px}
+  .contact-items{gap:16px;margin-bottom:24px}
+  .contact-item-icon{width:38px;height:38px;border-radius:8px}
+  .contact-item-icon svg{width:16px;height:16px}
+  .contact-item-label{font-size:.64rem;letter-spacing:.12em}
+  .contact-item-value{font-size:.9rem}
+  .contact-social{margin-bottom:24px}
+  .contact-social-btn{padding:11px 16px;font-size:.82rem;min-height:44px;width:100%;justify-content:flex-start}
+  .contact-hours{padding:18px 18px}
+  .contact-hours-row{font-size:.82rem}
+  .contact-form-card{padding:28px 20px}
+  .contact-form-header{margin-bottom:22px}
+  .contact-form-header h3{font-size:1.15rem;margin-bottom:4px;letter-spacing:-.005em}
+  .contact-form-header p{font-size:.84rem}
+
+  /* ---------- Forms — 44px+ tap targets, premium calm ---------- */
+  .quote-form-card{padding:28px 20px}
+  .quote-form-title{font-size:1.15rem;margin-bottom:22px;letter-spacing:-.005em}
+  .form-group{margin-bottom:14px}
+  .form-group label{font-size:.74rem;margin-bottom:8px;letter-spacing:.04em;text-transform:uppercase;color:var(--gray-500);font-weight:700}
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .contact-form-card select{
+    min-height:44px;
+    padding:12px 0;
+    font-size:16px; /* prevents iOS zoom on focus */
+    letter-spacing:.01em;
+  }
+  .contact-form-card select{padding:12px 36px 12px 14px;min-height:48px}
+  .form-group textarea{padding:14px 0;min-height:100px}
+  .upload-zone{padding:22px 16px}
+  .upload-icon{width:36px;height:36px;margin-bottom:8px}
+  .upload-icon svg{width:16px;height:16px}
+  .upload-zone p{font-size:.82rem}
+  .upload-zone span{font-size:.72rem}
+  .form-submit{padding:16px 30px;font-size:.82rem;letter-spacing:.1em;min-height:54px}
+
+  /* ---------- Footer — premium calm ---------- */
+  .footer{padding:48px 0 24px}
+  .footer-top{margin-bottom:28px;padding-bottom:24px;gap:18px}
+  .footer-brand p{font-size:.82rem;line-height:1.7}
+  .footer h4{font-size:.66rem;letter-spacing:.14em;margin-bottom:14px}
+  .footer ul li{margin-bottom:8px}
+  .footer ul a{font-size:.82rem}
+  .footer-grid{gap:28px;margin-bottom:32px}
+  .footer-bottom{font-size:.72rem;flex-direction:column;align-items:flex-start;gap:10px}
+  .footer-legal{gap:14px}
+
+  /* ---------- Gallery modal — full-bleed on mobile ---------- */
+  .gm-inner{width:100vw;max-height:100dvh;border-radius:0}
+  .gm-header{padding:14px 16px}
+  .gm-title{font-size:.88rem}
+  .gm-cta{font-size:.72rem;padding:9px 14px;min-height:38px}
+  .gm-close{width:38px;height:38px}
+  .gm-img-wrap{min-height:240px;max-height:54vh;padding:8px}
+  .gm-thumb{width:54px;height:54px}
+  .gm-arrow{width:42px;height:42px}
+}
+
+@media(max-width:480px){
+  .container{padding:0 18px}
+  .section-title{font-size:clamp(1.3rem,6vw,1.6rem)}
+  .page-banner h1{font-size:clamp(1.65rem,7.5vw,2.1rem)}
+  .product-img{height:200px}
+  .footer-brand p{max-width:none}
+}

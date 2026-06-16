@@ -594,22 +594,20 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .ba-section-cta{text-align:center;margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:10px}
 .ba-section-cta .ba-helper{font-size:.78rem;color:var(--gray-500);letter-spacing:.02em}
 
-/* Before/After placeholder backgrounds — neutral "blank wall" looks (CSS-only, no external deps) */
-.ba-bg-empty-1{background:linear-gradient(135deg,#d9cfbf 0%,#c6bba8 60%,#b7ac98 100%)}
-.ba-bg-empty-2{background:linear-gradient(180deg,#e8e6e1 0%,#d2cfc7 100%)}
-.ba-bg-empty-3{background:linear-gradient(160deg,#b9b2a3 0%,#9c9587 100%)}
-.ba-bg-empty-4{background:linear-gradient(150deg,#cfc3b0 0%,#b8a98f 100%)}
-.ba-bg-empty-5{background:linear-gradient(180deg,#eeeae3 0%,#dad4c8 100%)}
-.ba-bg-empty-6{background:linear-gradient(135deg,#c4bcae 0%,#a89e8b 100%)}
-.ba-before::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(0,0,0,.06),transparent 45%),radial-gradient(circle at 80% 75%,rgba(0,0,0,.05),transparent 45%);pointer-events:none}
-.ba-before::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(0,0,0,.04) 0%,transparent 18%,transparent 78%,rgba(0,0,0,.16) 100%);pointer-events:none}
+/* Before images — plain-wall room photos matching each after's framing */
+.ba-bg-empty-1{background-image:url('images/before-after/01-livingroom-before.webp')}
+.ba-bg-empty-2{background-image:url('images/before-after/02-office-before.webp')}
+.ba-bg-empty-3{background-image:url('images/before-after/03-basement-before.webp')}
+.ba-bg-empty-4{background-image:url('images/before-after/04-featurewall-before.webp')}
+.ba-bg-empty-5{background-image:url('images/before-after/05-condo-before.webp')}
+.ba-bg-empty-6{background-image:url('images/before-after/06-lobby-before.webp')}
 
 /* After images — real product photos */
 .ba-bg-after-1{background-image:url('images/products/indoor-wall-panels/walnuts-1.png')}
 .ba-bg-after-2{background-image:url('images/products/acoustic-panels/akupanel-classic-oak-showcase2.jpg')}
 .ba-bg-after-3{background-image:url('images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.54_9d2c6388.jpg')}
 .ba-bg-after-4{background-image:url('images/products/marble-pvc-high-gloss/Sala-moderna-con-detalles-elegantes.png')}
-.ba-bg-after-5{background-image:url('images/products/indoor-wall-panels/ash-woos.png')}
+.ba-bg-after-5{background-image:url('images/before-after/05-condo-after.webp')}
 .ba-bg-after-6{background-image:url('images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_38_37-p.m.png')}
 
 /* ===== TRUST & CREDIBILITY SECTION ===== */
@@ -722,6 +720,200 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .trust-badges{margin-bottom:48px}
   .hero-trust-grid{margin-top:18px}
   .hero h1 .h1-eyebrow{font-size:.65rem;margin-bottom:10px}
+}
+
+/* ============================================================
+   MOBILE PREMIUM REFINEMENT — HOMEPAGE (Smeg-inspired)
+   Calmer rhythm, stronger hierarchy, peek-card carousels,
+   single-glance hero, simpler social proof, premium CTAs.
+   ============================================================ */
+@media(max-width:768px){
+  /* Body rhythm tighter so sections breathe without feeling sparse */
+  body{padding-top:32px}
+  section{padding:56px 0}
+
+  /* ---------- HERO — single-glance value prop ---------- */
+  .hero{min-height:84svh;height:auto}
+  .hero::after{background:linear-gradient(180deg,rgba(20,20,20,.62) 0%,rgba(20,20,20,.18) 30%,rgba(20,20,20,.18) 60%,rgba(20,20,20,.78) 100%)}
+  .hero-inner{padding:84px 22px 28px;gap:0}
+  .hero h1{font-size:clamp(1.95rem,7.5vw,2.5rem);line-height:1.12;margin-bottom:14px;letter-spacing:-.01em;font-weight:700}
+  .hero h1 em{font-style:normal;font-weight:400;color:rgba(255,255,255,.92)}
+  .hero h1 .h1-eyebrow{font-size:.62rem;letter-spacing:.2em;margin-bottom:12px;color:rgba(255,255,255,.78);font-weight:600}
+  .hero h1 .h1-eyebrow::before{display:none}
+  .hero-mid{padding-top:calc(36svh - 130px)}
+  .hero-ctas{gap:10px}
+  .hero-btn-primary{min-height:52px;font-size:.74rem;letter-spacing:.14em;padding:16px 28px;background:#fff;color:var(--charcoal);border:1px solid #fff;font-weight:700}
+  .hero-btn-primary:hover{background:transparent;color:#fff}
+  .hero-btn-ghost{min-height:48px;font-size:.72rem;letter-spacing:.14em;padding:14px 28px;background:transparent;border:1px solid rgba(255,255,255,.42);color:rgba(255,255,255,.92);font-weight:600}
+  .hero-trust-grid{margin-top:18px;grid-template-columns:repeat(2,1fr);gap:8px 12px;justify-items:center}
+  .hero-trust-pill{font-size:.64rem;letter-spacing:.05em;color:rgba(255,255,255,.78)}
+  .hero-trust-pill svg{width:11px;height:11px}
+  /* Push the "Trusted by 2,400+" line distinctly to the bottom of the hero,
+     away from the trust-pill row, so the two trust signals don't crowd. */
+  .hero-bottom{margin-top:48px;padding-top:24px;padding-bottom:22px;gap:8px;border-top:1px solid rgba(255,255,255,.08)}
+  .hero-trust-line{font-size:.6rem;letter-spacing:.16em;color:rgba(255,255,255,.55)}
+  .hero-scroll-indicator{display:none}
+  .carousel-btn{width:34px;height:34px;background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.18)}
+  .carousel-btn svg{width:13px;height:13px}
+  .carousel-dots{bottom:14px}
+  .carousel-dot{width:18px}
+  .carousel-dot.active{width:32px}
+
+  /* ---------- WHY US — fewer card edges, more whitespace ---------- */
+  .why-grid{gap:14px}
+  .why-card{padding:24px 22px;border-radius:4px;border-color:var(--gray-100)}
+  .why-icon{width:36px;height:36px;margin-bottom:14px;border-radius:4px}
+  .why-icon svg{width:18px;height:18px}
+  .why-card h3{font-size:.98rem;margin-bottom:6px;letter-spacing:-.005em}
+  .why-card p{font-size:.85rem;line-height:1.6}
+
+  /* ---------- BEFORE / AFTER — single column peek isn't useful here ---------- */
+  .transformations-section{padding:56px 0;padding-top:64px}
+  .ba-grid{gap:18px;margin-top:4px}
+  .ba-card{border-radius:4px;border-color:var(--gray-100)}
+  .ba-slider-wrap{aspect-ratio:5/4}
+  .ba-meta{padding:18px 18px 20px;gap:8px}
+  .ba-room{font-size:.6rem;letter-spacing:.18em}
+  .ba-room::before{width:10px}
+  .ba-title{font-size:1rem;line-height:1.25;letter-spacing:-.005em}
+  .ba-desc{font-size:.82rem;line-height:1.6}
+  .ba-stats{gap:6px;padding-top:12px;margin-top:4px}
+  .ba-chip{font-size:.66rem;padding:5px 9px;letter-spacing:.02em}
+  .ba-label{font-size:.55rem;padding:4px 9px;letter-spacing:.14em;top:10px}
+  .ba-label.ba-label-before{left:10px}.ba-label.ba-label-after{right:10px}
+  .ba-handle-knob{width:36px;height:36px}
+  .ba-handle-knob svg{width:14px;height:14px}
+  .ba-section-cta{margin-top:32px;gap:8px}
+  .ba-section-cta .btn{width:100%;max-width:340px;justify-content:center}
+  .ba-helper{font-size:.7rem;text-align:center;line-height:1.5;padding:0 12px}
+
+  /* ---------- INSTALL VIDEO — tighter hierarchy ---------- */
+  .install-video-section{padding:56px 0}
+  .install-video-layout{gap:28px}
+  .install-video-copy h3{font-size:1.05rem;line-height:1.3;padding-top:20px;margin-top:0}
+  .install-video-copy p{font-size:.88rem;line-height:1.65;margin-bottom:18px}
+  .install-checks{gap:10px;margin-bottom:22px}
+  .install-check{font-size:.84rem;gap:10px}
+  .install-check svg{width:16px;height:16px;padding:3px}
+  .install-video-frame{aspect-ratio:9/12;border-radius:4px}
+  .install-play-btn{width:64px;height:64px}
+  .install-play-btn svg{width:22px;height:22px}
+  .install-video-caption{font-size:.68rem;padding:8px 11px;bottom:14px;left:14px;right:14px;border-radius:4px}
+  .install-video-meta{gap:14px;margin-top:22px;padding-top:18px;font-size:.62rem;letter-spacing:.1em}
+
+  /* ---------- BEST SELLERS — Smeg peek pattern (one and a quarter card) ---------- */
+  .bestsellers-section{padding:56px 0 8px}
+  .bestsellers-slider{margin-top:28px}
+  .bestsellers-viewport{padding-left:20px;margin-left:-20px;padding-right:20px;margin-right:-20px;scroll-padding-left:20px}
+  .bestsellers-track{gap:14px;padding:2px 0}
+  .bestseller-card{flex:0 0 78%}
+  .bestseller-img{margin-bottom:14px}
+  .bestseller-tag-slot{height:20px;margin-bottom:8px}
+  .bestseller-tag{font-size:.55rem;letter-spacing:.2em;padding:3px 10px}
+  .bestseller-sku{font-size:.6rem;letter-spacing:.16em;margin-bottom:6px}
+  .bestseller-title{font-size:.92rem;letter-spacing:.03em;margin-bottom:6px;line-height:1.25}
+  .bestseller-desc{font-size:.74rem;line-height:1.5;max-width:none;margin-bottom:16px;min-height:0}
+  .bestseller-btn{padding:12px 22px;font-size:.66rem;letter-spacing:.16em;min-height:42px;line-height:1}
+
+  /* ---------- HOW IT WORKS (homepage steps) ---------- */
+  .steps-grid{gap:12px}
+  .step-card{padding:22px 20px;border-radius:4px}
+  .step-num{width:42px;height:42px;font-size:.86rem;margin-bottom:12px;border-radius:4px}
+  .step-card h3{font-size:.94rem;margin-bottom:4px}
+  .step-card p{font-size:.81rem;line-height:1.6}
+
+  /* ---------- GALLERY — taller-than-wide aspect, no fixed height ---------- */
+  .gallery-section{padding:56px 0}
+  .gallery-grid{gap:10px}
+  .gallery-item{height:auto;aspect-ratio:4/5;border-radius:4px}
+  .gallery-overlay{padding:16px;opacity:1;background:linear-gradient(to top,rgba(20,20,20,.78) 0%,transparent 50%)}
+  .gallery-overlay-text strong{font-size:.88rem}
+  .gallery-overlay-text span{font-size:.66rem;letter-spacing:.1em}
+
+  /* ---------- TESTIMONIALS / TRUST (premium calm) ---------- */
+  .testimonials-section{padding:56px 0}
+  .testimonial-card{padding:24px 20px;border-radius:4px;border-color:var(--gray-100)}
+  .testimonial-card::after{font-size:3rem;top:18px;right:18px}
+  .testimonial-card blockquote{font-size:.88rem;line-height:1.7;margin-bottom:18px}
+  .testimonials-grid{gap:14px}
+  .trust-section{padding:56px 0}
+  .trust-eyebrow-row{gap:10px;margin-bottom:14px}
+  .trust-eyebrow-row .stars{font-size:.88rem}
+  .trust-eyebrow-row .rating-text{font-size:.72rem}
+  .trust-badges{grid-template-columns:1fr;gap:10px;margin-top:32px;margin-bottom:40px}
+  .trust-badge{padding:14px 16px;gap:12px;border-radius:4px;border-color:var(--gray-100)}
+  .trust-badge-icon{width:36px;height:36px;border-radius:4px}
+  .trust-badge-icon svg{width:18px;height:18px}
+  .trust-badge-text strong{font-size:.8rem}
+  .trust-badge-text span{font-size:.7rem;line-height:1.45}
+  .tt-card{padding:24px 20px;gap:14px;border-radius:4px;border-color:var(--gray-100)}
+  .tt-avatar{width:46px;height:46px}
+  .tt-name{font-size:.88rem}
+  .tt-meta{font-size:.7rem;gap:5px}
+  .tt-verified{font-size:.6rem;padding:3px 7px}
+  .tt-quote{font-size:.87rem;line-height:1.65}
+  .tt-product{padding-top:14px;font-size:.7rem}
+  .trust-across-canada{padding:28px 20px;margin-top:40px;border-radius:4px}
+  .trust-across-canada h3{font-size:.92rem;letter-spacing:.06em}
+  .trust-across-canada p{font-size:.82rem;margin-bottom:18px}
+  .city-pill{font-size:.7rem;padding:6px 12px}
+
+  /* ---------- STATS BAR — quieter, more refined ---------- */
+  .stats-bar{padding:48px 0}
+  .stats-grid{gap:24px 18px}
+  .stat-icon{width:36px;height:36px;margin-bottom:10px;border-radius:4px}
+  .stat-icon svg{width:16px;height:16px}
+  .stat-item h3{font-size:clamp(1.45rem,7vw,1.9rem);margin-bottom:2px}
+  .stat-item p{font-size:.62rem;letter-spacing:.16em}
+
+  /* ---------- QUOTE FORM section ---------- */
+  .quote-section{padding:56px 0}
+  .quote-layout{gap:28px}
+  .quote-info p{font-size:.9rem;margin-bottom:22px;line-height:1.7}
+  .quote-perks{gap:10px}
+  .quote-perk{font-size:.85rem;gap:10px}
+
+  /* ---------- FAQ ---------- */
+  .faq-section{padding:56px 0}
+  .faq-layout{gap:28px}
+  .faq-sidebar .section-header{margin-bottom:18px}
+  .faq-sidebar-cta{padding:20px 18px;border-radius:4px;margin-top:20px}
+  .faq-sidebar-cta p{font-size:.85rem;margin-bottom:12px}
+  .faq-q{padding:18px 18px;font-size:.88rem;gap:14px}
+  .faq-toggle{width:26px;height:26px}
+  .faq-a p{padding:0 18px 20px;font-size:.84rem;line-height:1.7}
+
+  /* ---------- FINAL CTA — premium calm ---------- */
+  .final-cta{padding:64px 0}
+  .final-cta h2{font-size:clamp(1.6rem,6.5vw,2.1rem);line-height:1.18;margin-bottom:12px;letter-spacing:-.01em}
+  .final-cta p{font-size:.9rem;line-height:1.7;margin-bottom:28px;max-width:340px}
+  .final-cta-btns{gap:8px;max-width:340px}
+  .final-cta-btns .btn{min-height:52px;font-size:.78rem;letter-spacing:.12em}
+
+  /* ---------- STYLE FINDER ---------- */
+  .style-card-overlay{padding:18px 14px}
+  .style-card-tag{font-size:.55rem;letter-spacing:.16em;margin-bottom:4px}
+  .style-card-title{font-size:.95rem}
+  .style-card-mood{font-size:.7rem;line-height:1.45}
+
+  /* ---------- STICKY CTA — premium, single button ---------- */
+  .mobile-sticky-cta{padding:14px 18px max(14px,env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(255,255,255,.97) 75%,rgba(255,255,255,0) 100%)}
+  .mobile-sticky-cta .btn{min-height:50px;font-size:.78rem;letter-spacing:.12em;font-weight:700;background:var(--charcoal);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .mobile-sticky-cta .btn:hover{background:var(--gray-800)}
+  /* Add bottom padding to last section so sticky CTA doesn't clip footer */
+  .footer{padding-bottom:96px}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:clamp(1.85rem,8vw,2.2rem)}
+  .hero-trust-grid{grid-template-columns:1fr;gap:6px;justify-items:start;padding:0 12px}
+  .hero-trust-pill{justify-content:flex-start}
+  /* On the smallest screens, the 1-col trust grid is taller — give the
+     bottom trust line an even bigger gap so the two never visually collide. */
+  .hero-bottom{margin-top:56px}
+  .bestseller-card{flex:0 0 82%}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:22px 14px}
+  .ba-slider-wrap{aspect-ratio:1/1}
 }
 </style>
 </head>

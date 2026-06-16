@@ -192,6 +192,30 @@
   .projects-cta-btns{flex-direction:column;align-items:stretch;max-width:280px;margin:0 auto}
   .cta-btn-primary,.cta-btn-ghost{width:100%;justify-content:center}
 }
+
+/* Mobile premium refinement — calm banner, always-on captions, scrollable filter */
+@media(max-width:768px){
+  .projects-banner{padding:56px 0 44px}
+  .projects-banner h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px;letter-spacing:-.01em}
+  .projects-banner p{font-size:.88rem;line-height:1.7;max-width:340px;padding:0 12px}
+  .projects-section{padding:48px 0 64px}
+  .projects-filter{gap:6px;margin-bottom:24px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-20px;margin-right:-20px;padding:0 20px}
+  .projects-filter::-webkit-scrollbar{display:none}
+  .filter-btn{padding:9px 16px;font-size:.66rem;letter-spacing:.12em;flex-shrink:0;min-height:38px;border-radius:999px}
+  .filter-btn.active{background:var(--charcoal);color:#fff}
+  .projects-masonry{columns:1;column-gap:0}
+  .project-item{margin-bottom:14px;border-radius:4px}
+  .project-item img{border-radius:4px}
+  /* Mobile: captions visible always (no hover on touch) */
+  .project-overlay{opacity:1;background:linear-gradient(to top,rgba(20,20,20,.78) 0%,transparent 55%);padding:18px 16px;border-radius:4px}
+  .project-caption-title{font-size:.92rem;margin-bottom:3px}
+  .project-caption-cat{font-size:.6rem;letter-spacing:.16em}
+  .projects-cta{padding:56px 0}
+  .projects-cta h2{font-size:clamp(1.6rem,6.5vw,2.1rem);margin-bottom:12px}
+  .projects-cta p{font-size:.9rem;line-height:1.7;margin-bottom:28px;max-width:320px;padding:0 12px}
+  .projects-cta-btns{flex-direction:column;align-items:stretch;gap:10px;max-width:320px;margin:0 auto;padding:0 20px}
+  .cta-btn-primary,.cta-btn-ghost{width:100%;padding:15px 28px;font-size:.74rem;letter-spacing:.12em;min-height:50px}
+}
 </style>
 </head>
 <body>
