@@ -770,6 +770,8 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   /* ---------- BEFORE / AFTER — single column peek isn't useful here ---------- */
   .transformations-section{padding:56px 0;padding-top:64px}
   .ba-grid{gap:18px;margin-top:4px}
+  /* Show only 3 strongest examples on mobile to save vertical real estate */
+  .ba-grid .ba-card:nth-child(n+4){display:none}
   .ba-card{border-radius:4px;border-color:var(--gray-100)}
   .ba-slider-wrap{aspect-ratio:5/4}
   .ba-meta{padding:18px 18px 20px;gap:8px}
