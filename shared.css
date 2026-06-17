@@ -414,21 +414,23 @@ section{padding:88px 0}
 /* ── Dark banner ── */
 .contact-banner{
   background:var(--charcoal);
-  padding:96px 0 72px;
+  padding:20px 0 14px;
   text-align:center;
   position:relative;
   overflow:hidden;
 }
 .contact-banner h1{
   font-family:var(--font);
-  font-size:clamp(2.2rem,5vw,3.4rem);
-  font-weight:700;
+  font-size:clamp(1.05rem,1.7vw,1.4rem);
+  font-weight:600;
   color:#fff;
-  letter-spacing:-.01em;
-  margin-bottom:14px;
+  letter-spacing:0;
+  margin:0;
+  line-height:1.25;
   position:relative;
 }
 .contact-banner p{
+  display:none;
   font-family:var(--font);
   color:rgba(255,255,255,.55);
   font-size:.96rem;
@@ -724,9 +726,8 @@ section{padding:88px 0}
   .back-link{font-size:.78rem;margin-bottom:18px}
 
   /* ---------- Contact page ---------- */
-  .contact-banner{padding:56px 0 44px}
-  .contact-banner h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px}
-  .contact-banner p{font-size:.88rem;line-height:1.7;max-width:320px}
+  .contact-banner{padding:16px 0 12px}
+  .contact-banner h1{font-size:clamp(.98rem,3.6vw,1.2rem);margin:0;letter-spacing:0}
   .contact-section{padding:48px 0 64px;background-size:18px 18px}
   .contact-grid{gap:32px}
   .contact-info-col h2{font-size:1.25rem;margin-bottom:10px;letter-spacing:-.005em}

@@ -13,7 +13,7 @@
 /* ── Page banner ── */
 .projects-banner{
   background:var(--charcoal);
-  padding:96px 0 72px;
+  padding:20px 0 14px;
   text-align:center;
   position:relative;
   overflow:hidden;
@@ -26,28 +26,20 @@
 }
 .projects-banner h1{
   font-family:var(--font);
-  font-size:clamp(2.4rem,5vw,3.8rem);
-  font-weight:700;
+  font-size:clamp(1.05rem,1.7vw,1.4rem);
+  font-weight:600;
   color:var(--white);
-  letter-spacing:-.01em;
-  margin-bottom:14px;
+  letter-spacing:0;
+  margin:0;
+  line-height:1.25;
   position:relative;
 }
 .projects-banner h1 em{font-style:italic;font-weight:400}
-.projects-banner p{
-  font-family:var(--font);
-  font-size:.96rem;
-  color:rgba(255,255,255,.45);
-  max-width:460px;
-  margin:0 auto;
-  line-height:1.8;
-  letter-spacing:.04em;
-  position:relative;
-}
+.projects-banner p{display:none}
 
 /* ── Gallery section ── */
 .projects-section{
-  padding:88px 0 112px;
+  padding:32px 0 112px;
   background:var(--gray-50);
 }
 
@@ -185,8 +177,7 @@
 .cta-btn-ghost:hover{border-color:rgba(255,255,255,.7);color:var(--white)}
 
 @media(max-width:520px){
-  .projects-banner{padding:72px 0 56px}
-  .projects-section{padding:64px 0 80px}
+  .projects-section{padding:24px 0 80px}
   .projects-filter{margin-bottom:32px}
   .projects-cta{padding:72px 0}
   .projects-cta-btns{flex-direction:column;align-items:stretch;max-width:280px;margin:0 auto}
@@ -195,10 +186,9 @@
 
 /* Mobile premium refinement — calm banner, always-on captions, scrollable filter */
 @media(max-width:768px){
-  .projects-banner{padding:56px 0 44px}
-  .projects-banner h1{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:10px;letter-spacing:-.01em}
-  .projects-banner p{font-size:.88rem;line-height:1.7;max-width:340px;padding:0 12px}
-  .projects-section{padding:48px 0 64px}
+  .projects-banner{padding:16px 0 12px}
+  .projects-banner h1{font-size:clamp(.98rem,3.6vw,1.2rem);margin:0;letter-spacing:0}
+  .projects-section{padding:20px 0 64px}
   .projects-filter{gap:6px;margin-bottom:24px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-20px;margin-right:-20px;padding:0 20px}
   .projects-filter::-webkit-scrollbar{display:none}
   .filter-btn{padding:9px 16px;font-size:.66rem;letter-spacing:.12em;flex-shrink:0;min-height:38px;border-radius:999px}
