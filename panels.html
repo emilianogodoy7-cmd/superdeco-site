@@ -11,21 +11,103 @@
      mirrored from the homepage so this page matches visually 1:1. -->
 <link rel="stylesheet" href="shared.css">
 
-<!-- Page-local styles: banner stats, samples CTA, category chips.
+<!-- Page-local styles: banner stats, sidebar category nav, samples CTA.
      Inlined (not in shared.css) because they only exist on this page. -->
 <style>
-  .banner-stats{display:flex;gap:0;justify-content:center;margin-top:22px;flex-wrap:wrap}
-  .banner-stats span{font-size:.72rem;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:0 18px;border-right:1px solid rgba(255,255,255,.18)}
+  /* Compact page banner — smaller than the original (88/72 padding,
+     3.4rem h1) but keeps the full title + description + stats so it
+     still introduces the page. */
+  .page-banner{padding:44px 0 32px;text-align:center}
+  .page-banner h1{
+    font-size:clamp(1.5rem,2.6vw,2.1rem);
+    margin:0 0 8px;letter-spacing:-.005em;line-height:1.2
+  }
+  .page-banner p{
+    font-size:.84rem;line-height:1.55;max-width:560px;margin:0 auto
+  }
+  .banner-stats{display:flex;gap:0;justify-content:center;margin-top:14px;flex-wrap:wrap}
+  .banner-stats span{
+    font-size:.64rem;color:rgba(255,255,255,.7);letter-spacing:.1em;
+    text-transform:uppercase;font-weight:500;
+    padding:0 14px;border-right:1px solid rgba(255,255,255,.18)
+  }
   .banner-stats span:last-child{border-right:none}
-  @media(max-width:560px){.banner-stats span{padding:4px 12px;border-right:none}}
-
-  .page-banner{padding-bottom:36px}
+  @media(max-width:900px){
+    .page-banner{padding:30px 0 22px}
+    .page-banner h1{font-size:clamp(1.25rem,4.2vw,1.65rem)}
+    .page-banner p{font-size:.78rem;max-width:380px}
+    .banner-stats{margin-top:10px;gap:4px}
+    .banner-stats span{font-size:.56rem;padding:3px 10px;letter-spacing:.12em}
+  }
+  @media(max-width:560px){.banner-stats span{padding:4px 10px;border-right:none}}
+  /* Mobile padding bump for the products-section container (matches shared.css .container). */
+  @media(max-width:900px) and (min-width:768px){
+    .products-section > .container{padding:0 36px}
+  }
   .products-section{padding-top:0}
-  .category-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:20px 0 24px}
-  .chip{appearance:none;border:1px solid var(--gray-200);background:var(--white);color:var(--gray-700);padding:9px 20px;border-radius:999px;font-family:var(--font);font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .2s ease}
-  .chip:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-1px)}
-  .chip.active{background:var(--blue);border-color:var(--blue);color:var(--white)}
-  .chip.active:hover{background:var(--blue-700);color:var(--white)}
+
+  /* Break the centered .container constraint for this section only.
+     The sidebar anchors to the viewport's left edge so it doesn't intrude
+     toward page center, and the product grid keeps its original max width
+     (1240px → ~1136px content area) so the cards stay full size. */
+  .products-section > .container{max-width:none;padding:0;margin:0;width:100%}
+
+  /* Two-column retail layout: vertical category nav (viewport-left)
+     + product grid (anchored after the sidebar, capped at 1240px). */
+  .products-layout{
+    display:grid;
+    grid-template-columns:170px minmax(0, 1fr);
+    gap:28px;
+    padding:24px 24px 0 20px;
+    align-items:start
+  }
+  .category-sidebar{position:sticky;top:96px;min-width:0}
+  .category-sidebar-title{
+    font-family:var(--font);font-size:.66rem;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gray-500);
+    margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--gray-150)
+  }
+  .products-main{min-width:0;max-width:1240px}
+
+  /* Desktop: chips render as a vertical Nike-style nav list */
+  .category-chips{display:flex;flex-direction:column;gap:0;padding:0;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;overflow:visible;margin:0;list-style:none}
+  .cat-group{display:flex;flex-direction:column}
+  .chip{
+    appearance:none;background:transparent;border:0;border-left:2px solid transparent;
+    text-align:left;width:100%;
+    padding:8px 12px;
+    display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+    font-family:var(--font);font-size:.82rem;font-weight:500;letter-spacing:0;text-transform:none;
+    color:var(--gray-700);cursor:pointer;border-radius:0;
+    transition:color .15s ease,border-color .15s ease,background .15s ease
+  }
+  .chip:hover{color:var(--blue);background:var(--gray-50)}
+  /* The chip whose dropdown is currently open gets the highlighted look. */
+  .chip[aria-expanded="true"]{color:var(--charcoal);font-weight:700;border-left-color:var(--charcoal);background:var(--gray-50)}
+  .chip[aria-expanded="true"]:hover{background:var(--gray-50);color:var(--charcoal)}
+  .chip-caret{
+    width:11px;height:11px;flex:0 0 11px;
+    fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+    transition:transform .18s ease;opacity:.6
+  }
+  .chip[aria-expanded="true"] .chip-caret{transform:rotate(180deg);opacity:1}
+
+  /* Sub-list under each chip — indented, smaller, link list */
+  .cat-sublist{
+    list-style:none;margin:0;padding:4px 0 10px 14px;
+    display:none;border-left:1px solid var(--gray-150);margin-left:12px
+  }
+  .chip[aria-expanded="true"] + .cat-sublist{display:block}
+  .cat-sublist li{margin:0}
+  .cat-sublist a,.cat-sub-more-btn{
+    display:block;width:100%;text-align:left;
+    padding:5px 12px;
+    font-family:var(--font);font-size:.76rem;font-weight:500;color:var(--gray-600);
+    text-decoration:none;background:transparent;border:0;cursor:pointer;
+    border-left:2px solid transparent;margin-left:-2px;
+    transition:color .15s ease,border-color .15s ease
+  }
+  .cat-sublist a:hover,.cat-sub-more-btn:hover{color:var(--blue);border-left-color:var(--blue)}
 
   /* Square-thumbnail treatment for all panel categories on this page.
      Class-selector specificity (0,1,0) is matched by the shared.css
@@ -44,11 +126,36 @@
     transform:scale(1.14);
   }
 
-  /* Mobile refinement — quieter chips, single-column grid breathing room */
-  @media(max-width:768px){
-    .category-chips{gap:6px;padding:14px 0 22px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -20px;padding-left:20px;padding-right:20px}
+  /* Tablet / mobile: collapse sidebar back to horizontal scroll chips.
+     Preserves the original mobile UX so nothing regresses on phones. */
+  @media(max-width:900px){
+    /* Restore the centered .container behaviour on small screens so the
+       grid keeps the same gutters as the rest of the page. */
+    .products-section > .container{max-width:1240px;padding:0 24px;margin:0 auto}
+    .products-layout{display:block;grid-template-columns:none;gap:0;padding:0}
+    .category-sidebar{position:static;width:100%;max-width:none}
+    .products-main{max-width:none}
+    .category-sidebar-title{display:none}
+    .category-chips{
+      flex-direction:row;flex-wrap:nowrap;gap:6px;align-items:center;justify-content:flex-start;
+      overflow-x:auto;scroll-snap-type:x mandatory;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch;
+      margin:0 -20px;padding:14px 20px 22px
+    }
     .category-chips::-webkit-scrollbar{display:none}
-    .chip{padding:9px 16px;font-size:.7rem;letter-spacing:.08em;flex-shrink:0;scroll-snap-align:start;min-height:38px;border-radius:999px}
+    .chip{
+      flex-shrink:0;scroll-snap-align:start;width:auto;
+      border:1px solid var(--gray-200);border-left:1px solid var(--gray-200);border-radius:999px;
+      padding:9px 16px;font-size:.7rem;font-weight:600;
+      letter-spacing:.08em;text-transform:uppercase;
+      min-height:38px;background:var(--white);color:var(--gray-700)
+    }
+    .chip:hover{border-color:var(--blue);color:var(--blue);background:var(--white)}
+    /* On mobile, hide the dropdown carets and sub-lists — the horizontal
+       scroll chips act as a flat filter, no expansion UI needed. */
+    .chip-caret{display:none}
+    .cat-sublist,.chip[aria-expanded="true"] + .cat-sublist{display:none}
+    .cat-group{display:contents}
     .banner-stats{margin-top:14px;gap:4px}
     .banner-stats span{font-size:.6rem;padding:3px 10px;letter-spacing:.12em}
     .page-banner{padding-bottom:28px}
@@ -138,18 +245,79 @@
      <a> wrapping the image + body, opening its detail page in a new tab. -->
 <section class="products-section">
   <div class="container">
+    <div class="products-layout">
 
-    <!-- Category filter chips — JS at bottom of page toggles card visibility. -->
-    <div class="category-chips" role="tablist" aria-label="Filter products by category">
-      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="chip" data-filter="interior" role="tab" aria-selected="false">Interior</button>
-      <button class="chip" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
-      <button class="chip" data-filter="acoustic" role="tab" aria-selected="false">Acoustic</button>
-      <button class="chip" data-filter="kitchen" role="tab" aria-selected="false">Kitchen &amp; Fireplace</button>
-      <button class="chip" data-filter="accessories" role="tab" aria-selected="false">Accessories &amp; Lighting</button>
-    </div>
+      <!-- Vertical left-rail category nav (retail / Nike style).
+           Each category chip wraps an expandable sub-list listing the
+           top sub-pages in that category. JS at the bottom of the page
+           handles filter + expand/collapse + "More" reveal. -->
+      <aside class="category-sidebar">
+        <h2 class="category-sidebar-title">Shop by Category</h2>
+        <div class="category-chips" role="tablist" aria-label="Filter products by category">
 
-    <div class="products-grid">
+          <div class="cat-group">
+            <button class="chip" data-filter="interior" role="tab" aria-expanded="false">
+              <span>Interior</span>
+              <svg class="chip-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="cat-sublist">
+              <li><a href="products/indoor-wall-panels.html">Indoor Wall Panels</a></li>
+              <li><a href="products/flat-wall-panels.html">Flat Wall Panels</a></li>
+              <li><a href="products/marble-pvc-high-gloss.html">Marble PVC High Gloss</a></li>
+              <li><a href="products/mirror-pvc.html">Mirror PVC</a></li>
+              <li><a href="products/metal-pvc.html">Metal PVC</a></li>
+              <li><a href="products/partition-dividers.html">Partition Dividers</a></li>
+            </ul>
+          </div>
+
+          <div class="cat-group">
+            <button class="chip" data-filter="exterior" role="tab" aria-expanded="false">
+              <span>Exterior</span>
+              <svg class="chip-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="cat-sublist">
+              <li><a href="products/outdoor-wall-panels.html">Outdoor Wall Panels</a></li>
+              <li><a href="products/wpc-fence.html">WPC Fence</a></li>
+            </ul>
+          </div>
+
+          <div class="cat-group">
+            <button class="chip" data-filter="acoustic" role="tab" aria-expanded="false">
+              <span>Acoustic</span>
+              <svg class="chip-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="cat-sublist">
+              <li><a href="products/acoustic-panels.html">Acoustic Panels</a></li>
+            </ul>
+          </div>
+
+          <div class="cat-group">
+            <button class="chip" data-filter="kitchen" role="tab" aria-expanded="false">
+              <span>Kitchen &amp; Fireplace</span>
+              <svg class="chip-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="cat-sublist">
+              <li><a href="products/kitchen.html">Kitchen</a></li>
+              <li><a href="products/fireplace.html">Fireplace</a></li>
+            </ul>
+          </div>
+
+          <div class="cat-group">
+            <button class="chip" data-filter="accessories" role="tab" aria-expanded="false">
+              <span>Accessories &amp; Lighting</span>
+              <svg class="chip-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="cat-sublist">
+              <li><a href="products/accessories.html">Accessories</a></li>
+              <li><a href="products/lights.html">Lights</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </aside>
+
+      <div class="products-main">
+        <div class="products-grid">
 
       <a href="products/indoor-wall-panels.html" class="product-card" data-category="interior" data-thumb="square" aria-label="View details: Indoor Wall Panels">
         <div class="product-img">
@@ -313,7 +481,9 @@
         </div>
       </a>
 
-    </div>
+        </div><!-- /.products-grid -->
+      </div><!-- /.products-main -->
+    </div><!-- /.products-layout -->
   </div>
 </section>
 
@@ -382,26 +552,25 @@
 
 <script src="shared.js"></script>
 
-<!-- Category-chip filter: toggles product card visibility by data-category. -->
+<!-- Sidebar category nav: each chip toggles its dropdown. The grid is
+     never filtered — clicks are pure navigation (sub-items are links). -->
 <script>
 (function(){
   var chips = document.querySelectorAll('.category-chips .chip');
-  var cards = document.querySelectorAll('.products-grid .product-card');
-  if(!chips.length || !cards.length) return;
+  if(!chips.length) return;
+
+  function setExpanded(chip, on){
+    if(chip.hasAttribute('aria-expanded')){
+      chip.setAttribute('aria-expanded', on ? 'true' : 'false');
+    }
+  }
 
   chips.forEach(function(chip){
     chip.addEventListener('click', function(){
-      var filter = chip.getAttribute('data-filter');
-      chips.forEach(function(c){
-        var on = (c === chip);
-        c.classList.toggle('active', on);
-        c.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      cards.forEach(function(card){
-        var cats = (card.getAttribute('data-category') || '').split(/\s+/);
-        var show = (filter === 'all' || cats.indexOf(filter) >= 0);
-        card.style.display = show ? '' : 'none';
-      });
+      var isOpen = chip.getAttribute('aria-expanded') === 'true';
+      // Collapse all chips, then re-open this one if it was closed.
+      chips.forEach(function(c){ setExpanded(c, false); });
+      if(!isOpen) setExpanded(chip, true);
     });
   });
 })();
