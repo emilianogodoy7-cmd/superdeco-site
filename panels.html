@@ -150,11 +150,18 @@
       min-height:38px;background:var(--white);color:var(--gray-700)
     }
     .chip:hover{border-color:var(--blue);color:var(--blue);background:var(--white)}
+    /* Active (selected) filter chip */
+    .chip.is-active,
+    .chip.is-active:hover{
+      background:var(--blue);color:#fff;border-color:var(--blue)
+    }
     /* On mobile, hide the dropdown carets and sub-lists — the horizontal
        scroll chips act as a flat filter, no expansion UI needed. */
     .chip-caret{display:none}
     .cat-sublist,.chip[aria-expanded="true"] + .cat-sublist{display:none}
     .cat-group{display:contents}
+    /* Cards hidden by the active filter */
+    .products-grid .product-card.filter-hidden{display:none}
     .banner-stats{margin-top:14px;gap:4px}
     .banner-stats span{font-size:.6rem;padding:3px 10px;letter-spacing:.12em}
     .page-banner{padding-bottom:28px}
@@ -552,12 +559,17 @@
 
 <script src="shared.js"></script>
 
-<!-- Sidebar category nav: each chip toggles its dropdown. The grid is
-     never filtered — clicks are pure navigation (sub-items are links). -->
+<!-- Sidebar category nav.
+     Desktop (>900px): each chip toggles its dropdown of sub-page links.
+     Mobile (≤900px):  each chip toggles a filter on the product grid
+     (tap again on the active chip to clear). -->
 <script>
 (function(){
   var chips = document.querySelectorAll('.category-chips .chip');
   if(!chips.length) return;
+
+  var mobileMQ = window.matchMedia('(max-width:900px)');
+  var cards = document.querySelectorAll('.products-grid .product-card');
 
   function setExpanded(chip, on){
     if(chip.hasAttribute('aria-expanded')){
@@ -565,13 +577,47 @@
     }
   }
 
+  function applyFilter(filter){
+    cards.forEach(function(card){
+      var match = !filter || card.dataset.category === filter;
+      card.classList.toggle('filter-hidden', !match);
+    });
+  }
+
+  function clearFilter(){
+    chips.forEach(function(c){ c.classList.remove('is-active'); });
+    applyFilter(null);
+  }
+
+  function clearExpanded(){
+    chips.forEach(function(c){ setExpanded(c, false); });
+  }
+
   chips.forEach(function(chip){
     chip.addEventListener('click', function(){
-      var isOpen = chip.getAttribute('aria-expanded') === 'true';
-      // Collapse all chips, then re-open this one if it was closed.
-      chips.forEach(function(c){ setExpanded(c, false); });
-      if(!isOpen) setExpanded(chip, true);
+      if(mobileMQ.matches){
+        var wasActive = chip.classList.contains('is-active');
+        chips.forEach(function(c){ c.classList.remove('is-active'); });
+        if(!wasActive){
+          chip.classList.add('is-active');
+          applyFilter(chip.dataset.filter);
+        } else {
+          applyFilter(null);
+        }
+      } else {
+        var isOpen = chip.getAttribute('aria-expanded') === 'true';
+        clearExpanded();
+        if(!isOpen) setExpanded(chip, true);
+      }
     });
+  });
+
+  // Reset state when crossing the desktop/mobile breakpoint so neither
+  // mode leaves orphan UI behind (hidden cards on desktop, open dropdown
+  // on mobile).
+  mobileMQ.addEventListener('change', function(){
+    clearFilter();
+    clearExpanded();
   });
 })();
 </script>
