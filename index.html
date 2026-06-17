@@ -1054,351 +1054,6 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   </div>
 </section>
 
-<!-- ============================================================
-     BEFORE / AFTER TRANSFORMATIONS (CRO PRIORITY 1)
-     Real customer-room transformations with interactive slider.
-     Sliders are pointer/touch/keyboard driven via inline script.
-     ============================================================ -->
-<section class="transformations-section" id="transformations">
-  <div class="container">
-    <div class="section-header center reveal">
-      <div class="section-label">Real Transformations</div>
-      <h2 class="section-title">From Plain Wall to Showpiece</h2>
-      <p class="section-desc">Drag the slider on any project to see the before &amp; after. These are the same panels we'll cut, ship, and deliver to your door — no construction, no demolition.</p>
-    </div>
-
-    <div class="ba-grid">
-      <!-- 1. Living Room -->
-      <article class="ba-card reveal" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Living Room">
-          <div class="ba-before ba-bg-empty-1" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-1" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Living Room</div>
-          <h3 class="ba-title">Cozy Family Room Refresh</h3>
-          <p class="ba-desc">A flat builder-beige wall reimagined with warm walnut fluted panels. The room feels grounded, intentional, and worth coming home to.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Walnut Indoor Panels</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~6 hours</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2. Home Office -->
-      <article class="ba-card reveal delay-1" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Home Office">
-          <div class="ba-before ba-bg-empty-2" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-2" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Home Office</div>
-          <h3 class="ba-title">Remote-Work Upgrade</h3>
-          <p class="ba-desc">An echoey white wall behind the desk swapped for slatted acoustic oak. Calls sound clearer, video looks broadcast-ready, the space feels designed.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Acoustic Oak Panels</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~4 hours</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3. Basement -->
-      <article class="ba-card reveal delay-2" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Basement">
-          <div class="ba-before ba-bg-empty-3" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-3" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Basement Renovation</div>
-          <h3 class="ba-title">Unfinished Storage to Lounge</h3>
-          <p class="ba-desc">Bare concrete-grey walls transformed into a warm, finished entertainment lounge with dark caramel panels — no drywall, no painters, no mess.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Dark Caramel PVC</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~1 weekend</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4. Feature Wall -->
-      <article class="ba-card reveal" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Feature Wall">
-          <div class="ba-before ba-bg-empty-4" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-4" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Feature Wall Makeover</div>
-          <h3 class="ba-title">Dining Room Statement</h3>
-          <p class="ba-desc">A tired accent wall lifted with high-gloss marble-look panels. The look of real Negro Marquina stone — at a fraction of the slab-and-install price.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Negro Marquina Marble PVC</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~3 hours</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5. Condo Accent Wall -->
-      <article class="ba-card reveal delay-1" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Condo Accent Wall">
-          <div class="ba-before ba-bg-empty-5" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-5" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Condo Accent Wall</div>
-          <h3 class="ba-title">Small Space, Big Character</h3>
-          <p class="ba-desc">A flat developer-white headboard wall warmed up with pale ash slats. Scandi-clean, brightens the room, and is fully removable when the lease ends.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Ash Wood Slat Panels</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~2.5 hours</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 6. Commercial Reception -->
-      <article class="ba-card reveal delay-2" data-ba-card>
-        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Commercial Reception">
-          <div class="ba-before ba-bg-empty-6" aria-hidden="true"></div>
-          <div class="ba-after ba-bg-after-6" aria-hidden="true"></div>
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
-          <div class="ba-handle" aria-hidden="true">
-            <div class="ba-handle-knob">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
-            </div>
-          </div>
-          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
-        </div>
-        <div class="ba-meta">
-          <div class="ba-room">Commercial Reception</div>
-          <h3 class="ba-title">Lobby Brand Statement</h3>
-          <p class="ba-desc">An overlooked office-tower lobby brought to life with brushed-bronze metallic panels. The kind of entrance that gets photographed before the first meeting.</p>
-          <div class="ba-stats">
-            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Brushed Bronze Metal PVC</span>
-            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~1 day</span>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="ba-section-cta reveal">
-      <a href="contact-us.html?intent=samples" class="btn btn-primary btn-lg">Order Free Samples to Try at Home</a>
-      <span class="ba-helper">Free shipping &nbsp;·&nbsp; ships within 3 business days &nbsp;·&nbsp; no obligation</span>
-    </div>
-  </div>
-
-  <script>
-  (function(){
-    function initBA(card){
-      var wrap = card.querySelector('.ba-slider-wrap');
-      var range = card.querySelector('.ba-range');
-      if(!wrap || !range) return;
-      function setPos(p){
-        p = Math.max(0, Math.min(100, p));
-        wrap.style.setProperty('--ba-pos', p + '%');
-        range.value = p;
-      }
-      function fromEvent(ev){
-        var rect = wrap.getBoundingClientRect();
-        var x = (ev.touches ? ev.touches[0].clientX : ev.clientX) - rect.left;
-        return (x / rect.width) * 100;
-      }
-      var dragging = false;
-      wrap.addEventListener('pointerdown', function(ev){
-        if(ev.target === range) return;
-        dragging = true;
-        card.classList.add('dragging');
-        setPos(fromEvent(ev));
-        try { wrap.setPointerCapture(ev.pointerId); } catch(e){}
-        ev.preventDefault();
-      });
-      wrap.addEventListener('pointermove', function(ev){
-        if(!dragging) return;
-        setPos(fromEvent(ev));
-      });
-      function endDrag(){ dragging = false; card.classList.remove('dragging'); }
-      wrap.addEventListener('pointerup', endDrag);
-      wrap.addEventListener('pointercancel', endDrag);
-      wrap.addEventListener('pointerleave', endDrag);
-      range.addEventListener('input', function(){
-        setPos(parseFloat(range.value));
-      });
-      // Initial subtle nudge animation on first reveal
-      if('IntersectionObserver' in window){
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
-            if(e.isIntersecting){
-              card.classList.add('hint');
-              io.disconnect();
-              setTimeout(function(){ card.classList.remove('hint'); }, 2400);
-            }
-          });
-        }, { threshold: 0.4 });
-        io.observe(card);
-      }
-      setPos(50);
-    }
-    document.querySelectorAll('[data-ba-card]').forEach(initBA);
-  })();
-  </script>
-</section>
-
-<!-- ============================================================
-     INSTALL VIDEO — real contractor installing panels.
-     Click-to-play (no autoplay) so the page stays light on load.
-     Sourced & re-encoded for web from the SuperDeco install footage.
-     ============================================================ -->
-<section class="install-video-section" id="install-video">
-  <div class="container">
-    <div class="install-video-layout">
-      <!-- Section header is promoted to a direct grid child so it can sit
-           above the video frame on mobile while keeping its desktop position. -->
-      <div class="section-header install-video-header reveal">
-        <div class="section-label">How It Installs</div>
-        <h2 class="section-title">Watch a Real Install Happen</h2>
-        <p class="section-desc">Real contractor, real kitchen island. Most accent walls go up in a single afternoon — clean cuts, simple mounting, zero demolition.</p>
-      </div>
-
-      <!-- LEFT COLUMN body: all editorial text shares one vertical axis -->
-      <div class="install-video-copy reveal">
-        <h3>From bare drywall to designer finish — same day.</h3>
-        <p>Our panels are precision-cut to your wall dimensions before they ship, so install crews skip the on-site measuring, sawing, and trim work that eats most of a renovation budget.</p>
-        <div class="install-checks">
-          <div class="install-check">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>No demolition, drywall replacement, or paint cleanup</span>
-          </div>
-          <div class="install-check">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Panels ship pre-cut to your exact dimensions</span>
-          </div>
-          <div class="install-check">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>DIY-friendly — or we can connect you with a local installer</span>
-          </div>
-          <div class="install-check">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Most accent walls finished in 3–6 hours</span>
-          </div>
-        </div>
-        <div class="install-video-ctas">
-          <a href="contact-us.html?intent=samples" class="btn btn-white btn-lg">Order Free Samples</a>
-          <a href="how-it-works.html" class="btn-ghost-dark">See the Full Process</a>
-        </div>
-        <div class="install-video-meta">
-          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>43 seconds</span>
-          <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Verified contractor footage</span>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN: video frame only -->
-      <div class="install-video-frame reveal delay-1" id="installVideoFrame">
-        <video id="installVideo" preload="metadata" playsinline muted poster="images/contractor-install-poster.jpg">
-          <source src="videos/contractor-install.webm" type="video/webm">
-          <source src="videos/contractor-install.mp4" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-        <button type="button" class="install-video-play" id="installVideoPlay" aria-label="Play install video">
-          <span class="install-play-btn" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <script>
-  (function(){
-    var frame = document.getElementById('installVideoFrame');
-    var video = document.getElementById('installVideo');
-    var play  = document.getElementById('installVideoPlay');
-    if(!frame || !video || !play) return;
-
-    function tryPlay(){
-      var p = video.play();
-      if(p && typeof p.catch === 'function') p.catch(function(){});
-    }
-
-    // Manual click on the big overlay button: unmute + start.
-    play.addEventListener('click', function(){
-      video.muted = false;
-      video.controls = true;
-      var p = video.play();
-      if(p && typeof p.catch === 'function'){
-        p.catch(function(){
-          video.muted = true;
-          tryPlay();
-        });
-      }
-      play.classList.add('hidden');
-    });
-
-    // Autoplay (muted, per browser policy) when the section scrolls into view.
-    // Pauses when it leaves so it doesn't run off-screen, resumes on return.
-    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if('IntersectionObserver' in window && !prefersReduced){
-      var started = false;
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting && entry.intersectionRatio >= 0.25){
-            video.muted = true;
-            video.controls = true;
-            play.classList.add('hidden');
-            tryPlay();
-            started = true;
-          } else if(started && entry.intersectionRatio === 0 && !video.paused){
-            video.pause();
-          }
-        });
-      }, { threshold: [0, 0.25] });
-      io.observe(frame);
-    }
-
-    video.addEventListener('ended', function(){
-      play.classList.remove('hidden');
-      video.controls = false;
-    });
-  })();
-  </script>
-</section>
-
 <!-- BEST SELLERS -->
 <section class="bestsellers-section" id="best-sellers">
   <div class="container">
@@ -1739,6 +1394,351 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       <a href="panels.html" class="btn btn-primary btn-lg" aria-label="View all product categories">See More Products</a>
     </div>
   </div>
+</section>
+
+<!-- ============================================================
+     INSTALL VIDEO — real contractor installing panels.
+     Click-to-play (no autoplay) so the page stays light on load.
+     Sourced & re-encoded for web from the SuperDeco install footage.
+     ============================================================ -->
+<section class="install-video-section" id="install-video">
+  <div class="container">
+    <div class="install-video-layout">
+      <!-- Section header is promoted to a direct grid child so it can sit
+           above the video frame on mobile while keeping its desktop position. -->
+      <div class="section-header install-video-header reveal">
+        <div class="section-label">How It Installs</div>
+        <h2 class="section-title">Watch a Real Install Happen</h2>
+        <p class="section-desc">Real contractor, real kitchen island. Most accent walls go up in a single afternoon — clean cuts, simple mounting, zero demolition.</p>
+      </div>
+
+      <!-- LEFT COLUMN body: all editorial text shares one vertical axis -->
+      <div class="install-video-copy reveal">
+        <h3>From bare drywall to designer finish — same day.</h3>
+        <p>Our panels are precision-cut to your wall dimensions before they ship, so install crews skip the on-site measuring, sawing, and trim work that eats most of a renovation budget.</p>
+        <div class="install-checks">
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>No demolition, drywall replacement, or paint cleanup</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Panels ship pre-cut to your exact dimensions</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>DIY-friendly — or we can connect you with a local installer</span>
+          </div>
+          <div class="install-check">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Most accent walls finished in 3–6 hours</span>
+          </div>
+        </div>
+        <div class="install-video-ctas">
+          <a href="contact-us.html?intent=samples" class="btn btn-white btn-lg">Order Free Samples</a>
+          <a href="how-it-works.html" class="btn-ghost-dark">See the Full Process</a>
+        </div>
+        <div class="install-video-meta">
+          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>43 seconds</span>
+          <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Verified contractor footage</span>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: video frame only -->
+      <div class="install-video-frame reveal delay-1" id="installVideoFrame">
+        <video id="installVideo" preload="metadata" playsinline muted poster="images/contractor-install-poster.jpg">
+          <source src="videos/contractor-install.webm" type="video/webm">
+          <source src="videos/contractor-install.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <button type="button" class="install-video-play" id="installVideoPlay" aria-label="Play install video">
+          <span class="install-play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var frame = document.getElementById('installVideoFrame');
+    var video = document.getElementById('installVideo');
+    var play  = document.getElementById('installVideoPlay');
+    if(!frame || !video || !play) return;
+
+    function tryPlay(){
+      var p = video.play();
+      if(p && typeof p.catch === 'function') p.catch(function(){});
+    }
+
+    // Manual click on the big overlay button: unmute + start.
+    play.addEventListener('click', function(){
+      video.muted = false;
+      video.controls = true;
+      var p = video.play();
+      if(p && typeof p.catch === 'function'){
+        p.catch(function(){
+          video.muted = true;
+          tryPlay();
+        });
+      }
+      play.classList.add('hidden');
+    });
+
+    // Autoplay (muted, per browser policy) when the section scrolls into view.
+    // Pauses when it leaves so it doesn't run off-screen, resumes on return.
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window && !prefersReduced){
+      var started = false;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting && entry.intersectionRatio >= 0.25){
+            video.muted = true;
+            video.controls = true;
+            play.classList.add('hidden');
+            tryPlay();
+            started = true;
+          } else if(started && entry.intersectionRatio === 0 && !video.paused){
+            video.pause();
+          }
+        });
+      }, { threshold: [0, 0.25] });
+      io.observe(frame);
+    }
+
+    video.addEventListener('ended', function(){
+      play.classList.remove('hidden');
+      video.controls = false;
+    });
+  })();
+  </script>
+</section>
+
+<!-- ============================================================
+     BEFORE / AFTER TRANSFORMATIONS (CRO PRIORITY 1)
+     Real customer-room transformations with interactive slider.
+     Sliders are pointer/touch/keyboard driven via inline script.
+     ============================================================ -->
+<section class="transformations-section" id="transformations">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Real Transformations</div>
+      <h2 class="section-title">From Plain Wall to Showpiece</h2>
+      <p class="section-desc">Drag the slider on any project to see the before &amp; after. These are the same panels we'll cut, ship, and deliver to your door — no construction, no demolition.</p>
+    </div>
+
+    <div class="ba-grid">
+      <!-- 1. Living Room -->
+      <article class="ba-card reveal" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Living Room">
+          <div class="ba-before ba-bg-empty-1" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-1" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Living Room</div>
+          <h3 class="ba-title">Cozy Family Room Refresh</h3>
+          <p class="ba-desc">A flat builder-beige wall reimagined with warm walnut fluted panels. The room feels grounded, intentional, and worth coming home to.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Walnut Indoor Panels</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~6 hours</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Home Office -->
+      <article class="ba-card reveal delay-1" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Home Office">
+          <div class="ba-before ba-bg-empty-2" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-2" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Home Office</div>
+          <h3 class="ba-title">Remote-Work Upgrade</h3>
+          <p class="ba-desc">An echoey white wall behind the desk swapped for slatted acoustic oak. Calls sound clearer, video looks broadcast-ready, the space feels designed.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Acoustic Oak Panels</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~4 hours</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Basement -->
+      <article class="ba-card reveal delay-2" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Basement">
+          <div class="ba-before ba-bg-empty-3" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-3" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Basement Renovation</div>
+          <h3 class="ba-title">Unfinished Storage to Lounge</h3>
+          <p class="ba-desc">Bare concrete-grey walls transformed into a warm, finished entertainment lounge with dark caramel panels — no drywall, no painters, no mess.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Dark Caramel PVC</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~1 weekend</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Feature Wall -->
+      <article class="ba-card reveal" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Feature Wall">
+          <div class="ba-before ba-bg-empty-4" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-4" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Feature Wall Makeover</div>
+          <h3 class="ba-title">Dining Room Statement</h3>
+          <p class="ba-desc">A tired accent wall lifted with high-gloss marble-look panels. The look of real Negro Marquina stone — at a fraction of the slab-and-install price.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Negro Marquina Marble PVC</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~3 hours</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Condo Accent Wall -->
+      <article class="ba-card reveal delay-1" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Condo Accent Wall">
+          <div class="ba-before ba-bg-empty-5" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-5" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Condo Accent Wall</div>
+          <h3 class="ba-title">Small Space, Big Character</h3>
+          <p class="ba-desc">A flat developer-white headboard wall warmed up with pale ash slats. Scandi-clean, brightens the room, and is fully removable when the lease ends.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Ash Wood Slat Panels</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~2.5 hours</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Commercial Reception -->
+      <article class="ba-card reveal delay-2" data-ba-card>
+        <div class="ba-slider-wrap" role="region" aria-label="Before and after slider: Commercial Reception">
+          <div class="ba-before ba-bg-empty-6" aria-hidden="true"></div>
+          <div class="ba-after ba-bg-after-6" aria-hidden="true"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-handle" aria-hidden="true">
+            <div class="ba-handle-knob">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+            </div>
+          </div>
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal slider position" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+        </div>
+        <div class="ba-meta">
+          <div class="ba-room">Commercial Reception</div>
+          <h3 class="ba-title">Lobby Brand Statement</h3>
+          <p class="ba-desc">An overlooked office-tower lobby brought to life with brushed-bronze metallic panels. The kind of entrance that gets photographed before the first meeting.</p>
+          <div class="ba-stats">
+            <span class="ba-chip ba-chip-product"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Brushed Bronze Metal PVC</span>
+            <span class="ba-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Installed in ~1 day</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="ba-section-cta reveal">
+      <a href="contact-us.html?intent=samples" class="btn btn-primary btn-lg">Order Free Samples to Try at Home</a>
+      <span class="ba-helper">Free shipping &nbsp;·&nbsp; ships within 3 business days &nbsp;·&nbsp; no obligation</span>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    function initBA(card){
+      var wrap = card.querySelector('.ba-slider-wrap');
+      var range = card.querySelector('.ba-range');
+      if(!wrap || !range) return;
+      function setPos(p){
+        p = Math.max(0, Math.min(100, p));
+        wrap.style.setProperty('--ba-pos', p + '%');
+        range.value = p;
+      }
+      function fromEvent(ev){
+        var rect = wrap.getBoundingClientRect();
+        var x = (ev.touches ? ev.touches[0].clientX : ev.clientX) - rect.left;
+        return (x / rect.width) * 100;
+      }
+      var dragging = false;
+      wrap.addEventListener('pointerdown', function(ev){
+        if(ev.target === range) return;
+        dragging = true;
+        card.classList.add('dragging');
+        setPos(fromEvent(ev));
+        try { wrap.setPointerCapture(ev.pointerId); } catch(e){}
+        ev.preventDefault();
+      });
+      wrap.addEventListener('pointermove', function(ev){
+        if(!dragging) return;
+        setPos(fromEvent(ev));
+      });
+      function endDrag(){ dragging = false; card.classList.remove('dragging'); }
+      wrap.addEventListener('pointerup', endDrag);
+      wrap.addEventListener('pointercancel', endDrag);
+      wrap.addEventListener('pointerleave', endDrag);
+      range.addEventListener('input', function(){
+        setPos(parseFloat(range.value));
+      });
+      // Initial subtle nudge animation on first reveal
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){
+              card.classList.add('hint');
+              io.disconnect();
+              setTimeout(function(){ card.classList.remove('hint'); }, 2400);
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(card);
+      }
+      setPos(50);
+    }
+    document.querySelectorAll('[data-ba-card]').forEach(initBA);
+  })();
+  </script>
 </section>
 
 <!-- WHY US -->
