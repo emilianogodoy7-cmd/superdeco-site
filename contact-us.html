@@ -176,18 +176,18 @@
           <form id="contactForm" action="https://formspree.io/f/xjgjkqye" method="POST">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none">
             <div class="form-row">
-              <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
-              <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+              <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" minlength="2" required title="Please enter your full name"></div>
+              <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required title="Please enter a valid email address"></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>Phone <span class="opt">(optional)</span></label><input type="tel" name="phone" placeholder="(555) 000-0000"></div>
-              <div class="form-group"><label>Project Type</label><select name="project_type"><option value="">Select one</option><option>Home Renovation</option><option>New Build</option><option>Commercial Space</option><option>Single Room</option><option>Other</option></select></div>
+              <div class="form-group"><label>Phone <span class="opt">(optional)</span></label><input type="tel" name="phone" placeholder="(438) 000-0000"></div>
+              <div class="form-group"><label>Project Type</label><select name="project_type" required title="Please select your project type"><option value="">Select one</option><option>Home Renovation</option><option>New Build</option><option>Commercial Space</option><option>Single Room</option><option>Other</option></select></div>
             </div>
             <div class="form-row">
               <div class="form-group"><label>Room Type</label><select name="room_type"><option value="">Select room</option><option>Living Room</option><option>Bedroom</option><option>Office / Study</option><option>Hallway</option><option>Kitchen</option><option>Bathroom</option><option>Multiple Rooms</option><option>Other</option></select></div>
               <div class="form-group"><label>Panel Style</label><select name="panel_style"><option value="">Select style</option><option>Indoor Wall Panels</option><option>Outdoor Wall Panels</option><option>Acoustic Panels</option><option>Mirror PVC</option><option>Marble PVC High Gloss</option><option>Metal PVC</option><option>Not sure yet</option></select></div>
             </div>
-            <div class="form-group"><label>Wall Dimensions <span class="opt">(approximate is fine)</span></label><input type="text" name="dimensions" placeholder="e.g. 3m wide × 2.5m high"></div>
+            <div class="form-group"><label>Wall Dimensions <span class="opt">(approximate is fine)</span></label><input type="text" name="dimensions" placeholder="e.g. 3m wide × 2.5m high" minlength="3" required title="Please provide approximate wall dimensions so we can prepare a quote"></div>
             <div class="form-group"><label>Message <span class="opt">(optional)</span></label><textarea name="message" placeholder="Tell us anything else about your project, timeline, or requirements..."></textarea></div>
             <div class="form-group">
               <label>Upload Photo or Plan <span class="opt">(optional)</span></label>
@@ -270,9 +270,49 @@
 
 <script src="shared.js"></script>
 <script>
+// Inline validation — show custom error message under each invalid field
+(function attachValidation(){
+  var form = document.getElementById('contactForm');
+  function setError(field){
+    var group = field.closest('.form-group');
+    if (!group) return;
+    group.classList.add('has-error');
+    var msg = group.querySelector('.field-error');
+    if (!msg){
+      msg = document.createElement('span');
+      msg.className = 'field-error';
+      group.appendChild(msg);
+    }
+    msg.textContent = field.title || field.validationMessage;
+  }
+  function clearError(field){
+    var group = field.closest('.form-group');
+    if (group) group.classList.remove('has-error');
+  }
+  form.addEventListener('invalid', function(e){
+    e.preventDefault(); // suppress native tooltip
+    setError(e.target);
+  }, true);
+  form.addEventListener('input', function(e){
+    if (e.target.checkValidity && e.target.checkValidity()) clearError(e.target);
+  });
+  form.addEventListener('change', function(e){
+    if (e.target.checkValidity && e.target.checkValidity()) clearError(e.target);
+  });
+})();
+
 // Formspree AJAX submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
+  if (!this.checkValidity()){
+    var firstError = this.querySelector('.has-error');
+    if (firstError){
+      firstError.scrollIntoView({behavior:'smooth', block:'center'});
+      var input = firstError.querySelector('input, select, textarea');
+      if (input) setTimeout(function(){ input.focus(); }, 300);
+    }
+    return;
+  }
   var btn = this.querySelector('.form-submit');
   var form = this;
   btn.textContent = 'Sending...';
