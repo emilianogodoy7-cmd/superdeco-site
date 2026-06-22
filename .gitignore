@@ -1,0 +1,26 @@
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (in case anything gets added later)
+node_modules/
+npm-debug.log*
+
+# Logs / temp
+*.log
+*.tmp
+
+# Local-only ops material (kept outside the repo)
+superdeco-ops/
