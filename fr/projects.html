@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — SuperDeco Canada</title>
-<meta name="description" content="A curated collection of spaces transformed by SuperDeco Canada. Explore real projects featuring indoor panels, outdoor cladding, marble PVC, acoustic walls, and more.">
+<title>Réalisations — SuperDeco Canada</title>
+<meta name="description" content="Une collection sélectionnée d'espaces transformés par SuperDeco Canada. Découvrez de vraies réalisations avec panneaux intérieurs, revêtements extérieurs, marbre PVC, murs acoustiques et plus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="../shared.css">
 <style>
 
-/* ── Page banner ── */
+/* ── Bannière de page ── */
 .projects-banner{
   background:var(--charcoal);
   padding:20px 0 14px;
@@ -37,13 +37,13 @@
 .projects-banner h1 em{font-style:italic;font-weight:400}
 .projects-banner p{display:none}
 
-/* ── Gallery section ── */
+/* ── Section galerie ── */
 .projects-section{
   padding:32px 0 112px;
   background:var(--gray-50);
 }
 
-/* Masonry via CSS columns */
+/* Maçonnerie via colonnes CSS */
 .projects-masonry{
   columns:3;
   column-gap:20px;
@@ -51,7 +51,7 @@
 @media(max-width:900px){.projects-masonry{columns:2;column-gap:16px}}
 @media(max-width:520px){.projects-masonry{columns:1}}
 
-/* Individual project card */
+/* Carte de projet individuelle */
 .project-item{
   break-inside:avoid;
   margin-bottom:20px;
@@ -71,7 +71,7 @@
 }
 .project-item:hover img{transform:scale(1.05)}
 
-/* Overlay revealed on hover */
+/* Superposition révélée au survol */
 .project-overlay{
   position:absolute;
   inset:0;
@@ -105,7 +105,7 @@
   color:rgba(255,255,255,.5);
 }
 
-/* ── Filter bar ── */
+/* ── Barre de filtres ── */
 .projects-filter{
   display:flex;
   gap:8px;
@@ -130,7 +130,7 @@
 .filter-btn:hover{border-color:var(--gray-400);color:var(--gray-800)}
 .filter-btn.active{background:var(--charcoal);color:var(--white);border-color:var(--charcoal)}
 
-/* ── CTA strip ── */
+/* ── Bande d'appel à l'action ── */
 .projects-cta{
   padding:88px 0;
   background:var(--charcoal);
@@ -184,7 +184,7 @@
   .cta-btn-primary,.cta-btn-ghost{width:100%;justify-content:center}
 }
 
-/* Mobile premium refinement — calm banner, always-on captions, scrollable filter */
+/* Raffinement mobile premium — bannière sobre, légendes toujours visibles, filtre déroulant */
 @media(max-width:768px){
   .projects-banner{padding:16px 0 12px}
   .projects-banner h1{font-size:clamp(.98rem,3.6vw,1.2rem);margin:0;letter-spacing:0}
@@ -196,7 +196,7 @@
   .projects-masonry{columns:1;column-gap:0}
   .project-item{margin-bottom:14px;border-radius:4px}
   .project-item img{border-radius:4px}
-  /* Mobile: captions visible always (no hover on touch) */
+  /* Mobile : légendes toujours visibles (pas de survol au toucher) */
   .project-overlay{opacity:1;background:linear-gradient(to top,rgba(20,20,20,.78) 0%,transparent 55%);padding:18px 16px;border-radius:4px}
   .project-caption-title{font-size:.92rem;margin-bottom:3px}
   .project-caption-cat{font-size:.6rem;letter-spacing:.16em}
@@ -223,18 +223,18 @@
       </a>
       <span class="utility-item utility-address">
         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Montreal, QC &amp; surrounding areas
+        Montréal, QC et environs
       </span>
     </div>
     <div class="utility-right">
-      <span class="utility-social-note">Follow our US site:</span>
-      <a href="https://www.facebook.com/superdecoimpor" class="utility-social" aria-label="Facebook (US site — Canada coming soon)" target="_blank" rel="noopener" title="Canada accounts coming soon — these link to our US team">
+      <span class="utility-social-note">Suivez notre site américain :</span>
+      <a href="https://www.facebook.com/superdecoimpor" class="utility-social" aria-label="Facebook (site américain)" target="_blank" rel="noopener" title="Compte canadien à venir — ces liens mènent à notre équipe américaine">
         <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <a href="https://www.instagram.com/superdecoimport/?hl=en" class="utility-social" aria-label="Instagram (US site — Canada coming soon)" target="_blank" rel="noopener" title="Canada accounts coming soon — these link to our US team">
+      <a href="https://www.instagram.com/superdecoimport/?hl=en" class="utility-social" aria-label="Instagram (site américain)" target="_blank" rel="noopener" title="Compte canadien à venir — ces liens mènent à notre équipe américaine">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
-      <a href="https://www.tiktok.com/@superdecoimport" class="utility-social" aria-label="TikTok (US site — Canada coming soon)" target="_blank" rel="noopener" title="Canada accounts coming soon — these link to our US team">
+      <a href="https://www.tiktok.com/@superdecoimport" class="utility-social" aria-label="TikTok (site américain)" target="_blank" rel="noopener" title="Compte canadien à venir — ces liens mènent à notre équipe américaine">
         <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg>
       </a>
     </div>
@@ -244,186 +244,186 @@
 <header class="header" id="header">
   <div class="container header-inner">
     <a href="index.html" class="logo">
-      <img src="images/logo.svg" alt="SuperDeco Canada decorative wall panels logo" class="logo-img" height="40">
+      <img src="../images/logo.svg" alt="Logo SuperDeco Canada — panneaux muraux décoratifs" class="logo-img" height="40">
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="panels.html">Products</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="projects.html" class="active-nav">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#faq">FAQs</a>
+      <a href="index.html">Accueil</a>
+      <a href="panels.html">Produits</a>
+      <a href="how-it-works.html">Comment ça marche</a>
+      <a href="projects.html" class="active-nav">Réalisations</a>
+      <a href="blog.html">Blogue</a>
+      <a href="index.html#faq">FAQ</a>
       <a href="contact-us.html">Contact</a>
-      <a href="contact-us.html" class="btn btn-primary nav-cta">Get Quote</a>
+      <a href="contact-us.html" class="btn btn-primary nav-cta">Demander un devis</a>
     </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
 </header>
 
 <div class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="closeMobile()">Home</a>
-  <a href="panels.html" onclick="closeMobile()">Products</a>
-  <a href="how-it-works.html" onclick="closeMobile()">How It Works</a>
-  <a href="projects.html" onclick="closeMobile()">Projects</a>
-  <a href="blog.html" onclick="closeMobile()">Blog</a>
-  <a href="index.html#faq" onclick="closeMobile()">FAQs</a>
+  <a href="index.html" onclick="closeMobile()">Accueil</a>
+  <a href="panels.html" onclick="closeMobile()">Produits</a>
+  <a href="how-it-works.html" onclick="closeMobile()">Comment ça marche</a>
+  <a href="projects.html" onclick="closeMobile()">Réalisations</a>
+  <a href="blog.html" onclick="closeMobile()">Blogue</a>
+  <a href="index.html#faq" onclick="closeMobile()">FAQ</a>
   <a href="contact-us.html" onclick="closeMobile()">Contact</a>
-  <a href="contact-us.html" class="btn btn-primary nav-cta" onclick="closeMobile()">Get Quote</a>
+  <a href="contact-us.html" class="btn btn-primary nav-cta" onclick="closeMobile()">Demander un devis</a>
 </div>
 
-<!-- BANNER -->
+<!-- BANNIÈRE -->
 <div class="projects-banner">
   <div class="container">
-    <h1>See What's <em>Possible</em></h1>
-    <p>A curated collection of spaces transformed by SuperDeco Canada.</p>
+    <h1>Voyez ce qui est <em>possible</em></h1>
+    <p>Une collection sélectionnée d'espaces transformés par SuperDeco Canada.</p>
   </div>
 </div>
 
-<!-- GALLERY -->
+<!-- GALERIE -->
 <section class="projects-section">
   <div class="container">
 
-    <!-- Filter bar -->
+    <!-- Barre de filtres -->
     <div class="projects-filter">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="indoor">Indoor</button>
-      <button class="filter-btn" data-filter="outdoor">Outdoor</button>
-      <button class="filter-btn" data-filter="marble">Marble PVC</button>
-      <button class="filter-btn" data-filter="acoustic">Acoustic</button>
+      <button class="filter-btn active" data-filter="all">Toutes les réalisations</button>
+      <button class="filter-btn" data-filter="indoor">Intérieur</button>
+      <button class="filter-btn" data-filter="outdoor">Extérieur</button>
+      <button class="filter-btn" data-filter="marble">Marbre PVC</button>
+      <button class="filter-btn" data-filter="acoustic">Acoustique</button>
     </div>
 
     <div class="projects-masonry" id="projectsMasonry">
 
       <!-- 1 -->
       <div class="project-item" data-category="outdoor">
-        <img src="images/gallery-1.png" alt="Exterior privacy fence installation using outdoor wall panels" loading="lazy">
+        <img src="../images/gallery-1.png" alt="Installation d'une clôture d'intimité extérieure avec panneaux muraux extérieurs" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Exterior Privacy Fence</span>
-            <span class="project-caption-cat">Outdoor Wall Panels</span>
+            <span class="project-caption-title">Clôture d'intimité extérieure</span>
+            <span class="project-caption-cat">Panneaux muraux extérieurs</span>
           </div>
         </div>
       </div>
 
       <!-- 2 -->
       <div class="project-item" data-category="indoor">
-        <img src="images/gallery-2.png" alt="Home office feature wall with wood-look indoor panels" loading="lazy">
+        <img src="../images/gallery-2.png" alt="Mur vedette de bureau à domicile avec panneaux intérieurs imitation bois" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Home Office Feature Wall</span>
-            <span class="project-caption-cat">Indoor Wall Panels</span>
+            <span class="project-caption-title">Mur vedette de bureau à domicile</span>
+            <span class="project-caption-cat">Panneaux muraux intérieurs</span>
           </div>
         </div>
       </div>
 
       <!-- 3 -->
       <div class="project-item" data-category="acoustic">
-        <img src="images/products/acoustic-panels/akupanel-classic-oak-showcase2.jpg" alt="Acoustic wood slat panels in a modern office interior" loading="lazy">
+        <img src="../images/products/acoustic-panels/akupanel-classic-oak-showcase2.jpg" alt="Panneaux acoustiques à lattes de bois dans un intérieur de bureau moderne" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Acoustic Office Wall</span>
-            <span class="project-caption-cat">Acoustic Panels</span>
+            <span class="project-caption-title">Mur acoustique de bureau</span>
+            <span class="project-caption-cat">Panneaux acoustiques</span>
           </div>
         </div>
       </div>
 
       <!-- 4 -->
       <div class="project-item" data-category="marble">
-        <img src="images/gallery-3.png" alt="Boutique accent wall with marble PVC high gloss panels" loading="lazy">
+        <img src="../images/gallery-3.png" alt="Mur d'accent de boutique avec panneaux marbre PVC haute brillance" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Boutique Accent Wall</span>
-            <span class="project-caption-cat">Marble PVC High Gloss</span>
+            <span class="project-caption-title">Mur d'accent de boutique</span>
+            <span class="project-caption-cat">Marbre PVC haute brillance</span>
           </div>
         </div>
       </div>
 
       <!-- 5 -->
       <div class="project-item" data-category="outdoor">
-        <img src="images/products/outdoor-wall-panels/Imagen-de-WhatsApp-2025-07-29-a-las-13.25.01_b5797b6d-1.jpg" alt="Modern outdoor facade cladding with WPC panels" loading="lazy">
+        <img src="../images/products/outdoor-wall-panels/Imagen-de-WhatsApp-2025-07-29-a-las-13.25.01_b5797b6d-1.jpg" alt="Revêtement de façade extérieure moderne avec panneaux WPC" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Outdoor Facade Cladding</span>
-            <span class="project-caption-cat">Outdoor Wall Panels</span>
+            <span class="project-caption-title">Revêtement de façade extérieure</span>
+            <span class="project-caption-cat">Panneaux muraux extérieurs</span>
           </div>
         </div>
       </div>
 
       <!-- 6 -->
       <div class="project-item" data-category="marble">
-        <img src="images/gallery-4.png" alt="Modern marble feature wall in a residential interior" loading="lazy">
+        <img src="../images/gallery-4.png" alt="Mur vedette en marbre moderne dans un intérieur résidentiel" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Modern Feature Wall</span>
-            <span class="project-caption-cat">Marble PVC High Gloss</span>
+            <span class="project-caption-title">Mur vedette moderne</span>
+            <span class="project-caption-cat">Marbre PVC haute brillance</span>
           </div>
         </div>
       </div>
 
       <!-- 7 -->
       <div class="project-item" data-category="acoustic">
-        <img src="images/products/acoustic-panels/akupanel-stone-showcase-1536x1536-1.jpg" alt="Acoustic stone-look panels in a residential living space" loading="lazy">
+        <img src="../images/products/acoustic-panels/akupanel-stone-showcase-1536x1536-1.jpg" alt="Panneaux acoustiques imitation pierre dans un espace de vie résidentiel" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Living Room Accent</span>
-            <span class="project-caption-cat">Acoustic Panels</span>
+            <span class="project-caption-title">Accent de salon</span>
+            <span class="project-caption-cat">Panneaux acoustiques</span>
           </div>
         </div>
       </div>
 
       <!-- 8 -->
       <div class="project-item" data-category="marble">
-        <img src="images/gallery-5.png" alt="Hallway renovation with marble PVC panels" loading="lazy">
+        <img src="../images/gallery-5.png" alt="Rénovation de couloir avec panneaux marbre PVC" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Hallway Renovation</span>
-            <span class="project-caption-cat">Marble PVC High Gloss</span>
+            <span class="project-caption-title">Rénovation de couloir</span>
+            <span class="project-caption-cat">Marbre PVC haute brillance</span>
           </div>
         </div>
       </div>
 
       <!-- 9 -->
       <div class="project-item" data-category="indoor">
-        <img src="images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png" alt="Open-plan room dividers in a modern living space" loading="lazy">
+        <img src="../images/products/partition-dividers/Sala-moderna-con-divisores-de-madera-1.png" alt="Séparateurs de pièce à aire ouverte dans un espace de vie moderne" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Open-Plan Room Dividers</span>
-            <span class="project-caption-cat">Partition Dividers</span>
+            <span class="project-caption-title">Séparateurs de pièce à aire ouverte</span>
+            <span class="project-caption-cat">Séparateurs d'espace</span>
           </div>
         </div>
       </div>
 
       <!-- 10 -->
       <div class="project-item" data-category="marble">
-        <img src="images/gallery-6.png" alt="Commercial showroom with mirror PVC panels" loading="lazy">
+        <img src="../images/gallery-6.png" alt="Salle d'exposition commerciale avec panneaux miroir PVC" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Commercial Showroom</span>
-            <span class="project-caption-cat">Mirror PVC</span>
+            <span class="project-caption-title">Salle d'exposition commerciale</span>
+            <span class="project-caption-cat">Miroir PVC</span>
           </div>
         </div>
       </div>
 
       <!-- 11 -->
       <div class="project-item" data-category="marble">
-        <img src="images/products/marble-pvc-high-gloss/blanco-gold-carrara.jpg" alt="Blanco Gold Carrara marble PVC feature wall" loading="lazy">
+        <img src="../images/products/marble-pvc-high-gloss/blanco-gold-carrara.jpg" alt="Mur vedette en marbre PVC Blanco Gold Carrara" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Gold Carrara Feature Wall</span>
-            <span class="project-caption-cat">Marble PVC High Gloss</span>
+            <span class="project-caption-title">Mur vedette Gold Carrara</span>
+            <span class="project-caption-cat">Marbre PVC haute brillance</span>
           </div>
         </div>
       </div>
 
       <!-- 12 -->
       <div class="project-item" data-category="indoor">
-        <img src="images/products/accessories/Salon-moderno-con-acentos-dorados.png" alt="Modern lounge interior with gold accent accessories" loading="lazy">
+        <img src="../images/products/accessories/Salon-moderno-con-acentos-dorados.png" alt="Intérieur de salon moderne avec accessoires d'accent dorés" loading="lazy">
         <div class="project-overlay">
           <div class="project-caption">
-            <span class="project-caption-title">Modern Lounge Interior</span>
-            <span class="project-caption-cat">Accessories</span>
+            <span class="project-caption-title">Intérieur de salon moderne</span>
+            <span class="project-caption-cat">Accessoires</span>
           </div>
         </div>
       </div>
@@ -432,53 +432,53 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- APPEL À L'ACTION -->
 <div class="projects-cta">
   <div class="container">
-    <h2>Ready to Transform Your Space?</h2>
-    <p>Get a free, no-obligation quote and see how our panels look in your home or commercial project.</p>
+    <h2>Prêt à transformer votre espace ?</h2>
+    <p>Obtenez un devis gratuit sans engagement et voyez comment nos panneaux s'intègrent à votre maison ou projet commercial.</p>
     <div class="projects-cta-btns">
-      <a href="contact-us.html" class="cta-btn-primary">Get a Free Quote</a>
-      <a href="panels.html" class="cta-btn-ghost">Browse All Products</a>
+      <a href="contact-us.html" class="cta-btn-primary">Obtenir un devis gratuit</a>
+      <a href="panels.html" class="cta-btn-ghost">Voir tous les produits</a>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- PIED DE PAGE -->
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">
-          <img src="images/logo-white.svg" alt="SuperDeco Canada decorative wall panels logo" class="logo-img" height="34">
+          <img src="../images/logo-white.svg" alt="Logo SuperDeco Canada — panneaux muraux décoratifs" class="logo-img" height="34">
         </div>
-        <p>Decorative wall panels for homes, offices, and commercial spaces. Quality materials, fair pricing, and reliable service.</p>
+        <p>Panneaux muraux décoratifs pour maisons, bureaux et espaces commerciaux. Matériaux de qualité, prix justes et service fiable.</p>
       </div>
       <div class="footer-cta-area">
-        <p>Ready to get started?</p>
-        <a href="contact-us.html" class="btn btn-primary btn-sm">Get a Free Quote</a>
+        <p>Prêt à commencer ?</p>
+        <a href="contact-us.html" class="btn btn-primary btn-sm">Obtenir un devis gratuit</a>
       </div>
     </div>
     <div class="footer-grid">
       <div>
-        <h4>Quick Links</h4>
+        <h4>Liens rapides</h4>
         <ul>
-          <li><a href="panels.html">Our Products</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="index.html#faq">FAQs</a></li>
-          <li><a href="contact-us.html">Get a Quote</a></li>
+          <li><a href="panels.html">Nos produits</a></li>
+          <li><a href="how-it-works.html">Comment ça marche</a></li>
+          <li><a href="projects.html">Réalisations</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact-us.html">Demander un devis</a></li>
         </ul>
       </div>
       <div>
-        <h4>Panel Types</h4>
+        <h4>Types de panneaux</h4>
         <ul>
-          <li><a href="products/indoor-wall-panels.html">Indoor Wall Panels</a></li>
-          <li><a href="products/outdoor-wall-panels.html">Outdoor Wall Panels</a></li>
-          <li><a href="products/acoustic-panels.html">Acoustic Panels</a></li>
-          <li><a href="products/mirror-pvc.html">Mirror PVC</a></li>
-          <li><a href="products/marble-pvc-high-gloss.html">Marble PVC High Gloss</a></li>
-          <li><a href="products/metal-pvc.html">Metal PVC</a></li>
+          <li><a href="products/indoor-wall-panels.html">Panneaux muraux intérieurs</a></li>
+          <li><a href="products/outdoor-wall-panels.html">Panneaux muraux extérieurs</a></li>
+          <li><a href="products/acoustic-panels.html">Panneaux acoustiques</a></li>
+          <li><a href="products/mirror-pvc.html">Miroir PVC</a></li>
+          <li><a href="products/marble-pvc-high-gloss.html">Marbre PVC haute brillance</a></li>
+          <li><a href="products/metal-pvc.html">Métal PVC</a></li>
         </ul>
       </div>
       <div>
@@ -486,24 +486,24 @@
         <ul>
           <li><a href="mailto:superdecoimportca@gmail.com">superdecoimportca@gmail.com</a></li>
           <li><a href="tel:+14383682830">(438) 368-2830</a></li>
-          <li><a href="#">Montreal, QC &amp; surrounding areas</a></li>
+          <li><a href="#">Montréal, QC et environs</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-divider"></div>
     <div class="footer-bottom">
-      <p>&copy; 2026 SuperDeco Canada. All rights reserved.</p>
+      <p>&copy; 2026 SuperDeco Canada. Tous droits réservés.</p>
       <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="shared.js"></script>
+<script src="../shared.js"></script>
 <script>
-/* Filter logic */
+/* Logique des filtres */
 (function(){
   var btns = document.querySelectorAll('.filter-btn');
   var items = document.querySelectorAll('.project-item');
@@ -523,6 +523,6 @@
   });
 })();
 </script>
-<script src="lang-toggle.js"></script>
+<script src="../lang-toggle.js"></script>
 </body>
 </html>
