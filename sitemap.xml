@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://superdecoimport.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Products catalogue -->
+  <url>
+    <loc>https://superdecoimport.ca/panels.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/panels.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/panels.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/panels.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/panels.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/panels.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product category pages -->
+  <url><loc>https://superdecoimport.ca/products/indoor-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/outdoor-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/flat-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/acoustic-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/mirror-pvc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/metal-pvc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/marble-pvc-high-gloss.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/products/wpc-fence.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/products/partition-dividers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/products/accessories.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/products/kitchen.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/products/fireplace.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/products/lights.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- French product category pages -->
+  <url><loc>https://superdecoimport.ca/fr/products/indoor-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/outdoor-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/flat-wall-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/acoustic-panels.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/mirror-pvc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/metal-pvc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/marble-pvc-high-gloss.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/wpc-fence.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/partition-dividers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/accessories.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/kitchen.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/fireplace.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/products/lights.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- How It Works -->
+  <url>
+    <loc>https://superdecoimport.ca/how-it-works.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/how-it-works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/how-it-works.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/how-it-works.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/how-it-works.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/how-it-works.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Projects -->
+  <url>
+    <loc>https://superdecoimport.ca/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/projects.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/projects.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://superdecoimport.ca/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/blog.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/blog.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url><loc>https://superdecoimport.ca/blog/interior-design-trends-2026.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://superdecoimport.ca/blog/maintenance-free-metal-finish-panels.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://superdecoimport.ca/blog/transform-living-room-flat-wall-panels.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/blog/interior-design-trends-2026.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/blog/maintenance-free-metal-finish-panels.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://superdecoimport.ca/fr/blog/transform-living-room-flat-wall-panels.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://superdecoimport.ca/contact-us.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/contact-us.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/contact-us.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://superdecoimport.ca/fr/contact-us.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superdecoimport.ca/contact-us.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://superdecoimport.ca/fr/contact-us.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
