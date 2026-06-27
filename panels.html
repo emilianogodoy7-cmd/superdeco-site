@@ -124,10 +124,11 @@
     transform:none;transition:transform .6s cubic-bezier(.4,0,.2,1);
   }
   .products-grid .product-card:hover .product-img-bg{transform:scale(1.06)}
-  /* Grey circular ring on hover — explicit on the circle element so it applies
-     uniformly to all 13 cards regardless of card-level cascade interactions. */
+  /* Circular shadow on the circle element itself (border-radius:50%) so the
+     shadow follows the circle shape uniformly across all 13 cards. */
+  .products-grid .product-card .product-img{transition:box-shadow .3s ease}
   .products-grid .product-card:hover .product-img{
-    box-shadow:0 0 0 3px var(--gray-200);
+    box-shadow:var(--shadow-lg);
   }
   /* Vignette on ::after — immune to the shared.css position:relative override on
      .product-img-overlay (line 291). Pseudo-elements are fully under local control. */
