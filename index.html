@@ -251,6 +251,45 @@ section{padding:88px 0}
 @media(max-width:720px){.bestsellers-arrow{display:none}}
 @media(max-width:560px){.bestsellers-section{padding:60px 0 8px}.bestsellers-slider{margin-top:36px}}
 
+/* ===== BEST SELLERS — GALLERY MODAL ===== */
+.bs-gallery-modal{display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center}
+.bs-gallery-modal.open{display:flex}
+.bs-gm-backdrop{position:absolute;inset:0;background:rgba(10,14,26,.88);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.bs-gm-inner{position:relative;z-index:1;background:#0f1117;border-radius:16px;overflow:hidden;width:min(900px,96vw);max-height:92vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.6);animation:bsGmSlideUp .25s ease}
+@keyframes bsGmSlideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.bs-gm-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;gap:12px}
+.bs-gm-title{font-size:.95rem;font-weight:700;color:#fff;letter-spacing:-.01em}
+.bs-gm-actions{display:flex;align-items:center;gap:10px}
+.bs-gm-cta{display:inline-block;font-family:var(--font);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 18px;text-decoration:none;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.bs-gm-cta-primary{background:#ffffff;color:#000000;border:1px solid #ffffff}
+.bs-gm-cta-primary:hover{background:transparent;color:#ffffff}
+.bs-gm-cta-secondary{background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,.45)}
+.bs-gm-cta-secondary:hover{border-color:#ffffff;background:rgba(255,255,255,.08)}
+.bs-gm-close{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);border:none;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s;flex-shrink:0}
+.bs-gm-close:hover{background:rgba(255,255,255,.16)}
+.bs-gm-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative;background:#0a0c12;overflow:hidden}
+.bs-gm-img-wrap{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:300px;max-height:60vh;padding:12px}
+#bsGmImg{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;transition:opacity .2s}
+#bsGmImg.bs-gm-fade{opacity:0}
+.bs-gm-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);border:none;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.bs-gm-arrow:hover{background:rgba(255,255,255,.22)}
+.bs-gm-prev{left:12px}.bs-gm-next{right:12px}
+.bs-gm-thumbs{display:flex;gap:6px;padding:10px 14px;background:#080a10;overflow-x:auto;flex-shrink:0;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.15) transparent}
+.bs-gm-thumbs::-webkit-scrollbar{height:4px}
+.bs-gm-thumbs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}
+.bs-gm-thumb{width:64px;height:64px;flex-shrink:0;border-radius:6px;background-size:cover;background-position:center;border:2px solid transparent;cursor:pointer;transition:border-color .18s,opacity .18s;opacity:.6;padding:0}
+.bs-gm-thumb:hover{opacity:.9}
+.bs-gm-thumb.active{border-color:#2b4c7e;opacity:1}
+.bs-gm-counter{text-align:center;padding:6px 0 10px;font-size:.72rem;color:rgba(255,255,255,.35);flex-shrink:0}
+@media(max-width:600px){
+  .bs-gm-inner{border-radius:0;width:100vw;max-height:100dvh}
+  .bs-gm-img-wrap{min-height:220px;max-height:52vh}
+  .bs-gm-thumb{width:52px;height:52px}
+  .bs-gm-cta{font-size:.6rem;padding:7px 10px;letter-spacing:.08em}
+  .bs-gm-actions{gap:6px}
+  .bs-gm-title{font-size:.78rem}
+}
+
 /* ===== HOW IT WORKS ===== */
 .steps-section{background:var(--charcoal);position:relative;overflow:hidden;color:var(--white)}
 .steps-section .section-label{color:rgba(255,255,255,.4)}
@@ -1278,6 +1317,125 @@ a.product-card:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
       layer.className = 'bs-hover-layer';
       layer.style.backgroundImage = "url('" + src + "')";
       el.appendChild(layer);
+    });
+
+    /* ─── Gallery modal — open instead of navigating to category ─── */
+    var BS_GALLERY = {
+      'LK 3009':   ['images/products/indoor-wall-panels/1.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.54_9d2c6388.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.55_2fd893d2.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.14.53_ace02f6e.jpg'],
+      'LK 1019':   ['images/products/indoor-wall-panels/5.jpg','images/products/indoor-wall-panels/ppure-black-3.jpg'],
+      'LK-1016':   ['images/products/indoor-wall-panels/walnuts-3.png','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-09-18-a-las-10.32.32_7037e3b1.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-09-18-a-las-10.32.21_5e2035e4.jpg','images/products/indoor-wall-panels/walnuts-1.png','images/products/indoor-wall-panels/65656565.png','images/products/indoor-wall-panels/walnuts-23.png'],
+      'PS-D15020': ['images/products/indoor-wall-panels/2.jpg','images/products/indoor-wall-panels/Esquina-Moderna-de-Oficina-Elegante.png','images/products/indoor-wall-panels/Tienda-de-joyeria-elegante.png','images/products/indoor-wall-panels/Lobby-elegante-con-detalles-dorados-y-verdes.png','images/products/indoor-wall-panels/Oficina-moderna-con-detalles-elegantes.png'],
+      'LK-4005':   ['images/products/indoor-wall-panels/6.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2024-06-03-a-las-20.36.24_aee0334e.jpg','images/products/indoor-wall-panels/WhatsApp-Image-2026-01-14-at-1.01.45-PM.jpeg'],
+      'LK 1018':   ['images/products/indoor-wall-panels/ash-woos.png','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-10_25_56-p.m.png','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-09_43_06-p.m.png','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-10_30_48-p.m.png'],
+      'LK-4010':   ['images/products/indoor-wall-panels/7.jpg','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-11_25_18-p.m.png','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-11_14_43-p.m.png','images/products/indoor-wall-panels/ChatGPT-Image-25-jul-2025-11_09_20-p.m.png'],
+      '58956-6':   ['images/products/indoor-wall-panels/9.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.15.13_4d6a012a.jpg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-04-03-a-las-10.15.13_69375899.jpg'],
+      'LK 1021':   ['images/products/indoor-wall-panels/10.jpg','images/products/indoor-wall-panels/ChatGPT-Image-13-jul-2025-05_12_26-p.m.png','images/products/indoor-wall-panels/ChatGPT-Image-26-jul-2025-11_39_37-a.m.png','images/products/indoor-wall-panels/ChatGPT-Image-26-jul-2025-11_39_28-a.m.png'],
+      'LK 1017':   ['images/products/indoor-wall-panels/madera-clasica.png','images/products/indoor-wall-panels/2-2.png','images/products/indoor-wall-panels/1-1.png','images/products/indoor-wall-panels/para-subir.png'],
+      '0017-46':   ['images/products/indoor-wall-panels/3.jpg','images/products/indoor-wall-panels/descarga-34.jpeg','images/products/indoor-wall-panels/Imagen-de-WhatsApp-2025-05-15-a-las-14.27.31_bc3c7bc2.jpg','images/products/indoor-wall-panels/5de8bea447f242a1859ff466497c82a9.jpg','images/products/indoor-wall-panels/IMG-20250515-WA0010.jpg'],
+      'LK 8001':   ['images/products/indoor-wall-panels/12.jpg','images/products/indoor-wall-panels/ppure-black2.jpg','images/products/indoor-wall-panels/ppure-black.jpg'],
+      'K219-26T':  ['images/products/outdoor-wall-panels/16.jpg','images/products/outdoor-wall-panels/teka.jpg','images/products/outdoor-wall-panels/Arkowood-Paineis-Ripados.jpeg','images/products/outdoor-wall-panels/Painel-Ripado-Ipe.jpeg','images/products/outdoor-wall-panels/Painel-Ripado-Freijo.jpeg','images/products/outdoor-wall-panels/Bardage-1.jpeg'],
+      'KL8233':    ['images/products/marble-pvc-high-gloss/31.jpg','images/products/marble-pvc-high-gloss/negro-marquina.jpg'],
+      'MMB-03':    ['images/products/metal-pvc/bronce-metal-2.png','images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_38_37-p.m.png','images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_17-p.m.png','images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_31-p.m.png','images/products/metal-pvc/ChatGPT-Image-25-jul-2025-07_46_26-p.m.png'],
+      'LK-3008':   ['images/products/acoustic-panels/wall-panels-acoustic-22_02.jpg','images/products/acoustic-panels/superdecoimport_1753491465075.jpg','images/products/acoustic-panels/superdecoimport_1753491467169.jpg','images/products/acoustic-panels/superdecoimport_1753491466804.jpg','images/products/acoustic-panels/superdecoimport_1753491466372.jpg','images/products/acoustic-panels/superdecoimport_1753491465932.jpg']
+    };
+
+    var modal = document.createElement('div');
+    modal.className = 'bs-gallery-modal';
+    modal.setAttribute('role','dialog');
+    modal.setAttribute('aria-modal','true');
+    modal.setAttribute('aria-label','Product gallery');
+    modal.innerHTML =
+      '<div class="bs-gm-backdrop"></div>' +
+      '<div class="bs-gm-inner">' +
+      '  <div class="bs-gm-header">' +
+      '    <span class="bs-gm-title" id="bsGmTitle"></span>' +
+      '    <div class="bs-gm-actions">' +
+      '      <a class="bs-gm-cta bs-gm-cta-secondary" id="bsGmCollection" href="#">View Collection</a>' +
+      '      <a class="bs-gm-cta bs-gm-cta-primary" id="bsGmQuote" href="contact-us.html">Request Quote</a>' +
+      '      <button class="bs-gm-close" id="bsGmClose" aria-label="Close gallery">' +
+      '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+      '      </button>' +
+      '    </div>' +
+      '  </div>' +
+      '  <div class="bs-gm-stage">' +
+      '    <button class="bs-gm-arrow bs-gm-prev" id="bsGmPrev" aria-label="Previous image">' +
+      '      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>' +
+      '    </button>' +
+      '    <div class="bs-gm-img-wrap"><img id="bsGmImg" src="" alt="Product image" /></div>' +
+      '    <button class="bs-gm-arrow bs-gm-next" id="bsGmNext" aria-label="Next image">' +
+      '      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>' +
+      '    </button>' +
+      '  </div>' +
+      '  <div class="bs-gm-thumbs" id="bsGmThumbs"></div>' +
+      '  <div class="bs-gm-counter" id="bsGmCounter"></div>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    var bsImages = [], bsIdx = 0;
+    function bsShow(i){
+      var img = document.getElementById('bsGmImg');
+      img.classList.add('bs-gm-fade');
+      var src = bsImages[i];
+      var tmp = new Image();
+      tmp.onload = tmp.onerror = function(){ img.src = src; img.classList.remove('bs-gm-fade'); };
+      tmp.src = src;
+      bsIdx = i;
+      document.querySelectorAll('#bsGmThumbs .bs-gm-thumb').forEach(function(t,j){
+        t.classList.toggle('active', j === i);
+        if (j === i) t.scrollIntoView({ block:'nearest', inline:'center', behavior:'smooth' });
+      });
+      var c = document.getElementById('bsGmCounter');
+      if (c) c.textContent = (i+1) + ' / ' + bsImages.length;
+    }
+    function bsOpen(title, images, quoteHref, collectionHref){
+      bsImages = images.slice();
+      bsIdx = 0;
+      document.getElementById('bsGmTitle').textContent = title;
+      document.getElementById('bsGmQuote').setAttribute('href', quoteHref);
+      document.getElementById('bsGmCollection').setAttribute('href', collectionHref);
+      var thumbs = document.getElementById('bsGmThumbs');
+      thumbs.innerHTML = '';
+      bsImages.forEach(function(src,i){
+        var t = document.createElement('button');
+        t.type = 'button';
+        t.className = 'bs-gm-thumb' + (i===0?' active':'');
+        t.setAttribute('aria-label','Image ' + (i+1));
+        t.style.backgroundImage = "url('" + src + "')";
+        t.addEventListener('click', function(){ bsShow(i); });
+        thumbs.appendChild(t);
+      });
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      bsShow(0);
+      document.getElementById('bsGmClose').focus();
+    }
+    function bsClose(){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+
+    document.querySelectorAll('.bestseller-card').forEach(function(card){
+      var imgLink = card.querySelector('.bestseller-img[data-sku]');
+      if (!imgLink) return;
+      var sku = imgLink.getAttribute('data-sku');
+      var images = BS_GALLERY[sku];
+      if (!images || !images.length) return;
+      var title = (card.querySelector('.bestseller-title') || {}).textContent || sku;
+      var quoteEl = card.querySelector('.bestseller-btn');
+      var quoteHref = (quoteEl && quoteEl.getAttribute('href')) || 'contact-us.html';
+      var collectionHref = imgLink.getAttribute('href') || '#';
+      imgLink.addEventListener('click', function(e){
+        e.preventDefault();
+        bsOpen(title + ' — ' + sku, images, quoteHref, collectionHref);
+      });
+    });
+
+    modal.querySelector('.bs-gm-backdrop').addEventListener('click', bsClose);
+    document.getElementById('bsGmClose').addEventListener('click', bsClose);
+    document.getElementById('bsGmPrev').addEventListener('click', function(){ bsShow((bsIdx - 1 + bsImages.length) % bsImages.length); });
+    document.getElementById('bsGmNext').addEventListener('click', function(){ bsShow((bsIdx + 1) % bsImages.length); });
+    document.addEventListener('keydown', function(e){
+      if (!modal.classList.contains('open')) return;
+      if (e.key === 'Escape')    bsClose();
+      if (e.key === 'ArrowLeft') bsShow((bsIdx - 1 + bsImages.length) % bsImages.length);
+      if (e.key === 'ArrowRight') bsShow((bsIdx + 1) % bsImages.length);
     });
 
     var viewport = document.querySelector('.bestsellers-viewport');
