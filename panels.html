@@ -108,21 +108,67 @@
   }
   .cat-sublist a:hover,.cat-sub-more-btn:hover{color:var(--blue);border-left-color:var(--blue)}
 
-  /* Square-thumbnail treatment for all panel categories on this page.
-     Class-selector specificity (0,1,0) is matched by the shared.css
-     hover rule .product-card:hover .product-img-bg (0,2,0), so the
-     hover rule below repeats the selector to win on cascade order. */
+  /* ── Circular thumbnail treatment (matches homepage product cards) ──
+     The card loses its border/background so only the circle and text show.
+     overflow:hidden on .product-img clips everything to the 50% radius,
+     including the hover layer and overlay from shared.css. */
+  .products-grid .product-card{
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    text-align:center;
+    align-items:center;
+  }
   .products-grid .product-card .product-img{
+    width:min(300px,100%);
     height:auto;
     aspect-ratio:1 / 1;
-    border-radius:0;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto;
   }
   .products-grid .product-card .product-img-bg{
-    transform:scale(1.08);
-    transform-origin:center center;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    transform:none;
+    transition:transform .6s cubic-bezier(.4,0,.2,1);
   }
   .products-grid .product-card:hover .product-img-bg{
-    transform:scale(1.14);
+    transform:scale(1.06);
+  }
+  /* Overlay becomes a radial vignette centred in the circle (same as homepage). */
+  .products-grid .product-card .product-img-overlay{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:radial-gradient(circle at center,transparent 35%,rgba(14,28,48,.55) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    opacity:0;
+    transition:opacity .3s;
+  }
+  .products-grid .product-card:hover .product-img-overlay{opacity:1}
+  /* Badge labels sit awkwardly clipped by the circle — hide them. */
+  .products-grid .product-card .product-img-label{display:none}
+  /* Body: centred column under the circle, width matches circle. */
+  .products-grid .product-card .product-body{
+    padding:24px 12px 8px;
+    text-align:center;
+    align-items:center;
+    width:min(300px,100%);
+    max-width:none;
+    margin:0 auto;
+  }
+  .products-grid .product-card .product-body h3{text-align:center}
+  .products-grid .product-card .product-body p{text-align:center}
+  .products-grid .product-card .btn-ghost{align-self:center}
+  @media(max-width:560px){
+    .products-grid .product-card .product-img{width:min(220px,80%)}
+    .products-grid .product-card .product-body{width:min(220px,80%)}
   }
 
   /* Tablet / mobile: collapse sidebar back to horizontal scroll chips.
